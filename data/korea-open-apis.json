@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-29",
-    "version": "0.15.0",
+    "version": "0.16.0",
     "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완. 추가로 dl0312/open-apis-korea 교차검증(폐기 항목 배제, 생존분만 반영).",
     "limitations": [
       "이 카탈로그는 두 층위: (1) 전 분야 대표 무료 API 큐레이션(README 본문), (2) data.go.kr 오픈 API 전수 12,073건(부록 A, data/datago_apis.json).",
@@ -20,7 +20,8 @@
       "특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.",
       "K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능).",
       "K-콘텐츠 산업 공백 점검(게임산업·한류·영화인 등): 게임물 등급분류(GRAC)·한류현황(KF)·영화인 DB(KOFIC) 추가(URL은 datago 전수 확인). 전통주·애니메이션·웹소설·콘텐츠펀드·관광통역은 전국 단위 간판 API 부재(지자체/채용/면세유 오탐만)로 보류. K-푸드 수출은 기보유 관세청 UNIPASS로 커버.",
-      "산업/인프라 24개 주제 점검: 대부분 충실(기상·통계·재난·교통·국방 등 두 자리수 보유). 진짜 공백은 항공기상뿐이라 기상청 항공기상청 API 추가. '동네예보/단기예보'는 기존 '기상청 API 허브'(단기/중기예보 포함)로 이미 커버되어 별도 미추가."
+      "산업/인프라 24개 주제 점검: 대부분 충실(기상·통계·재난·교통·국방 등 두 자리수 보유). 진짜 공백은 항공기상뿐이라 기상청 항공기상청 API 추가. '동네예보/단기예보'는 기존 '기상청 API 허브'(단기/중기예보 포함)로 이미 커버되어 별도 미추가.",
+      "민간 SaaS 결 공백 점검: 한국 서비스 개발 필수인 본인인증(NICE)·메시징(SOLAPI)·고객상담(채널톡)·PG결제(나이스페이먼츠)가 비어 추가. 모두 free-tier(연동/가입 무료, 사용 건당·수수료 과금)로 GOAL의 '무료 구간 존재' 기준 충족 — pricing=free-tier로 표기. 직방/다방·배민·당근 등은 공개 개발자 API 부재로 미수록."
     ],
     "source": "GitHub 교차검증(yybmion/public-apis-4Kr)"
   },
@@ -3384,6 +3385,62 @@
       "rate_limit": "포털 기본 한도",
       "source": "산업/인프라 주제 공백 점검(항공기상)",
       "note": "전수에서 URL 확인(공항예보 15123139 / 공항기상관측 15123073 / 국내공항기상 15110052 / 세계공항 전문 15059100 등 다수). 드론·항공·여행 앱 활용. 일반 기상은 기상청 API 허브와 별개 항공 특화."
+    },
+    {
+      "name": "NICE 본인확인 API",
+      "provider": "나이스평가정보(NICE)",
+      "category": "기타",
+      "description": "휴대폰·PASS 등 실명 본인확인(이름·생년월일·CI/DI) 연동 API.",
+      "docs_url": "https://www.niceapi.co.kr/",
+      "auth": "기관 연동키(상점 계약)",
+      "pricing": "free-tier",
+      "signup_required": true,
+      "format": "REST/폼 연동",
+      "rate_limit": "건당 과금(연동 무료)",
+      "source": "민간 SaaS 공백 점검(본인인증)",
+      "note": "본인확인 시장 대표. 연동 자체는 무료, 인증 건당 과금. 회원가입·상점 계약 필요. 공식 확인(2026-05)."
+    },
+    {
+      "name": "SOLAPI 메시징 API",
+      "provider": "솔라피(SOLAPI, 구 쿨에스엠에스)",
+      "category": "커뮤니케이션",
+      "description": "SMS/LMS/MMS·카카오 알림톡·친구톡·RCS 통합 발송 API.",
+      "docs_url": "https://developers.solapi.com/",
+      "auth": "API Key(HMAC)",
+      "pricing": "free-tier",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "발송 건당 과금(가입 무료)",
+      "source": "민간 SaaS 공백 점검(메시징)",
+      "note": "문자·알림톡 발송 대표 SaaS. SDK 다수. 가입·연동 무료, 발송 건당 과금. 공식 확인(2026-05)."
+    },
+    {
+      "name": "채널톡(Channel.io) Open API",
+      "provider": "채널코퍼레이션(채널톡)",
+      "category": "커뮤니케이션",
+      "description": "고객 상담 채팅·CRM·마케팅 메시지 연동(웹/iOS/Android SDK 및 Open API).",
+      "docs_url": "https://developers.channel.io/",
+      "auth": "API Secret / Access Token",
+      "pricing": "free-tier",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "플랜별 상이",
+      "source": "민간 SaaS 공백 점검(고객상담/CRM)",
+      "note": "고객상담 메신저 대표. 무료 플랜 존재(상위 기능 유료). 공식 확인(2026-05)."
+    },
+    {
+      "name": "나이스페이먼츠(NICEPay) 결제 API",
+      "provider": "나이스페이먼츠",
+      "category": "결제·핀테크",
+      "description": "카드·계좌이체·가상계좌·간편결제 등 PG(전자결제) 연동 API.",
+      "docs_url": "https://developers.nicepay.co.kr/",
+      "auth": "상점키(Merchant Key)",
+      "pricing": "free-tier",
+      "signup_required": true,
+      "format": "REST/폼 연동",
+      "rate_limit": "결제 수수료(연동 무료·테스트키 제공)",
+      "source": "민간 SaaS 공백 점검(PG 결제)",
+      "note": "PG사 대표. 테스트키 무료, 실거래는 수수료. 토스페이먼츠/포트원과 함께 PG 선택지. 공식 확인(2026-05)."
     }
   ]
 }
