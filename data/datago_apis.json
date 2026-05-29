@@ -4,21 +4,22 @@
     "description": "공공데이터포털 목록조회 API(15077093, open-data-list)로 수집한 오픈 API 전수. 서비스(list_id) 단위로 정규화.",
     "generated": "2026-05-29",
     "source_total_rows": 17305,
-    "service_count": 12081,
+    "service_count": 12073,
     "skipped_paid": 1,
+    "removed_duplicates": 8,
     "categories": {
       "공공행정": 1668,
       "문화관광": 1297,
-      "농축수산": 1283,
-      "교통물류": 1270,
-      "산업고용": 902,
+      "농축수산": 1282,
+      "교통물류": 1269,
+      "산업고용": 901,
       "사회복지": 864,
       "환경기상": 820,
       "식품건강": 712,
-      "재정금융": 638,
+      "재정금융": 635,
       "재난안전": 624,
       "보건의료": 553,
-      "국토관리": 546,
+      "국토관리": 544,
       "교육": 417,
       "과학기술": 276,
       "통일외교안보": 186,
@@ -49280,20 +49281,6 @@
       "note": "list_id=15150608; operations=1; created=2025-09-25; updated=2025-11-21; 형태=링크(LINK)"
     },
     {
-      "name": "행정안전부_공통기반_본선_구간_정보_기본",
-      "provider": "행정안전부",
-      "category": "교통물류",
-      "description": "행정안전부에서는 「재난 및 안전관리 기본법」에 따라 데이터 기반 재난 및 안전관리체제 확립 및 재난안전데이터 수집·연계·분석·활용·공유·공개를 위하여 재난안전데이터통합관리시스템인 '재난안전데이터 공유플랫폼' 구축·운영하여 안전분야 공공데이터를 통합하여 제공하고 있습니다.\r\n- 재난안전데이터 공유플랫폼(https://www.safetydata.go.kr)과 공공데이터포털에서 연계하여 제공하고 있습니다.\r\n- 해당 데이터는 국토교통부 국가교통정보센터에서 제공하는 정보입니다.",
-      "docs_url": "https://www.data.go.kr/data/15150696/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15150696; operations=1; created=2025-09-25; updated=2025-09-25; 형태=링크(LINK)"
-    },
-    {
       "name": "행정안전부_공통기반_우회로_구간_상세",
       "provider": "행정안전부",
       "category": "교통물류",
@@ -51280,34 +51267,6 @@
       "rate_limit": "(미확인)",
       "source": "data.go.kr 목록조회API(15077093) open-data-list",
       "note": "list_id=15033164; operations=1; created=2018-10-29; updated=2018-10-29; 형태=링크(LINK)"
-    },
-    {
-      "name": "경기도 광명시_공중이용시설 현황(복합건축물)",
-      "provider": "경기도 광명시",
-      "category": "국토관리",
-      "description": "광명시 공중이용시설 현황(복합건축물)입니다",
-      "docs_url": "https://www.data.go.kr/data/15033103/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON+XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15033103; operations=1; created=2018-10-29; updated=2021-10-25; 형태=링크(LINK)"
-    },
-    {
-      "name": "경기도 광명시_공중이용시설 현황(업무시설)",
-      "provider": "경기도 광명시",
-      "category": "국토관리",
-      "description": "광명시 공중이용시설 현황(업무시설) 입니다",
-      "docs_url": "https://www.data.go.kr/data/15033104/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON+XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15033104; operations=1; created=2018-10-29; updated=2021-10-25; 형태=링크(LINK)"
     },
     {
       "name": "경기도 광명시_공중이용시설(실내체육관) 현황",
@@ -73484,20 +73443,6 @@
       "rate_limit": "(미확인)",
       "source": "data.go.kr 목록조회API(15077093) open-data-list",
       "note": "list_id=15058121; operations=6; created=2015-12-17; updated=2025-08-05"
-    },
-    {
-      "name": "해양수산부_연안정보도 도엽제공 서비스",
-      "provider": "해양수산부",
-      "category": "농축수산",
-      "description": "(국가연안공간정보) 기준점, 갯벌, 등심선, 수심, 하천, 해안선, 지형지명",
-      "docs_url": "https://www.data.go.kr/data/15059302/openapi.do",
-      "auth": "API Key",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "REST/XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15059302; operations=6; created=2014-12-01; updated=2019-06-18"
     },
     {
       "name": "해양수산부_연안정비_연안침식등급정보",
@@ -122486,20 +122431,6 @@
       "note": "list_id=15056961; operations=2; created=2016-01-05; updated=2024-08-24"
     },
     {
-      "name": "한국노인인력개발원_자립형일자리 수행기관",
-      "provider": "한국노인인력개발원",
-      "category": "산업고용",
-      "description": "한국노인인력개발원에서 제공하는 「자립형일자리 수행기관 조회」 오픈API로, 자립형 노인일자리 사업을 운영하는 수행기관의 상세 정보를 검색할 수 있는 데이터입니다. API는 페이지 번호, 결과 수, 행정구역 코드(시도·시군구), 기관명, 사업년도 등을 요청변수로 받아, 해당 조건에 맞는 수행기관 목록을 반환합니다. 출력값에는 운영기관 코드, 기관유형, 기관명, 우편번호, 주소, 전화번호, 팩스번호 등이 포함되어 있어, 사용자는 특정 지역과 기간에 해당하는 수행기관의 기본 정보와 위치, 연락처를 확인할 수 있습니다. 이를 통해 연구자나 정책 담당자는 지역별 노인일자리 사업 현황을 비교·분석할 수 있으며, 기관 이용자는 관련 기관에 대한 접근성과 신뢰도를 높일 수 있습니다. 또한 우편번호와 상세주소를 활용해 지리적 분포를 분석하거나 기관유형별 특성을 분류할 수 있어, 노인 고용 및 복지정책 수립에 중요한 기초 자료로 활용될 수 있습니다.",
-      "docs_url": "https://www.data.go.kr/data/15058688/openapi.do",
-      "auth": "API Key",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "REST/XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15058688; operations=2; created=2014-11-26; updated=2025-09-05"
-    },
-    {
       "name": "한국노인인력개발원_자립형일자리 코드 정보",
       "provider": "한국노인인력개발원",
       "category": "산업고용",
@@ -150570,20 +150501,6 @@
       "note": "list_id=15057783; operations=1; created=2015-07-09; updated=2025-08-29; 형태=링크(LINK)"
     },
     {
-      "name": "기획예산처_국가채권현황",
-      "provider": "기획예산처",
-      "category": "재정금융",
-      "description": "재정정보 공개시스템 열린재정을 통해 제공되는 국가채권 관련 주요 재정 지표를 포함한 종합적인 통계를 담고 있습니다. 국가채권현황을 비롯하여 회계별 세입·세출 결산현황, 각종 부담금의 운용 실적, 조세수입 내역과 국민의 조세부담률, 추경예산의 편성 추이, 연도별 세입세출 예산편성 현황 등 다양한 항목에 대한 정보를 확인할 수 있습니다. 이를 통해 정부의 재정 운용상황과 국가재정의 건전성 수준을 파악할 수 있으며, 정책 수립 및 예산 편성에 참고할 수 있는 기초자료로 활용됩니다. 해당 데이터는 재정투명성 강화를 위해 대국민에게 개방된 정보로서, 국가의 재정 흐름과 정책 방향을 이해하는 데에 유용한 자료입니다.",
-      "docs_url": "https://www.data.go.kr/data/15057841/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON+XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15057841; operations=1; created=2017-05-24; updated=2025-08-29; 형태=링크(LINK)"
-    },
-    {
       "name": "기획예산처_국고보조금 공모사업 상세",
       "provider": "기획예산처",
       "category": "재정금융",
@@ -154280,20 +154197,6 @@
       "note": "list_id=15138856; operations=1; created=2024-10-23; updated=2025-05-23; 형태=링크(LINK)"
     },
     {
-      "name": "행정안전부_지방재정365_세부사업별 세출현황",
-      "provider": "행정안전부",
-      "category": "재정금융",
-      "description": "지방자치단체의 분야별 세출 현황은 각 지방자치단체가 예산을 어떻게 활용하고 있는지를 보여주는 지표로 세출현황은 공공 서비스 제공을 위한 지출을 다양한 분야로 분류하여 관리되고 있습니다. 이러한 세출 현황은 자치단체의 재정 운영의 효율성을 평가하고, 각 분야에서의 재정 지원이 어떻게 이루어지는를 분석한 자료입니다.\r\n(분야별 분류 : 일반공공행정, 교육, 문화 및 관광, 환경, 사회복지, 보건등)\r\n세부사업별 세출현황 정보는 2016회계연도부터 제공됩니다. 제공되는 세부항목은 자치단체별 회계구분명, 세부사업명, 집행일자, 예산현액 등 항목입니다.",
-      "docs_url": "https://www.data.go.kr/data/15138857/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON+XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15138857; operations=1; created=2024-10-23; updated=2025-05-23; 형태=링크(LINK)"
-    },
-    {
       "name": "행정안전부_지방재정365_시도별 세수신장률",
       "provider": "행정안전부",
       "category": "재정금융",
@@ -154530,20 +154433,6 @@
       "rate_limit": "(미확인)",
       "source": "data.go.kr 목록조회API(15077093) open-data-list",
       "note": "list_id=15138716; operations=1; created=2024-10-11; updated=2025-05-13; 형태=링크(LINK)"
-    },
-    {
-      "name": "행정안전부_지방재정365_지방의회 관련경비",
-      "provider": "행정안전부",
-      "category": "재정금융",
-      "description": "지방자치단체의 지방의회 관련 경비는 지방재정법 제60조 및 같은법 시행령 제68조에 따라 주민의 알권리 보장과 재정운영의 투명성 확보를 위해 공개됩니다. 공개 대상에는 지방의회 의원의 인건비, 의정활동비, 여비, 업무추진비 등 의회운영에 소요되는 모든 경비가 포함됩니다.\r\n지방의회 관련경비 정보는 2020 회계연도 이후의 정보가 제공되며 대상회계는 일반회계를 대상으로 당초예산 편성액 정보로 취합됩니다. 세부 제공항목으로는 의정운영공통경비, 의회운영업무추진비, 의원국외여비, 의원역량개발비(민간위탁) 각 항목별 예산액과 총액한도 대비 편성액 정보가 제공됩니다.",
-      "docs_url": "https://www.data.go.kr/data/15138864/openapi.do",
-      "auth": "없음",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "LINK/JSON+XML",
-      "rate_limit": "(미확인)",
-      "source": "data.go.kr 목록조회API(15077093) open-data-list",
-      "note": "list_id=15138864; operations=1; created=2024-10-23; updated=2025-05-23; 형태=링크(LINK)"
     },
     {
       "name": "행정안전부_지방재정365_지방의회 국외여비 비율",

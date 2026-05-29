@@ -58,9 +58,24 @@ def main() -> None:
             "note": f"list_id={list_id}; operations={len(items)}; "
                     f"created={created}; updated={updated}"
                     + ("; 형태=링크(LINK)" if api_type == "LINK" else ""),
+            "_ops": len(items),
         })
 
     apis.sort(key=lambda a: (a["category"], a["provider"], a["name"]))
+
+    # 같은 서비스가 다른 list_id로 이중 등록된 경우 제거
+    # (name+provider 동일 → operation 수가 많은 쪽을 남긴다)
+    best = {}
+    for a in apis:
+        key = (a["name"], a["provider"])
+        prev = best.get(key)
+        if prev is None or a["_ops"] > prev["_ops"]:
+            best[key] = a
+    deduped = sorted(best.values(), key=lambda a: (a["category"], a["provider"], a["name"]))
+    removed_dups = len(apis) - len(deduped)
+    for a in deduped:
+        del a["_ops"]
+    apis = deduped
 
     cats = Counter(a["category"] for a in apis)
     doc = {
@@ -72,6 +87,7 @@ def main() -> None:
             "source_total_rows": len(rows),
             "service_count": len(apis),
             "skipped_paid": skipped_paid,
+            "removed_duplicates": removed_dups,
             "categories": dict(sorted(cats.items(), key=lambda x: (-x[1], x[0]))),
             "note": "rows는 operation 단위라 서비스 수보다 많다. 전부 is_deleted=N(활성).",
         },
