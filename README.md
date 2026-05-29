@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-244-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-239-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.16.0**
-- 큐레이션 API: **244** · 분야: **37** · 요금: free **212** / free-tier **32** · 회원가입·승인 필요: **239**
+- 최종 갱신: **2026-05-29** · 버전: **0.17.0**
+- 큐레이션 API: **239** · 분야: **37** · 요금: free **212** / free-tier **27** · 회원가입·승인 필요: **234**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -17,7 +17,7 @@
   - [🏛 공공·행정](#공공행정) (22)
   - [🚍 교통](#교통) (19)
   - [🎭 문화·관광·체육](#문화관광체육) (19)
-  - [💵 금융](#금융) (18)
+  - [💵 금융](#금융) (16)
   - [🎓 교육·학술](#교육학술) (15)
   - [☀️ 날씨·환경](#날씨환경) (14)
   - [💬 생활·소셜](#생활소셜) (13)
@@ -26,9 +26,9 @@
   - [📺 콘텐츠·미디어](#콘텐츠미디어) (10)
   - [🚨 재난·안전](#재난안전) (9)
   - [🗺 지도·위치](#지도위치) (8)
-  - [📨 커뮤니케이션](#커뮤니케이션) (7)
-  - [💳 결제·핀테크](#결제핀테크) (6)
   - [🏘 부동산](#부동산) (6)
+  - [📨 커뮤니케이션](#커뮤니케이션) (6)
+  - [💳 결제·핀테크](#결제핀테크) (5)
   - [🏪 상권·창업](#상권창업) (5)
   - [⚡ 에너지](#에너지) (5)
   - [🤖 인공지능](#인공지능) (5)
@@ -40,13 +40,13 @@
   - [🔗 블록체인·암호화폐](#블록체인암호화폐) (3)
   - [📖 언어·사전](#언어사전) (3)
   - [🏠 IoT·스마트홈](#iot스마트홈) (2)
-  - [• 기타](#기타) (2)
   - [🚢 무역·통상](#무역통상) (2)
   - [• 미디어·콘텐츠](#미디어콘텐츠) (2)
   - [⚖️ 법령·사법](#법령사법) (2)
   - [📡 통신·인터넷](#통신인터넷) (2)
   - [• 검색·생활](#검색생활) (1)
   - [📊 과학·통계](#과학통계) (1)
+  - [• 기타](#기타) (1)
   - [🏭 산업·고용](#산업고용) (1)
   - [🛍 쇼핑](#쇼핑) (1)
   - [☁️ 클라우드](#클라우드) (1)
@@ -61,7 +61,7 @@
 | 🏛 [공공·행정](#공공행정) | 22 |
 | 🚍 [교통](#교통) | 19 |
 | 🎭 [문화·관광·체육](#문화관광체육) | 19 |
-| 💵 [금융](#금융) | 18 |
+| 💵 [금융](#금융) | 16 |
 | 🎓 [교육·학술](#교육학술) | 15 |
 | ☀️ [날씨·환경](#날씨환경) | 14 |
 | 💬 [생활·소셜](#생활소셜) | 13 |
@@ -70,9 +70,9 @@
 | 📺 [콘텐츠·미디어](#콘텐츠미디어) | 10 |
 | 🚨 [재난·안전](#재난안전) | 9 |
 | 🗺 [지도·위치](#지도위치) | 8 |
-| 📨 [커뮤니케이션](#커뮤니케이션) | 7 |
-| 💳 [결제·핀테크](#결제핀테크) | 6 |
 | 🏘 [부동산](#부동산) | 6 |
+| 📨 [커뮤니케이션](#커뮤니케이션) | 6 |
+| 💳 [결제·핀테크](#결제핀테크) | 5 |
 | 🏪 [상권·창업](#상권창업) | 5 |
 | ⚡ [에너지](#에너지) | 5 |
 | 🤖 [인공지능](#인공지능) | 5 |
@@ -84,18 +84,18 @@
 | 🔗 [블록체인·암호화폐](#블록체인암호화폐) | 3 |
 | 📖 [언어·사전](#언어사전) | 3 |
 | 🏠 [IoT·스마트홈](#iot스마트홈) | 2 |
-| • [기타](#기타) | 2 |
 | 🚢 [무역·통상](#무역통상) | 2 |
 | • [미디어·콘텐츠](#미디어콘텐츠) | 2 |
 | ⚖️ [법령·사법](#법령사법) | 2 |
 | 📡 [통신·인터넷](#통신인터넷) | 2 |
 | • [검색·생활](#검색생활) | 1 |
 | 📊 [과학·통계](#과학통계) | 1 |
+| • [기타](#기타) | 1 |
 | 🏭 [산업·고용](#산업고용) | 1 |
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **244** |
+| **합계** | **239** |
 
 ## 분야별 API 목록
 
@@ -194,8 +194,6 @@
 | [한국투자증권 KIS Developers Open API](https://apiportal.koreainvestment.com/intro) | 한국투자증권 | 주식/선물 시세 조회 및 주문·자동매매 REST/WebSocket 트레이딩 API. | API Key(App Key/Secret) + OAuth | free | ✅ |
 | [키움증권 Open API+](https://www.kiwoom.com/h/customer/download/VOpenApiInfoView) | 키움증권 | 주식 시세·주문 등 트레이딩 API. | 계정 인증 | free | ✅ |
 | [업비트(Upbit) Open API](https://docs.upbit.com/kr/docs/developer-center-overview) | 업비트(두나무) | 가상자산 시세(캔들·현재가·호가·체결), 잔고·주문·출금 등 거래소 API. | 없음(시세) / API Key(거래) | free | — |
-| [토스페이먼츠 결제 API](https://docs.tosspayments.com/) | 토스페이먼츠 | 카드·간편결제(네이버페이/카카오페이 등) 통합 결제 연동 API. | API Key(시크릿/클라이언트 키) | free-tier | ✅ |
-| [포트원(PortOne, 구 아임포트) 결제연동 API](https://developers.portone.io/) | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | ✅ |
 | [우체국금융(예금·보험) Open API](https://www.epostlife.go.kr/IPUIOP0000.do) | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | ✅ |
 | [금융결제원 어카운트인포 계좌통합관리 API](https://developers.kftc.or.kr/dev/openapi/account-info) | 금융결제원(KFTC) | 전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API. | OAuth 2.0 | free | ✅ |
 | [한국주택금융공사(HF) 주택금융 통계 API](https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do) | 한국주택금융공사(HF) | 보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API. | API Key | free | ✅ |
@@ -350,6 +348,19 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 부동산
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [국토교통부 실거래가 공개시스템 API](https://rt.molit.go.kr) | 국토교통부 | 아파트/연립/단독 등 부동산 매매·전월세 실거래가 오픈 API. | API Key | free | ✅ |
+| [한국부동산원 R-ONE 부동산통계 Open API](https://www.reb.or.kr/r-one/portal/openapi/openApiIntroPage.do) | 한국부동산원 | 지가·주택가격지수·거래량 등 부동산 통계 오픈 API. | API Key | free | ✅ |
+| [국토교통부 개별공시지가·공동주택가격 API](https://www.data.go.kr/data/15124014/openapi.do) | 국토교통부 | 개별공시지가, 공동주택가격(WMS/WFS/속성) 등 부동산 공시가격 오픈 API. | API Key | free | ✅ |
+| [국토교통부 건축HUB 건축물대장·인허가 API](https://www.data.go.kr/data/15134735/openapi.do) | 국토교통부 | 건축물대장(표제부·전유부·층별 등), 건축인허가 등 건축데이터 오픈 API. | API Key | free | ✅ |
+| [한국토지주택공사(LH) 임대·분양 주택정보 API](https://www.data.go.kr/data/15058476/openapi.do) | 한국토지주택공사(LH) | 공공임대주택 단지정보, 분양·임대 공고별 공급정보 등 주택 오픈 API. | API Key | free | ✅ |
+| [주택도시보증공사(HUG) Open API](https://www.khug.or.kr/openapi/web/se/ap/seap000002.jsp) | 주택도시보증공사(HUG) | 분양보증, 주택사업, 주택도시 관련 통계·정보 오픈 API. | API Key | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 커뮤니케이션
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -359,7 +370,6 @@
 | [잔디(JANDI) 웹훅](https://support.jandi.com/) | 토스랩 | 외부 서비스 인커밍 웹훅 연동 | Webhook | free | — |
 | [네이버웍스 API](https://developers.worksmobile.com/kr) | 네이버웍스 | Bot·조직/그룹 관리·파일 등 협업 API | OAuth | free-tier | ✅ |
 | [하이웍스 API](https://developers.hiworks.com/) | 하이웍스 | 전자결재·푸시 등 기업 협업 API | API Key | free-tier | ✅ |
-| [SOLAPI 메시징 API](https://developers.solapi.com/) | 솔라피(SOLAPI, 구 쿨에스엠에스) | SMS/LMS/MMS·카카오 알림톡·친구톡·RCS 통합 발송 API. | API Key(HMAC) | free-tier | ✅ |
 | [채널톡(Channel.io) Open API](https://developers.channel.io/) | 채널코퍼레이션(채널톡) | 고객 상담 채팅·CRM·마케팅 메시지 연동(웹/iOS/Android SDK 및 Open API). | API Secret / Access Token | free-tier | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
@@ -373,20 +383,6 @@
 | [페이플](https://developer.payple.kr/) | 페이플 | 간편·정기·링크결제 서비스 | API Key | free | ✅ |
 | [페이코(PAYCO)](https://developers.payco.com/guide) | NHN페이코 | NHN 통합 ID·결제·멤버십 연동 | OAuth | free | ✅ |
 | [하이픈 API 마켓플레이스](https://hyphen.im/) | 케이에스넷 | 금융·공공 데이터 스크래핑 API 마켓(500+) | API Key | free-tier | ✅ |
-| [나이스페이먼츠(NICEPay) 결제 API](https://developers.nicepay.co.kr/) | 나이스페이먼츠 | 카드·계좌이체·가상계좌·간편결제 등 PG(전자결제) 연동 API. | 상점키(Merchant Key) | free-tier | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 부동산
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [국토교통부 실거래가 공개시스템 API](https://rt.molit.go.kr) | 국토교통부 | 아파트/연립/단독 등 부동산 매매·전월세 실거래가 오픈 API. | API Key | free | ✅ |
-| [한국부동산원 R-ONE 부동산통계 Open API](https://www.reb.or.kr/r-one/portal/openapi/openApiIntroPage.do) | 한국부동산원 | 지가·주택가격지수·거래량 등 부동산 통계 오픈 API. | API Key | free | ✅ |
-| [국토교통부 개별공시지가·공동주택가격 API](https://www.data.go.kr/data/15124014/openapi.do) | 국토교통부 | 개별공시지가, 공동주택가격(WMS/WFS/속성) 등 부동산 공시가격 오픈 API. | API Key | free | ✅ |
-| [국토교통부 건축HUB 건축물대장·인허가 API](https://www.data.go.kr/data/15134735/openapi.do) | 국토교통부 | 건축물대장(표제부·전유부·층별 등), 건축인허가 등 건축데이터 오픈 API. | API Key | free | ✅ |
-| [한국토지주택공사(LH) 임대·분양 주택정보 API](https://www.data.go.kr/data/15058476/openapi.do) | 한국토지주택공사(LH) | 공공임대주택 단지정보, 분양·임대 공고별 공급정보 등 주택 오픈 API. | API Key | free | ✅ |
-| [주택도시보증공사(HUG) Open API](https://www.khug.or.kr/openapi/web/se/ap/seap000002.jsp) | 주택도시보증공사(HUG) | 분양보증, 주택사업, 주택도시 관련 통계·정보 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -509,15 +505,6 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
-### 기타
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [네이버 캡차(CAPTCHA) API](https://developers.naver.com/docs/utils/captcha/) | 네이버 | 자동입력 방지용 이미지/음성 보안문자 생성 및 입력값 검증. | API Key(Client ID/Secret) | free | ✅ |
-| [NICE 본인확인 API](https://www.niceapi.co.kr/) | 나이스평가정보(NICE) | 휴대폰·PASS 등 실명 본인확인(이름·생년월일·CI/DI) 연동 API. | 기관 연동키(상점 계약) | free-tier | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
 ### 무역·통상
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -567,6 +554,14 @@
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
 |-----|----------|------|------|------|:----:|
 | [KOSIS 국가통계포털 공유서비스](https://kosis.kr/openapi/) | 통계청 | 국가통계 자료를 조회하는 오픈 API. | API Key | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
+### 기타
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [네이버 캡차(CAPTCHA) API](https://developers.naver.com/docs/utils/captcha/) | 네이버 | 자동입력 방지용 이미지/음성 보안문자 생성 및 입력값 검증. | API Key(Client ID/Secret) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -650,3 +645,4 @@
 - K-콘텐츠 산업 공백 점검(게임산업·한류·영화인 등): 게임물 등급분류(GRAC)·한류현황(KF)·영화인 DB(KOFIC) 추가(URL은 datago 전수 확인). 전통주·애니메이션·웹소설·콘텐츠펀드·관광통역은 전국 단위 간판 API 부재(지자체/채용/면세유 오탐만)로 보류. K-푸드 수출은 기보유 관세청 UNIPASS로 커버.
 - 산업/인프라 24개 주제 점검: 대부분 충실(기상·통계·재난·교통·국방 등 두 자리수 보유). 진짜 공백은 항공기상뿐이라 기상청 항공기상청 API 추가. '동네예보/단기예보'는 기존 '기상청 API 허브'(단기/중기예보 포함)로 이미 커버되어 별도 미추가.
 - 민간 SaaS 결 공백 점검: 한국 서비스 개발 필수인 본인인증(NICE)·메시징(SOLAPI)·고객상담(채널톡)·PG결제(나이스페이먼츠)가 비어 추가. 모두 free-tier(연동/가입 무료, 사용 건당·수수료 과금)로 GOAL의 '무료 구간 존재' 기준 충족 — pricing=free-tier로 표기. 직방/다방·배민·당근 등은 공개 개발자 API 부재로 미수록.
+- 정책 변경(2026-05): '무료 호출 구간이 전혀 없는 순수 종량제'(쓰면 무조건 과금)는 제외하기로 함. 이에 따라 결제 PG(토스페이먼츠·포트원·나이스페이먼츠)·본인인증(NICE)·문자발송(SOLAPI) 5종 제거. 무료 구간/크레딧/무료 플랜이 실재하는 free-tier(네이버지도·TMAP·Papago·CLOVA·채널톡·업스테이지 등)는 GOAL의 '무료 구간 존재 시 포함' 기준대로 유지.
