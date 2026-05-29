@@ -24,14 +24,30 @@
 
    ```bash
    export DATAGO_SERVICE_KEY='발급받은_Decoding_키'
-   python3 scripts/fetch_datago.py --type API --out data/datago_raw.json
+   python3 scripts/fetch_datago.py --resource open-data-list --out data/datago_raw.json
+   python3 scripts/normalize_datago.py   # → data/datago_apis.json
+   python3 scripts/build_readme.py        # README 부록 A 갱신
    ```
 
-4. 산출된 원천 목록을 본 카탈로그 스키마(`data/korea-open-apis.json`)로 정규화/병합.
+4. 산출된 원천 목록을 카탈로그 스키마(`data/datago_apis.json`)로 정규화.
 
-> `scripts/fetch_datago.py` 는 위 목록조회 API를 페이지 단위로 호출하도록 작성된 스캐폴드입니다.
-> 엔드포인트 경로/파라미터명은 발급 시 받는 **활용가이드 문서 기준으로 1줄 상수만 맞추면** 됩니다
-> (포털 웹 차단으로 사전 검증을 못 했기 때문에 상수는 가이드로 확정 필요).
+## 실행 결과 (실측, 2026-05-29)
+
+키 발급 후 실제로 전수 수집을 완료했습니다.
+
+- **호스트/경로 확정**: 이 서비스는 odcloud 호스팅이며 OAS 문서
+  (`https://infuser.odcloud.kr/oas/docs?namespace=15077093/v1`)에서 리소스 경로를 확인:
+  - `https://api.odcloud.kr/api/15077093/v1/open-data-list` — 오픈 API **17,305** operation행
+  - `.../file-data-list` — 파일데이터 201,842 · `.../standard-data-list` — 표준데이터 12,655
+- 파라미터는 `serviceKey`, `page`, `perPage` (odcloud 표준). 앞서 추정했던
+  `apis.data.go.kr/15077093/getDataList` 류는 전부 HTTP 500 → odcloud 경로가 정답이었음.
+- 정규화 결과: 서비스(list_id) 단위 **무료 오픈 API 12,081건**, 순수 유료 1건만 제외.
+
+### "2022년 미갱신" 오해에 대하여
+
+데이터셋 페이지에 표시되는 갱신주기/표본 갱신일과 무관하게, **목록 API 자체는 최신**입니다.
+수집 데이터 기준 `created_at` 최신 **2026-05-22**, `updated_at` 최신 **2026-05-28**,
+2025년 등록 2,250건·2026년 593건. 전 항목 `is_deleted=N`(활성). 즉 enumerate 결과는 현행 목록입니다.
 
 ## 대안
 

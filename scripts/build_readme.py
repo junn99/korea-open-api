@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "korea-open-apis.json"
+DATAGO = ROOT / "data" / "datago_apis.json"
 OUT = ROOT / "README.md"
 
 
@@ -78,6 +79,39 @@ def main() -> None:
                     doc=doc_link,
                 )
             )
+        lines.append("")
+
+    # data.go.kr 전수 결과 (있을 때만)
+    if DATAGO.exists():
+        dg = json.loads(DATAGO.read_text(encoding="utf-8"))
+        dm = dg["meta"]
+        lines.append("## 부록 A — data.go.kr 오픈 API 전수")
+        lines.append("")
+        lines.append(
+            "위 큐레이션과 별개로, 공공데이터포털 **목록조회 API(15077093)** 로 "
+            "오픈 API 목록을 **전수 수집**했습니다. 기계 판독용 전체 목록은 "
+            "[`data/datago_apis.json`](data/datago_apis.json) 에 있습니다."
+        )
+        lines.append("")
+        lines.append(
+            f"- 수집일: **{dm['generated']}** · 무료 오픈 API 서비스: "
+            f"**{dm['service_count']:,}** (operation 단위 원천 행 **{dm['source_total_rows']:,}**, "
+            f"순수 유료 제외 {dm['skipped_paid']})"
+        )
+        lines.append(
+            "- 신선도: 수집된 목록은 **현재 활성(is_deleted=N)** 항목만 포함하며, "
+            "최근 등록·갱신분(2025–2026년 등록 다수)까지 반영됩니다."
+        )
+        lines.append("")
+        lines.append("| 분야(공공데이터포털 분류) | 개수 |")
+        lines.append("|------|------|")
+        for cat, n in dm["categories"].items():
+            lines.append(f"| {esc(cat)} | {n:,} |")
+        lines.append("")
+        lines.append(
+            "> 전체 12,000여 건은 본 README 표에 모두 싣지 않고 JSON으로만 제공합니다 "
+            "(가독성·용량). 분야별 핵심 API는 위 큐레이션 섹션을 참고하세요."
+        )
         lines.append("")
 
     # 한계
