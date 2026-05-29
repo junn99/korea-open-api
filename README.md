@@ -2,30 +2,30 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-223-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-229-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.10.0**
-- 큐레이션 API: **223** · 분야: **37** · 요금: free **195** / free-tier **28** · 회원가입·승인 필요: **219**
+- 최종 갱신: **2026-05-29** · 버전: **0.11.0**
+- 큐레이션 API: **229** · 분야: **37** · 요금: free **201** / free-tier **28** · 회원가입·승인 필요: **225**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
 
 - [분야별 분포](#분야별-분포)
 - **분야별 API 목록**
-  - [🏛 공공·행정](#공공행정) (21)
+  - [🏛 공공·행정](#공공행정) (22)
   - [🚍 교통](#교통) (19)
   - [💵 금융](#금융) (18)
   - [🎓 교육·학술](#교육학술) (15)
-  - [🎭 문화·관광·체육](#문화관광체육) (13)
+  - [🎭 문화·관광·체육](#문화관광체육) (14)
+  - [☀️ 날씨·환경](#날씨환경) (13)
   - [💬 생활·소셜](#생활소셜) (13)
-  - [☀️ 날씨·환경](#날씨환경) (12)
   - [🌾 농축수산](#농축수산) (10)
-  - [🏥 보건·식품](#보건식품) (9)
+  - [🏥 보건·식품](#보건식품) (10)
+  - [🚨 재난·안전](#재난안전) (9)
   - [🗺 지도·위치](#지도위치) (8)
   - [📺 콘텐츠·미디어](#콘텐츠미디어) (8)
-  - [🚨 재난·안전](#재난안전) (7)
   - [🏘 부동산](#부동산) (6)
   - [💳 결제·핀테크](#결제핀테크) (5)
   - [🏪 상권·창업](#상권창업) (5)
@@ -58,18 +58,18 @@
 
 | 분야 | 개수 |
 |------|------:|
-| 🏛 [공공·행정](#공공행정) | 21 |
+| 🏛 [공공·행정](#공공행정) | 22 |
 | 🚍 [교통](#교통) | 19 |
 | 💵 [금융](#금융) | 18 |
 | 🎓 [교육·학술](#교육학술) | 15 |
-| 🎭 [문화·관광·체육](#문화관광체육) | 13 |
+| 🎭 [문화·관광·체육](#문화관광체육) | 14 |
+| ☀️ [날씨·환경](#날씨환경) | 13 |
 | 💬 [생활·소셜](#생활소셜) | 13 |
-| ☀️ [날씨·환경](#날씨환경) | 12 |
 | 🌾 [농축수산](#농축수산) | 10 |
-| 🏥 [보건·식품](#보건식품) | 9 |
+| 🏥 [보건·식품](#보건식품) | 10 |
+| 🚨 [재난·안전](#재난안전) | 9 |
 | 🗺 [지도·위치](#지도위치) | 8 |
 | 📺 [콘텐츠·미디어](#콘텐츠미디어) | 8 |
-| 🚨 [재난·안전](#재난안전) | 7 |
 | 🏘 [부동산](#부동산) | 6 |
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
 | 🏪 [상권·창업](#상권창업) | 5 |
@@ -95,7 +95,7 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **223** |
+| **합계** | **229** |
 
 ## 분야별 API 목록
 
@@ -124,6 +124,7 @@
 | [전국공중화장실 표준데이터 Open API](https://www.data.go.kr/data/15012892/standard.do) | 행정안전부 | 전국 공중화장실 위치(좌표)·남녀/장애인/어린이 칸 수·개방시간·비상벨 등 표준 항목. | API Key(serviceKey) | free | ✅ |
 | [전국공공시설개방정보 표준데이터 Open API](https://www.data.go.kr/data/15013117/standard.do) | 행정안전부 | 주민센터·체육관 등 공공시설 개방(대관) 정보 표준 항목(시설명·주소·개방시간·예약). | API Key(serviceKey) | free | ✅ |
 | [e하늘 장사정보(장사시설) 시스템](https://www.ehaneul.go.kr/) | 보건복지부 / 한국장례문화진흥원 | 전국 화장시설·봉안당·자연장지 등 장사시설 현황 및 화장로 예약 정보. | API Key(serviceKey) | free | ✅ |
+| [경찰청 습득물(유실물) 정보 조회 API](https://www.data.go.kr/data/15058696/openapi.do) | 경찰청 | 전국 습득물·유실물 보관 정보 조회(lost112 연계). | API Key(serviceKey) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -217,6 +218,27 @@
 | [국가유산청 문화재 공간정보(GIS) API](https://www.data.go.kr/data/3070426/openapi.do) | 국가유산청 | 문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API. | API Key | free | ✅ |
 | [문화체육관광부 공연정보(통합) API](https://www.data.go.kr/data/15121487/openapi.do) | 문화체육관광부 | 예술의전당·국립극장 등 10개 기관 공연/전시 정보 통합 오픈 API. | API Key | free | ✅ |
 | [국립현대미술관 미술작품 정보 API](https://www.data.go.kr/dataset/3059104/openapi.do) | 국립현대미술관(MMCA) | 소장 미술작품 명칭·작가·재질·이미지 등 정보 오픈 API. | API Key | free | ✅ |
+| [한국관광공사 무장애(배리어프리) 여행정보 API](https://www.data.go.kr/data/15101897/openapi.do) | 한국관광공사 | 장애인·고령자 등 이동약자를 위한 무장애 관광지·편의시설 정보. | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
+### 날씨·환경
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [기상청 API 허브](https://apihub.kma.go.kr) | 기상청 | 단기/중기예보, 실황, 지상/해양 관측 등 기상 데이터 오픈 API 통합 허브. | API Key | free | ✅ |
+| [에어코리아 대기오염정보 API](https://www.data.go.kr/data/15073861/openapi.do) | 한국환경공단 | 미세먼지·대기질 실시간 측정정보 오픈 API. | API Key | free | ✅ |
+| [한국환경공단 전기차 충전소 정보 API](https://www.data.go.kr/data/15076352/openapi.do) | 한국환경공단 | 전국 전기차 충전소 위치·상태 정보 오픈 API. | API Key | free | ✅ |
+| [바다누리 해양정보 서비스 Open API](http://www.khoa.go.kr/oceangrid/khoa/takepart/openapi/openApiDeveloperGuide.do) | 국립해양조사원 | 조위·조류·수온 등 해양 관측/예측 정보 오픈 API. | API Key | free | ✅ |
+| [K-water 공공데이터 개방포털 Open API](https://opendata.kwater.or.kr/) | 한국수자원공사(K-water) | 댐·보 수문정보(수위·강우·방류량 등), 수자원 데이터 오픈 API. | API Key | free | ✅ |
+| [환경부 화학물질정보 API](https://www.data.go.kr/data/15029194/openapi.do) | 환경부 화학물질안전원 | 화학물질 명칭·CAS번호·분자식·분류 등 화학물질 정보 오픈 API. | API Key | free | ✅ |
+| [국립생물자원관 한반도 생물다양성 API](https://species.nibr.go.kr/) | 환경부 국립생물자원관 | 국가생물종목록, 생물다양성, 종별 멀티미디어 등 생태 정보 오픈 API. | API Key | free | ✅ |
+| [한강홍수통제소 수문·홍수 Open API](https://www.hrfco.go.kr/web/openapiPage/openApi.do) | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | ✅ |
+| [국가지하수정보센터(GIMS) Open API](https://www.gims.go.kr/apiIntro.do) | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | ✅ |
+| [한국환경공단 올바로(Allbaro) 폐기물·자원순환 API](https://www.recycling-info.or.kr/sds/apiKeyControl.do) | 한국환경공단 | 폐기물 배출·운반·처리 관리(올바로) 코드 및 자원순환 정보 오픈 API. | API Key | free | ✅ |
+| [국립생태원 생태자연도 서비스 API](https://www.data.go.kr/data/15057288/openapi.do) | 국립생태원(NIE) | 전 국토 생태·자연도 등급, 지형평가 등 생태 공간정보 오픈 API. | API Key | free | ✅ |
+| [국립수목원 국가표준식물목록 서비스 API](https://www.data.go.kr/data/15000236/openapi.do) | 산림청 국립수목원 | 국가표준식물목록(학명·국명·문헌 등), 식물자원 정보 오픈 API. | API Key | free | ✅ |
+| [기상청 기상특보 조회서비스 API](https://www.data.go.kr/data/15000415/openapi.do) | 기상청(KMA) | 폭염·한파·호우·태풍·황사 등 기상특보 발효 현황 및 예비특보. | API Key(serviceKey) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -237,25 +259,6 @@
 | [외교부 해외안전여행 여행경보 API](https://www.data.go.kr/data/15076237/openapi.do) | 외교부 | 국가·지역별 여행경보, 특별여행경보, 여행금지 등 해외안전여행 오픈 API. | API Key | free | ✅ |
 | [온통청년 청년정책 API](https://www.data.go.kr/data/15143273/openapi.do) | 한국고용정보원 | 중앙·지자체 청년정책, 청년센터 등 청년 지원정보 오픈 API. | API Key | free | ✅ |
 | [소비자24 제품안전·리콜 Open API](https://www.consumer.go.kr/user/ftc/consumer/openApiSvcUser/120/selectOpenApiSvcList.do) | 공정거래위원회 / 한국소비자원 | 제품 리콜정보, 인증정보, 피해주의보 등 소비자 안전 오픈 API. | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 날씨·환경
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [기상청 API 허브](https://apihub.kma.go.kr) | 기상청 | 단기/중기예보, 실황, 지상/해양 관측 등 기상 데이터 오픈 API 통합 허브. | API Key | free | ✅ |
-| [에어코리아 대기오염정보 API](https://www.data.go.kr/data/15073861/openapi.do) | 한국환경공단 | 미세먼지·대기질 실시간 측정정보 오픈 API. | API Key | free | ✅ |
-| [한국환경공단 전기차 충전소 정보 API](https://www.data.go.kr/data/15076352/openapi.do) | 한국환경공단 | 전국 전기차 충전소 위치·상태 정보 오픈 API. | API Key | free | ✅ |
-| [바다누리 해양정보 서비스 Open API](http://www.khoa.go.kr/oceangrid/khoa/takepart/openapi/openApiDeveloperGuide.do) | 국립해양조사원 | 조위·조류·수온 등 해양 관측/예측 정보 오픈 API. | API Key | free | ✅ |
-| [K-water 공공데이터 개방포털 Open API](https://opendata.kwater.or.kr/) | 한국수자원공사(K-water) | 댐·보 수문정보(수위·강우·방류량 등), 수자원 데이터 오픈 API. | API Key | free | ✅ |
-| [환경부 화학물질정보 API](https://www.data.go.kr/data/15029194/openapi.do) | 환경부 화학물질안전원 | 화학물질 명칭·CAS번호·분자식·분류 등 화학물질 정보 오픈 API. | API Key | free | ✅ |
-| [국립생물자원관 한반도 생물다양성 API](https://species.nibr.go.kr/) | 환경부 국립생물자원관 | 국가생물종목록, 생물다양성, 종별 멀티미디어 등 생태 정보 오픈 API. | API Key | free | ✅ |
-| [한강홍수통제소 수문·홍수 Open API](https://www.hrfco.go.kr/web/openapiPage/openApi.do) | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | ✅ |
-| [국가지하수정보센터(GIMS) Open API](https://www.gims.go.kr/apiIntro.do) | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | ✅ |
-| [한국환경공단 올바로(Allbaro) 폐기물·자원순환 API](https://www.recycling-info.or.kr/sds/apiKeyControl.do) | 한국환경공단 | 폐기물 배출·운반·처리 관리(올바로) 코드 및 자원순환 정보 오픈 API. | API Key | free | ✅ |
-| [국립생태원 생태자연도 서비스 API](https://www.data.go.kr/data/15057288/openapi.do) | 국립생태원(NIE) | 전 국토 생태·자연도 등급, 지형평가 등 생태 공간정보 오픈 API. | API Key | free | ✅ |
-| [국립수목원 국가표준식물목록 서비스 API](https://www.data.go.kr/data/15000236/openapi.do) | 산림청 국립수목원 | 국가표준식물목록(학명·국명·문헌 등), 식물자원 정보 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -289,6 +292,23 @@
 | [식약처 의약품안전사용서비스(DUR) API](https://www.data.go.kr/data/15059486/openapi.do) | 식품의약품안전처 | 병용금기, 연령·임부 금기, 중복효능 등 의약품 안전사용(DUR) 오픈 API. | API Key | free | ✅ |
 | [초록누리(생활환경안전정보) Open API](https://ecolife.me.go.kr/ecolife/infoCenter/openApi?pMENU_NO=588) | 기후에너지환경부(환경부) / 국립환경과학원 | 생활화학제품 전성분(함유 화학물질·유해성) 및 안전기준 위반 회수대상 제품 정보. | API Key(인증키) | free | ✅ |
 | [대한적십자사 헌혈·혈액 정보 Open API](https://www.data.go.kr/data/15050729/fileData.do) | 대한적십자사 혈액관리본부 | 전국 헌혈의 집 정보, 혈액 통계 등 헌혈·혈액 관련 공공데이터. | API Key(serviceKey) | free | ✅ |
+| [질병관리청 예방접종 정보 API](https://www.data.go.kr/data/15084296/openapi.do) | 질병관리청(KDCA) | 예방접종 대상 감염병 정보 및 국가예방접종 위탁의료기관 현황. | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
+### 재난·안전
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [재난안전데이터 공유플랫폼 Open API](https://www.safetydata.go.kr/) | 행정안전부 | 재난·안전 분야 데이터를 통합 제공하는 플랫폼 오픈 API. | API Key | free | ✅ |
+| [생활안전지도(SafeMap) Open API](https://www.safemap.go.kr/dvct/openAPI.do) | 행정안전부 | 치안·교통·재난 등 생활안전 공간정보 오픈 API. | API Key | free | ✅ |
+| [소방청 구급정보 서비스 API](https://www.data.go.kr/data/15099423/openapi.do) | 소방청 | 구급·구급통계, 출동 등 119 구급 정보 오픈 API. | API Key | free | ✅ |
+| [경찰청 치안·교통 Open API](https://www.data.go.kr/data/15148511/openapi.do) | 경찰청 | 교통 CCTV 영상, 안전Dream 실종자 정보, 범죄 통계 등 치안 오픈 API. | API Key | free | ✅ |
+| [한국승강기안전공단 승강기 정보 API](https://www.data.go.kr/data/15000476/openapi.do) | 한국승강기안전공단 | 건물별 승강기 목록·검사이력·사고/고장이력 등 승강기 안전 오픈 API. | API Key | free | ✅ |
+| [경찰청 실종경보정보 서비스 API](https://www.data.go.kr/data/3051810/openapi.do) | 경찰청 | 실종아동·치매환자 등 실종경보 발령 대상자 정보 조회. | API Key(serviceKey) | free | ✅ |
+| [기상청 지진정보 조회서비스 API](https://www.data.go.kr/data/15000420/openapi.do) | 기상청(KMA) | 국내외 지진 발생 정보(규모·진앙·발생시각) 및 지진해일 정보 조회. | API Key(serviceKey) | free | ✅ |
+| [행정안전부 무더위쉼터 Open API](https://www.data.go.kr/data/15138456/openapi.do) | 행정안전부 | 전국 무더위쉼터(경로당·복지관 등) 위치·운영 정보. | API Key(serviceKey) | free | ✅ |
+| [행정안전부 민방위대피시설 조회서비스 API](https://www.data.go.kr/data/15155067/openapi.do) | 행정안전부 | 전국 민방위 대피시설(지하 대피소 등) 위치·수용규모 조회. | API Key(serviceKey) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -319,20 +339,6 @@
 | [영상물등급위원회 등급분류정보 API](https://www.data.go.kr/data/15127675/openapi.do) | 영상물등급위원회 | 비디오물 등급분류 정보(제명·감독·관람등급·내용정보) 오픈 API. | API Key | free | ✅ |
 | [한국저작권위원회 공유마당 API](https://gongu.copyright.or.kr/gongu/useReqst/apiKey/info.do?menuNo=200245) | 한국저작권위원회 | CCL/만료저작물 등 자유이용 저작물(사진·음악·미술·어문 등) 검색 오픈 API. | API Key | free | ✅ |
 | [국립국악원 국악 디지털음원 API](https://www.data.go.kr/data/15097515/openapi.do) | 문화체육관광부 국립국악원 | 국악 디지털 음원·아카이브(음향·영상·이미지) 정보 오픈 API. | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 재난·안전
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [재난안전데이터 공유플랫폼 Open API](https://www.safetydata.go.kr/) | 행정안전부 | 재난·안전 분야 데이터를 통합 제공하는 플랫폼 오픈 API. | API Key | free | ✅ |
-| [생활안전지도(SafeMap) Open API](https://www.safemap.go.kr/dvct/openAPI.do) | 행정안전부 | 치안·교통·재난 등 생활안전 공간정보 오픈 API. | API Key | free | ✅ |
-| [소방청 구급정보 서비스 API](https://www.data.go.kr/data/15099423/openapi.do) | 소방청 | 구급·구급통계, 출동 등 119 구급 정보 오픈 API. | API Key | free | ✅ |
-| [경찰청 치안·교통 Open API](https://www.data.go.kr/data/15148511/openapi.do) | 경찰청 | 교통 CCTV 영상, 안전Dream 실종자 정보, 범죄 통계 등 치안 오픈 API. | API Key | free | ✅ |
-| [한국승강기안전공단 승강기 정보 API](https://www.data.go.kr/data/15000476/openapi.do) | 한국승강기안전공단 | 건물별 승강기 목록·검사이력·사고/고장이력 등 승강기 안전 오픈 API. | API Key | free | ✅ |
-| [경찰청 실종경보정보 서비스 API](https://www.data.go.kr/data/3051810/openapi.do) | 경찰청 | 실종아동·치매환자 등 실종경보 발령 대상자 정보 조회. | API Key(serviceKey) | free | ✅ |
-| [기상청 지진정보 조회서비스 API](https://www.data.go.kr/data/15000420/openapi.do) | 기상청(KMA) | 국내외 지진 발생 정보(규모·진앙·발생시각) 및 지진해일 정보 조회. | API Key(serviceKey) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -623,3 +629,4 @@
 - 주제 점검(의약품·위생/유해성분)에서 의약품(e약은요·DUR)·식품안전은 충분했으나 '생활화학제품 유해성분/회수' 간판이 비어 초록누리 OpenAPI 추가. 식품·의약품 회수·판매중단은 기존 식품안전나라 API에 포함.
 - 주제 점검(금융·엔터): 금융은 충실했으나 '금융상품 비교(예적금/대출/연금 금리)' 간판이 비어 금융감독원 금융상품한눈에 API 추가. 엔터는 공공(영화/공연/게임/등급위 등)은 충실하나 민간 음원·웹툰·OTT·티켓예매·프로스포츠는 공식 공개 API가 부재하여 미수록(카탈로그 공백이 아닌 실제 부재).
 - 특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시).
+- 특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.
