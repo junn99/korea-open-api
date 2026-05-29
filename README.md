@@ -2,20 +2,20 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-214-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-217-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.7.0**
-- 큐레이션 API: **214** · 분야: **37** · 요금: free **186** / free-tier **28** · 회원가입·승인 필요: **210**
+- 최종 갱신: **2026-05-29** · 버전: **0.8.0**
+- 큐레이션 API: **217** · 분야: **37** · 요금: free **189** / free-tier **28** · 회원가입·승인 필요: **213**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
 
 - [분야별 분포](#분야별-분포)
 - **분야별 API 목록**
+  - [🏛 공공·행정](#공공행정) (20)
   - [🚍 교통](#교통) (19)
-  - [🏛 공공·행정](#공공행정) (18)
   - [💵 금융](#금융) (17)
   - [🎓 교육·학술](#교육학술) (15)
   - [🎭 문화·관광·체육](#문화관광체육) (13)
@@ -27,13 +27,13 @@
   - [🏥 보건·식품](#보건식품) (7)
   - [🏘 부동산](#부동산) (6)
   - [💳 결제·핀테크](#결제핀테크) (5)
+  - [🏪 상권·창업](#상권창업) (5)
   - [⚡ 에너지](#에너지) (5)
   - [🚨 재난·안전](#재난안전) (5)
   - [💼 채용·고용](#채용고용) (5)
   - [📨 커뮤니케이션](#커뮤니케이션) (5)
   - [🔬 과학기술·특허](#과학기술특허) (4)
   - [📦 물류·배송](#물류배송) (4)
-  - [🏪 상권·창업](#상권창업) (4)
   - [🤖 인공지능](#인공지능) (4)
   - [🔎 검색](#검색) (3)
   - [🔗 블록체인·암호화폐](#블록체인암호화폐) (3)
@@ -58,8 +58,8 @@
 
 | 분야 | 개수 |
 |------|------:|
+| 🏛 [공공·행정](#공공행정) | 20 |
 | 🚍 [교통](#교통) | 19 |
-| 🏛 [공공·행정](#공공행정) | 18 |
 | 💵 [금융](#금융) | 17 |
 | 🎓 [교육·학술](#교육학술) | 15 |
 | 🎭 [문화·관광·체육](#문화관광체육) | 13 |
@@ -71,13 +71,13 @@
 | 🏥 [보건·식품](#보건식품) | 7 |
 | 🏘 [부동산](#부동산) | 6 |
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
+| 🏪 [상권·창업](#상권창업) | 5 |
 | ⚡ [에너지](#에너지) | 5 |
 | 🚨 [재난·안전](#재난안전) | 5 |
 | 💼 [채용·고용](#채용고용) | 5 |
 | 📨 [커뮤니케이션](#커뮤니케이션) | 5 |
 | 🔬 [과학기술·특허](#과학기술특허) | 4 |
 | 📦 [물류·배송](#물류배송) | 4 |
-| 🏪 [상권·창업](#상권창업) | 4 |
 | 🤖 [인공지능](#인공지능) | 4 |
 | 🔎 [검색](#검색) | 3 |
 | 🔗 [블록체인·암호화폐](#블록체인암호화폐) | 3 |
@@ -95,9 +95,36 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **214** |
+| **합계** | **217** |
 
 ## 분야별 API 목록
+
+### 공공·행정
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [공공데이터포털 (Public Data Portal)](https://www.data.go.kr) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | ✅ |
+| [공공데이터포털 목록조회서비스](https://www.data.go.kr/data/15077093/openapi.do) | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | ✅ |
+| [정부24 OpenAPI](https://www.gov.kr/openapi) | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | ✅ |
+| [서울 열린데이터광장](https://data.seoul.go.kr) | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | ✅ |
+| [국세청 사업자등록정보 진위확인·상태조회 API](https://www.data.go.kr/data/15081808/openapi.do) | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | ✅ |
+| [경기데이터드림 Open API](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | ✅ |
+| [조달청 나라장터 입찰공고·낙찰 정보 API](https://www.data.go.kr/data/15129394/openapi.do) | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | ✅ |
+| [중앙선거관리위원회 선거정보 API](https://www.data.go.kr/data/15000900/openapi.do) | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | ✅ |
+| [병무청 오픈 API](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | ✅ |
+| [통일부 북한정보포털 통합검색 API](https://www.data.go.kr/data/15079225/openapi.do) | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | ✅ |
+| [행정표준코드 법정동코드 API](https://www.data.go.kr/data/15077871/openapi.do) | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | ✅ |
+| [지방재정365 재정정보 API](https://www.data.go.kr/data/15058102/openapi.do) | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | ✅ |
+| [행정안전부 주민등록 인구·세대현황 API](https://www.data.go.kr/data/15108065/openapi.do) | 행정안전부 | 행정동/법정동/도로명별 주민등록 인구·세대수·연령·남녀 통계 오픈 API. | API Key | free | ✅ |
+| [국가보훈부 현충시설·독립유공자 Open API](https://www.mpva.go.kr/mpva/contents.do?key=17) | 국가보훈부 | 현충시설, 국외사적지, 독립유공자 공훈록 등 보훈 정보 오픈 API. | API Key | free | ✅ |
+| [국민연금공단 가입 사업장 내역 API](https://www.data.go.kr/data/3046071/openapi.do) | 국민연금공단 | 국민연금 가입 사업장 정보·기간별 현황 등 연금 오픈 API. | API Key | free | ✅ |
+| [ALIO 공공기관 경영정보 Open API](https://opendata.alio.go.kr/public_inst/list) | 기획재정부(공공기관 경영정보 공개시스템) | 공공기관 임직원·재무·복리후생 등 경영정보(알리오) 오픈 API. | API Key | free | ✅ |
+| [제주데이터허브 Open API](https://www.jejudatahub.net/) | 제주특별자치도 | 제주 지역 관광·교통·환경·생활 등 데이터를 제공하는 지자체 데이터 포털. | API Key | free | ✅ |
+| [비즈노 API](https://bizno.net/openapi) | 비즈노 | 사업자등록번호·상호로 사업자정보 조회 | API Key | free-tier | ✅ |
+| [전국공중화장실 표준데이터 Open API](https://www.data.go.kr/data/15012892/standard.do) | 행정안전부 | 전국 공중화장실 위치(좌표)·남녀/장애인/어린이 칸 수·개방시간·비상벨 등 표준 항목. | API Key(serviceKey) | free | ✅ |
+| [전국공공시설개방정보 표준데이터 Open API](https://www.data.go.kr/data/15013117/standard.do) | 행정안전부 | 주민센터·체육관 등 공공시설 개방(대관) 정보 표준 항목(시설명·주소·개방시간·예약). | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
 
 ### 교통
 
@@ -122,31 +149,6 @@
 | [카카오모빌리티 API](https://developers.kakaomobility.com/product/api) | 카카오모빌리티 | 길찾기 등 모빌리티 개발 API | API Key | free-tier | ✅ |
 | [현대자동차 Developers](https://developers.hyundai.com/) | 현대자동차 | 차량 제원·운행·주행거리·운전습관 | OAuth | free | ✅ |
 | [기아 Developers](https://developers.kia.com/) | 기아 | KIA Connect 차량 데이터 | OAuth | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 공공·행정
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [공공데이터포털 (Public Data Portal)](https://www.data.go.kr) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | ✅ |
-| [공공데이터포털 목록조회서비스](https://www.data.go.kr/data/15077093/openapi.do) | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | ✅ |
-| [정부24 OpenAPI](https://www.gov.kr/openapi) | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | ✅ |
-| [서울 열린데이터광장](https://data.seoul.go.kr) | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | ✅ |
-| [국세청 사업자등록정보 진위확인·상태조회 API](https://www.data.go.kr/data/15081808/openapi.do) | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | ✅ |
-| [경기데이터드림 Open API](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | ✅ |
-| [조달청 나라장터 입찰공고·낙찰 정보 API](https://www.data.go.kr/data/15129394/openapi.do) | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | ✅ |
-| [중앙선거관리위원회 선거정보 API](https://www.data.go.kr/data/15000900/openapi.do) | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | ✅ |
-| [병무청 오픈 API](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | ✅ |
-| [통일부 북한정보포털 통합검색 API](https://www.data.go.kr/data/15079225/openapi.do) | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | ✅ |
-| [행정표준코드 법정동코드 API](https://www.data.go.kr/data/15077871/openapi.do) | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | ✅ |
-| [지방재정365 재정정보 API](https://www.data.go.kr/data/15058102/openapi.do) | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | ✅ |
-| [행정안전부 주민등록 인구·세대현황 API](https://www.data.go.kr/data/15108065/openapi.do) | 행정안전부 | 행정동/법정동/도로명별 주민등록 인구·세대수·연령·남녀 통계 오픈 API. | API Key | free | ✅ |
-| [국가보훈부 현충시설·독립유공자 Open API](https://www.mpva.go.kr/mpva/contents.do?key=17) | 국가보훈부 | 현충시설, 국외사적지, 독립유공자 공훈록 등 보훈 정보 오픈 API. | API Key | free | ✅ |
-| [국민연금공단 가입 사업장 내역 API](https://www.data.go.kr/data/3046071/openapi.do) | 국민연금공단 | 국민연금 가입 사업장 정보·기간별 현황 등 연금 오픈 API. | API Key | free | ✅ |
-| [ALIO 공공기관 경영정보 Open API](https://opendata.alio.go.kr/public_inst/list) | 기획재정부(공공기관 경영정보 공개시스템) | 공공기관 임직원·재무·복리후생 등 경영정보(알리오) 오픈 API. | API Key | free | ✅ |
-| [제주데이터허브 Open API](https://www.jejudatahub.net/) | 제주특별자치도 | 제주 지역 관광·교통·환경·생활 등 데이터를 제공하는 지자체 데이터 포털. | API Key | free | ✅ |
-| [비즈노 API](https://bizno.net/openapi) | 비즈노 | 사업자등록번호·상호로 사업자정보 조회 | API Key | free-tier | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -341,6 +343,18 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 상권·창업
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [소상공인시장진흥공단 상가(상권)정보 API](https://www.data.go.kr/data/15012005/openapi.do) | 소상공인시장진흥공단 | 전국 상가업소 상호·업종·좌표 등 상권정보 오픈 API. | API Key | free | ✅ |
+| [K-Startup 창업지원 정보 API](https://www.data.go.kr/data/15125364/openapi.do) | 창업진흥원 / 중소벤처기업부 | 창업지원 사업공고, 사업소개, 콘텐츠 등 창업 오픈 API. | API Key | free | ✅ |
+| [공정거래위원회 가맹사업(프랜차이즈) 정보 API](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=API&keyword=가맹사업) | 공정거래위원회 | 브랜드별 가맹점·직영점 수, 매출액, 계약현황 등 프랜차이즈 정보 오픈 API. | API Key | free | ✅ |
+| [기업마당(Bizinfo) 정부지원사업 API](https://www.bizinfo.go.kr/web/lay1/program/S1T175C174/apiList.do) | 중소벤처기업부 | 중앙부처·지자체·유관기관 중소기업 지원사업 공고·정책정보 오픈 API. | API Key | free | ✅ |
+| [지방행정인허가데이터개방(LOCALDATA) Open API](https://www.localdata.go.kr/devcenter/apiGuide.do?menuNo=20002) | 행정안전부 / 한국지역정보개발원 | 일반·휴게음식점 등 전국 인허가 업소(약 20만+) 정보. 그룹/업종별 전체·변동분 오픈API. | API Key(인증키) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 에너지
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -408,17 +422,6 @@
 | [한진택배 배송조회](https://developers.hanjin.com/guides) | 한진택배 | 한진택배 배송추적 서비스 | 없음 | free | — |
 | [로지스팟 물류 Open API](https://logi-spot.com/) | 로지스팟 | 통합 물류관리(운송배차·차량·정산) | API Key | free-tier | ✅ |
 | [KOMSA MTIS Open API](https://mtisopenapi.komsa.or.kr/) | 한국해양교통안전공단 | 연안여객선 운항·통계·제원·안전 정보 | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 상권·창업
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [소상공인시장진흥공단 상가(상권)정보 API](https://www.data.go.kr/data/15012005/openapi.do) | 소상공인시장진흥공단 | 전국 상가업소 상호·업종·좌표 등 상권정보 오픈 API. | API Key | free | ✅ |
-| [K-Startup 창업지원 정보 API](https://www.data.go.kr/data/15125364/openapi.do) | 창업진흥원 / 중소벤처기업부 | 창업지원 사업공고, 사업소개, 콘텐츠 등 창업 오픈 API. | API Key | free | ✅ |
-| [공정거래위원회 가맹사업(프랜차이즈) 정보 API](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=API&keyword=가맹사업) | 공정거래위원회 | 브랜드별 가맹점·직영점 수, 매출액, 계약현황 등 프랜차이즈 정보 오픈 API. | API Key | free | ✅ |
-| [기업마당(Bizinfo) 정부지원사업 API](https://www.bizinfo.go.kr/web/lay1/program/S1T175C174/apiList.do) | 중소벤처기업부 | 중앙부처·지자체·유관기관 중소기업 지원사업 공고·정책정보 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -610,3 +613,4 @@
 - 시점 스냅샷(2026-05) — 신규 추가/폐기로 시간이 지나면 낡음. 일부 항목은 폐기·대체 안내가 있어 note에 표기.
 - 일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'.
 - GitHub 모음 2차 교차검증(dl0312/open-apis-korea, 711행): 신규+생존+무료+한국제공은 3건(카카오내비·카카오톡채널·네이버캡차)뿐. 나머지는 해외 API(범위 밖)·기보유·폐기(카카오 비전/번역/음성 2022종료, 카카오스토리 2023종료, 네이버 me2.do 2024종료). 즉 공개 모음들은 상당수 폐기 항목을 포함하므로 그대로 신뢰 불가.
+- 주제별 커버리지 점검(노래/화장실/공공장소/식당) 중 큐레이션 본문에 화장실·식당 '간판'이 비어 있던 공백을 보완: 전국공중화장실 표준데이터, LOCALDATA(음식점 인허가), 전국공공시설개방정보 표준데이터 추가. data.go.kr 전수(부록 A)에는 이미 다수 존재했으나 대표 API를 본문으로 끌어올림.
