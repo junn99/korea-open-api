@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-29",
-    "version": "0.12.0",
+    "version": "0.13.0",
     "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완. 추가로 dl0312/open-apis-korea 교차검증(폐기 항목 배제, 생존분만 반영).",
     "limitations": [
       "이 카탈로그는 두 층위: (1) 전 분야 대표 무료 API 큐레이션(README 본문), (2) data.go.kr 오픈 API 전수 12,073건(부록 A, data/datago_apis.json).",
@@ -17,7 +17,8 @@
       "주제 점검(금융·엔터): 금융은 충실했으나 '금융상품 비교(예적금/대출/연금 금리)' 간판이 비어 금융감독원 금융상품한눈에 API 추가. 엔터는 공공(영화/공연/게임/등급위 등)은 충실하나 민간 음원·웹툰·OTT·티켓예매·프로스포츠는 공식 공개 API가 부재하여 미수록(카탈로그 공백이 아닌 실제 부재).",
       "특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시).",
       "특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.",
-      "특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시."
+      "특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.",
+      "K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능)."
     ],
     "source": "GitHub 교차검증(yybmion/public-apis-4Kr)"
   },
@@ -3255,6 +3256,76 @@
       "rate_limit": "승인 단위",
       "source": "특이 주제 공백 점검(사투리/방언)",
       "note": "호출형 REST API가 아니라 '다운로드형 데이터셋'(aihubshell 제공). 권역별 방언 발화 다수 공개. K-콘텐츠 음성합성·STT 학습에 핵심. 무료(가입·승인 필요)."
+    },
+    {
+      "name": "국가유산청 국가유산포털 Open API",
+      "provider": "국가유산청(구 문화재청)",
+      "category": "문화·관광·체육",
+      "description": "국보·보물·사적·명승·천연기념물·궁궐·왕릉·세계유산 등 지정 국가유산 통합 정보(공간정보 포함).",
+      "docs_url": "https://www.khs.go.kr/html/HtmlPage.do?pg=/publicinfo/pbinfo3_0201.jsp&mn=NS_04_04_03",
+      "auth": "API Key 또는 키 불필요(서비스별 상이)",
+      "pricing": "free",
+      "signup_required": false,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "서비스별 상이",
+      "source": "K-문화 주제 공백 점검 — 분야 대표 간판",
+      "note": "국가유산포털(heritage.go.kr)/디지털서비스. 지정유산 검색·상세·이미지·공간정보(GIS). 천연기념물·궁궐·세계유산 등 다수 하위 분야를 통합 커버."
+    },
+    {
+      "name": "국립무형유산원 무형유산 정보 API",
+      "provider": "국가유산청 국립무형유산원",
+      "category": "문화·관광·체육",
+      "description": "국가무형문화재 현황, 전승 공방·공예품, 공연/전시/교육 디지털 기록 등 무형유산 정보.",
+      "docs_url": "https://www.data.go.kr/data/15028215/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-문화 주제 공백 점검(무형유산/장인)",
+      "note": "전수에서 URL 확인(15028215 외 공방 15094340·공예품 15094334 등 다수)."
+    },
+    {
+      "name": "한국문화정보원 전통문양 Open API",
+      "provider": "한국문화정보원 / 국가유산청 국립문화유산연구원",
+      "category": "문화·관광·체육",
+      "description": "한국 전통문양·단청 등 디자인 활용 가능한 문양 이미지·메타데이터.",
+      "docs_url": "https://www.data.go.kr/data/15015644/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-문화 주제 공백 점검(전통문양)",
+      "note": "전수에서 URL 확인(전통문양 15015644 / 디자인문양 15059313). 디자인·굿즈 제작 활용."
+    },
+    {
+      "name": "국립민속박물관 한국민속대백과/아카이브 API",
+      "provider": "문화체육관광부 국립민속박물관",
+      "category": "문화·관광·체육",
+      "description": "한국민속대백과사전(세시풍속·전통놀이·민간신앙 등) 및 민속 아카이브 사진·자료.",
+      "docs_url": "https://www.data.go.kr/data/15126343/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-문화 주제 공백 점검(전통놀이/세시풍속)",
+      "note": "전수에서 URL 확인(15126343). 세시풍속·민속놀이·향토문화 콘텐츠."
+    },
+    {
+      "name": "국립문화유산연구원 전통건축·전통재료 API",
+      "provider": "국가유산청 국립문화유산연구원",
+      "category": "문화·관광·체육",
+      "description": "향교·서원 등 전통건축 기록, 석탑 3D, 한지 등 문화유산 전통재료 정보.",
+      "docs_url": "https://www.data.go.kr/data/15015627/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-문화 주제 공백 점검(한옥/사찰/한지)",
+      "note": "전수에서 URL 확인(향교건축 15015627 / 전통재료 15028223 / 석탑3D 15015634)."
     }
   ]
 }

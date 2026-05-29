@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-231-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-236-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.12.0**
-- 큐레이션 API: **231** · 분야: **37** · 요금: free **203** / free-tier **28** · 회원가입·승인 필요: **227**
+- 최종 갱신: **2026-05-29** · 버전: **0.13.0**
+- 큐레이션 API: **236** · 분야: **37** · 요금: free **208** / free-tier **28** · 회원가입·승인 필요: **231**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -16,9 +16,9 @@
 - **분야별 API 목록**
   - [🏛 공공·행정](#공공행정) (22)
   - [🚍 교통](#교통) (19)
+  - [🎭 문화·관광·체육](#문화관광체육) (19)
   - [💵 금융](#금융) (18)
   - [🎓 교육·학술](#교육학술) (15)
-  - [🎭 문화·관광·체육](#문화관광체육) (14)
   - [☀️ 날씨·환경](#날씨환경) (13)
   - [💬 생활·소셜](#생활소셜) (13)
   - [🌾 농축수산](#농축수산) (10)
@@ -60,9 +60,9 @@
 |------|------:|
 | 🏛 [공공·행정](#공공행정) | 22 |
 | 🚍 [교통](#교통) | 19 |
+| 🎭 [문화·관광·체육](#문화관광체육) | 19 |
 | 💵 [금융](#금융) | 18 |
 | 🎓 [교육·학술](#교육학술) | 15 |
-| 🎭 [문화·관광·체육](#문화관광체육) | 14 |
 | ☀️ [날씨·환경](#날씨환경) | 13 |
 | 💬 [생활·소셜](#생활소셜) | 13 |
 | 🌾 [농축수산](#농축수산) | 10 |
@@ -95,7 +95,7 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **231** |
+| **합계** | **236** |
 
 ## 분야별 API 목록
 
@@ -154,6 +154,32 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 문화·관광·체육
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [한국관광공사 TourAPI](https://api.visitkorea.or.kr/) | 한국관광공사 | 관광지·숙박·축제·문화시설·여행코스·이미지 등 관광 콘텐츠 오픈 API(15종, 약 26만 건). | API Key | free | ✅ |
+| [공연예술통합전산망(KOPIS) Open API](https://www.kopis.or.kr/por/cs/openapi/openApiList.do) | 예술경영지원센터 | 공연 목록·상세·예매상황 등 공연예술 통계/정보 오픈 API. | API Key | free | ✅ |
+| [문화공공데이터광장(문화포털) Open API](https://www.culture.go.kr/data/) | 한국문화정보원 | 문화·예술·관광·도서 등 문화 분야 공공데이터 오픈 API. | API Key | free | ✅ |
+| [고캠핑(GoCamping) 캠핑장 정보 API](https://www.data.go.kr/data/15101933/openapi.do) | 한국관광공사 | 전국 등록 야영장(캠핑장) 위치·시설·안전정보 등 오픈 API. | API Key | free | ✅ |
+| [해양수산부 해수욕장정보 서비스 API](https://www.data.go.kr/data/15058519/openapi.do) | 해양수산부 | 전국 해수욕장 위치·제원·비상연락처·이미지 등 오픈 API. | API Key | free | ✅ |
+| [산림청 산·등산로·식물 정보 API](https://www.data.go.kr/data/15058682/openapi.do) | 산림청 | 전국 산 정보, 등산로, 숲에 사는 식물, 수목 이미지 등 산림 오픈 API. | API Key | free | ✅ |
+| [국립중앙박물관 e뮤지엄 유물정보 API](https://www.data.go.kr/data/15104964/openapi.do) | 문화체육관광부 / 국립중앙박물관 | 전국 박물관 소장품(유물) 명칭·시대·재질·이미지 등 통합검색 오픈 API. | API Key | free | ✅ |
+| [국민체육진흥공단 공공체육시설 정보 API](https://www.data.go.kr/data/15107764/openapi.do) | 서울올림픽기념국민체육진흥공단 | 전국 공공체육시설 위치·규모·운영상태 등 체육시설 오픈 API. | API Key | free | ✅ |
+| [한국관광공사 두루누비(코리아둘레길) 정보 API](https://www.data.go.kr/data/15101974/openapi.do) | 한국관광공사 | 코리아둘레길 284개 코스 GPX·걷기여행길·자전거길 정보 오픈 API. | API Key | free | ✅ |
+| [한국마사회 경마경주정보 API](https://www.data.go.kr/data/15063951/openapi.do) | 한국마사회 | 경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API. | API Key | free | ✅ |
+| [국가유산청 문화재 공간정보(GIS) API](https://www.data.go.kr/data/3070426/openapi.do) | 국가유산청 | 문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API. | API Key | free | ✅ |
+| [문화체육관광부 공연정보(통합) API](https://www.data.go.kr/data/15121487/openapi.do) | 문화체육관광부 | 예술의전당·국립극장 등 10개 기관 공연/전시 정보 통합 오픈 API. | API Key | free | ✅ |
+| [국립현대미술관 미술작품 정보 API](https://www.data.go.kr/dataset/3059104/openapi.do) | 국립현대미술관(MMCA) | 소장 미술작품 명칭·작가·재질·이미지 등 정보 오픈 API. | API Key | free | ✅ |
+| [한국관광공사 무장애(배리어프리) 여행정보 API](https://www.data.go.kr/data/15101897/openapi.do) | 한국관광공사 | 장애인·고령자 등 이동약자를 위한 무장애 관광지·편의시설 정보. | API Key(serviceKey) | free | ✅ |
+| [국가유산청 국가유산포털 Open API](https://www.khs.go.kr/html/HtmlPage.do?pg=/publicinfo/pbinfo3_0201.jsp&mn=NS_04_04_03) | 국가유산청(구 문화재청) | 국보·보물·사적·명승·천연기념물·궁궐·왕릉·세계유산 등 지정 국가유산 통합 정보(공간정보 포함). | API Key 또는 키 불필요(서비스별 상이) | free | — |
+| [국립무형유산원 무형유산 정보 API](https://www.data.go.kr/data/15028215/openapi.do) | 국가유산청 국립무형유산원 | 국가무형문화재 현황, 전승 공방·공예품, 공연/전시/교육 디지털 기록 등 무형유산 정보. | API Key(serviceKey) | free | ✅ |
+| [한국문화정보원 전통문양 Open API](https://www.data.go.kr/data/15015644/openapi.do) | 한국문화정보원 / 국가유산청 국립문화유산연구원 | 한국 전통문양·단청 등 디자인 활용 가능한 문양 이미지·메타데이터. | API Key(serviceKey) | free | ✅ |
+| [국립민속박물관 한국민속대백과/아카이브 API](https://www.data.go.kr/data/15126343/openapi.do) | 문화체육관광부 국립민속박물관 | 한국민속대백과사전(세시풍속·전통놀이·민간신앙 등) 및 민속 아카이브 사진·자료. | API Key(serviceKey) | free | ✅ |
+| [국립문화유산연구원 전통건축·전통재료 API](https://www.data.go.kr/data/15015627/openapi.do) | 국가유산청 국립문화유산연구원 | 향교·서원 등 전통건축 기록, 석탑 3D, 한지 등 문화유산 전통재료 정보. | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 금융
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -198,27 +224,6 @@
 | [국회도서관 Open API](https://www.nanet.go.kr/usermadang/etc/openApiView.do) | 국회도서관 | 국회전자도서관 소장자료·국가학술정보 검색 오픈 API. | API Key | free | ✅ |
 | [국가정책연구포털(NKIS) Open API](https://www.nkis.re.kr/openSvcList.do) | 경제·인문사회연구회 | 국책연구기관 정책연구보고서 등 정책연구 정보 오픈 API. | API Key | free | ✅ |
 | [클래스101 Business API](https://docs.class101.net/) | 클래스101 | 클래스 관리·수강신청·진도율·SSO | Bearer Token | free-tier | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 문화·관광·체육
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [한국관광공사 TourAPI](https://api.visitkorea.or.kr/) | 한국관광공사 | 관광지·숙박·축제·문화시설·여행코스·이미지 등 관광 콘텐츠 오픈 API(15종, 약 26만 건). | API Key | free | ✅ |
-| [공연예술통합전산망(KOPIS) Open API](https://www.kopis.or.kr/por/cs/openapi/openApiList.do) | 예술경영지원센터 | 공연 목록·상세·예매상황 등 공연예술 통계/정보 오픈 API. | API Key | free | ✅ |
-| [문화공공데이터광장(문화포털) Open API](https://www.culture.go.kr/data/) | 한국문화정보원 | 문화·예술·관광·도서 등 문화 분야 공공데이터 오픈 API. | API Key | free | ✅ |
-| [고캠핑(GoCamping) 캠핑장 정보 API](https://www.data.go.kr/data/15101933/openapi.do) | 한국관광공사 | 전국 등록 야영장(캠핑장) 위치·시설·안전정보 등 오픈 API. | API Key | free | ✅ |
-| [해양수산부 해수욕장정보 서비스 API](https://www.data.go.kr/data/15058519/openapi.do) | 해양수산부 | 전국 해수욕장 위치·제원·비상연락처·이미지 등 오픈 API. | API Key | free | ✅ |
-| [산림청 산·등산로·식물 정보 API](https://www.data.go.kr/data/15058682/openapi.do) | 산림청 | 전국 산 정보, 등산로, 숲에 사는 식물, 수목 이미지 등 산림 오픈 API. | API Key | free | ✅ |
-| [국립중앙박물관 e뮤지엄 유물정보 API](https://www.data.go.kr/data/15104964/openapi.do) | 문화체육관광부 / 국립중앙박물관 | 전국 박물관 소장품(유물) 명칭·시대·재질·이미지 등 통합검색 오픈 API. | API Key | free | ✅ |
-| [국민체육진흥공단 공공체육시설 정보 API](https://www.data.go.kr/data/15107764/openapi.do) | 서울올림픽기념국민체육진흥공단 | 전국 공공체육시설 위치·규모·운영상태 등 체육시설 오픈 API. | API Key | free | ✅ |
-| [한국관광공사 두루누비(코리아둘레길) 정보 API](https://www.data.go.kr/data/15101974/openapi.do) | 한국관광공사 | 코리아둘레길 284개 코스 GPX·걷기여행길·자전거길 정보 오픈 API. | API Key | free | ✅ |
-| [한국마사회 경마경주정보 API](https://www.data.go.kr/data/15063951/openapi.do) | 한국마사회 | 경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API. | API Key | free | ✅ |
-| [국가유산청 문화재 공간정보(GIS) API](https://www.data.go.kr/data/3070426/openapi.do) | 국가유산청 | 문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API. | API Key | free | ✅ |
-| [문화체육관광부 공연정보(통합) API](https://www.data.go.kr/data/15121487/openapi.do) | 문화체육관광부 | 예술의전당·국립극장 등 10개 기관 공연/전시 정보 통합 오픈 API. | API Key | free | ✅ |
-| [국립현대미술관 미술작품 정보 API](https://www.data.go.kr/dataset/3059104/openapi.do) | 국립현대미술관(MMCA) | 소장 미술작품 명칭·작가·재질·이미지 등 정보 오픈 API. | API Key | free | ✅ |
-| [한국관광공사 무장애(배리어프리) 여행정보 API](https://www.data.go.kr/data/15101897/openapi.do) | 한국관광공사 | 장애인·고령자 등 이동약자를 위한 무장애 관광지·편의시설 정보. | API Key(serviceKey) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -633,3 +638,4 @@
 - 특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시).
 - 특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.
 - 특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.
+- K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능).
