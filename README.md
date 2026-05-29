@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-211-blue) ![Categories](https://img.shields.io/badge/분야-35-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-214-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.6.0**
-- 큐레이션 API: **211** · 분야: **35** · 요금: free **183** / free-tier **28** · 회원가입·승인 필요: **207**
+- 최종 갱신: **2026-05-29** · 버전: **0.7.0**
+- 큐레이션 API: **214** · 분야: **37** · 요금: free **186** / free-tier **28** · 회원가입·승인 필요: **210**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -22,9 +22,9 @@
   - [💬 생활·소셜](#생활소셜) (13)
   - [☀️ 날씨·환경](#날씨환경) (12)
   - [🌾 농축수산](#농축수산) (10)
+  - [🗺 지도·위치](#지도위치) (8)
   - [📺 콘텐츠·미디어](#콘텐츠미디어) (8)
   - [🏥 보건·식품](#보건식품) (7)
-  - [🗺 지도·위치](#지도위치) (7)
   - [🏘 부동산](#부동산) (6)
   - [💳 결제·핀테크](#결제핀테크) (5)
   - [⚡ 에너지](#에너지) (5)
@@ -44,7 +44,9 @@
   - [⚖️ 법령·사법](#법령사법) (2)
   - [📖 언어·사전](#언어사전) (2)
   - [📡 통신·인터넷](#통신인터넷) (2)
+  - [• 검색·생활](#검색생활) (1)
   - [📊 과학·통계](#과학통계) (1)
+  - [• 기타](#기타) (1)
   - [🏭 산업·고용](#산업고용) (1)
   - [🛍 쇼핑](#쇼핑) (1)
   - [☁️ 클라우드](#클라우드) (1)
@@ -64,9 +66,9 @@
 | 💬 [생활·소셜](#생활소셜) | 13 |
 | ☀️ [날씨·환경](#날씨환경) | 12 |
 | 🌾 [농축수산](#농축수산) | 10 |
+| 🗺 [지도·위치](#지도위치) | 8 |
 | 📺 [콘텐츠·미디어](#콘텐츠미디어) | 8 |
 | 🏥 [보건·식품](#보건식품) | 7 |
-| 🗺 [지도·위치](#지도위치) | 7 |
 | 🏘 [부동산](#부동산) | 6 |
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
 | ⚡ [에너지](#에너지) | 5 |
@@ -86,12 +88,14 @@
 | ⚖️ [법령·사법](#법령사법) | 2 |
 | 📖 [언어·사전](#언어사전) | 2 |
 | 📡 [통신·인터넷](#통신인터넷) | 2 |
+| • [검색·생활](#검색생활) | 1 |
 | 📊 [과학·통계](#과학통계) | 1 |
+| • [기타](#기타) | 1 |
 | 🏭 [산업·고용](#산업고용) | 1 |
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **211** |
+| **합계** | **214** |
 
 ## 분야별 API 목록
 
@@ -268,6 +272,21 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 지도·위치
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [SGIS 통계지리정보서비스](https://sgis.kostat.go.kr/developer/) | 통계청 | 통계 기반 지리정보(인구·사업체·경계 등) 오픈 API. | API Key | free | ✅ |
+| [VWorld(브이월드) 오픈 API](https://www.vworld.kr/dev/v4api.do) | 국토교통부 / 국토지리정보원 | 2D/3D 지도, 배경지도, 공간정보(WMS/WFS), 지오코더 등 공간정보 오픈 API. | API Key | free | ✅ |
+| [카카오맵 / 로컬 API](https://developers.kakao.com/docs/latest/ko/local/dev-guide) | 카카오 | 지도 표시, 장소 검색, 주소-좌표 변환(지오코딩) 등. | API Key(REST/JavaScript) | free | ✅ |
+| [네이버 지도(Maps) API](https://www.ncloud.com/product/applicationService/maps) | 네이버클라우드플랫폼(NCP) | 지도, 길찾기(Directions), 지오코딩 등. | API Key(Client ID/Secret) | free-tier | ✅ |
+| [도로명주소 API](https://business.juso.go.kr/addrlink/openApi/apiExprn.do) | 행정안전부 | 도로명주소 검색, 영문주소, 좌표제공 등 주소 오픈 API. | API Key | free | ✅ |
+| [국토교통부 연속지적도·토지특성 정보 API](https://www.data.go.kr/data/15057558/openapi.do) | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | ✅ |
+| [한국국토정보공사(LX) LX맵 서비스 API](https://www.data.go.kr/data/15020966/openapi.do) | 한국국토정보공사(LX) | 국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API. | API Key | free | ✅ |
+| [카카오내비 API](https://developers.kakao.com/docs/latest/ko/kakaonavi/common) | 카카오 | 카카오내비 앱 연동 길 안내, 다중 경유지·다중 목적지 경로 탐색. | API Key(REST/SDK) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 콘텐츠·미디어
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -294,20 +313,6 @@
 | [국민건강보험공단 검진기관 정보 API](https://www.data.go.kr/data/15001672/openapi.do) | 국민건강보험공단 | 건강검진기관 위치·검진종류 등 정보 오픈 API. | API Key | free | ✅ |
 | [식약처 의약품개요정보(e약은요) API](https://www.data.go.kr/data/15075057/openapi.do) | 식품의약품안전처 | 일반·전문 의약품의 효능·용법·주의사항·상호작용 등 개요 정보 오픈 API. | API Key | free | ✅ |
 | [식약처 의약품안전사용서비스(DUR) API](https://www.data.go.kr/data/15059486/openapi.do) | 식품의약품안전처 | 병용금기, 연령·임부 금기, 중복효능 등 의약품 안전사용(DUR) 오픈 API. | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 지도·위치
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [SGIS 통계지리정보서비스](https://sgis.kostat.go.kr/developer/) | 통계청 | 통계 기반 지리정보(인구·사업체·경계 등) 오픈 API. | API Key | free | ✅ |
-| [VWorld(브이월드) 오픈 API](https://www.vworld.kr/dev/v4api.do) | 국토교통부 / 국토지리정보원 | 2D/3D 지도, 배경지도, 공간정보(WMS/WFS), 지오코더 등 공간정보 오픈 API. | API Key | free | ✅ |
-| [카카오맵 / 로컬 API](https://developers.kakao.com/docs/latest/ko/local/dev-guide) | 카카오 | 지도 표시, 장소 검색, 주소-좌표 변환(지오코딩) 등. | API Key(REST/JavaScript) | free | ✅ |
-| [네이버 지도(Maps) API](https://www.ncloud.com/product/applicationService/maps) | 네이버클라우드플랫폼(NCP) | 지도, 길찾기(Directions), 지오코딩 등. | API Key(Client ID/Secret) | free-tier | ✅ |
-| [도로명주소 API](https://business.juso.go.kr/addrlink/openApi/apiExprn.do) | 행정안전부 | 도로명주소 검색, 영문주소, 좌표제공 등 주소 오픈 API. | API Key | free | ✅ |
-| [국토교통부 연속지적도·토지특성 정보 API](https://www.data.go.kr/data/15057558/openapi.do) | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | ✅ |
-| [한국국토정보공사(LX) LX맵 서비스 API](https://www.data.go.kr/data/15020966/openapi.do) | 한국국토정보공사(LX) | 국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -511,11 +516,27 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 검색·생활
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [카카오톡 채널 API](https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common) | 카카오 | 카카오톡 채널 추가/친구 관계 조회, 채널 기반 메시지·소셜 연동. | OAuth/API Key | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 과학·통계
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
 |-----|----------|------|------|------|:----:|
 | [KOSIS 국가통계포털 공유서비스](https://kosis.kr/openapi/) | 통계청 | 국가통계 자료를 조회하는 오픈 API. | API Key | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
+### 기타
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [네이버 캡차(CAPTCHA) API](https://developers.naver.com/docs/utils/captcha/) | 네이버 | 자동입력 방지용 이미지/음성 보안문자 생성 및 입력값 검증. | API Key(Client ID/Secret) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -588,3 +609,4 @@
 - 민간(네이버·카카오·토스·업비트 등) 무료 API는 집계처가 없어 '전수'가 아니라 '대표 큐레이션'이다.
 - 시점 스냅샷(2026-05) — 신규 추가/폐기로 시간이 지나면 낡음. 일부 항목은 폐기·대체 안내가 있어 note에 표기.
 - 일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'.
+- GitHub 모음 2차 교차검증(dl0312/open-apis-korea, 711행): 신규+생존+무료+한국제공은 3건(카카오내비·카카오톡채널·네이버캡차)뿐. 나머지는 해외 API(범위 밖)·기보유·폐기(카카오 비전/번역/음성 2022종료, 카카오스토리 2023종료, 네이버 me2.do 2024종료). 즉 공개 모음들은 상당수 폐기 항목을 포함하므로 그대로 신뢰 불가.

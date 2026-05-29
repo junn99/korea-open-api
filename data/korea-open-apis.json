@@ -3,14 +3,15 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-29",
-    "version": "0.6.0",
-    "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완.",
+    "version": "0.7.0",
+    "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완. 추가로 dl0312/open-apis-korea 교차검증(폐기 항목 배제, 생존분만 반영).",
     "limitations": [
       "이 카탈로그는 두 층위: (1) 전 분야 대표 무료 API 큐레이션(README 본문), (2) data.go.kr 오픈 API 전수 12,073건(부록 A, data/datago_apis.json).",
       "data.go.kr 전수는 공식 목록조회 API(15077093)로 수집 완료 — 현재 활성(is_deleted=N) 항목만 포함, 2025~2026 등록분까지 반영. 재현 절차는 docs/ENUMERATION.md 참고.",
       "민간(네이버·카카오·토스·업비트 등) 무료 API는 집계처가 없어 '전수'가 아니라 '대표 큐레이션'이다.",
       "시점 스냅샷(2026-05) — 신규 추가/폐기로 시간이 지나면 낡음. 일부 항목은 폐기·대체 안내가 있어 note에 표기.",
-      "일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'."
+      "일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'.",
+      "GitHub 모음 2차 교차검증(dl0312/open-apis-korea, 711행): 신규+생존+무료+한국제공은 3건(카카오내비·카카오톡채널·네이버캡차)뿐. 나머지는 해외 API(범위 밖)·기보유·폐기(카카오 비전/번역/음성 2022종료, 카카오스토리 2023종료, 네이버 me2.do 2024종료). 즉 공개 모음들은 상당수 폐기 항목을 포함하므로 그대로 신뢰 불가."
     ],
     "source": "GitHub 교차검증(yybmion/public-apis-4Kr)"
   },
@@ -2968,6 +2969,48 @@
       "rate_limit": "(미확인)",
       "source": "GitHub: yybmion/public-apis-4Kr",
       "note": ""
+    },
+    {
+      "name": "카카오내비 API",
+      "provider": "카카오",
+      "category": "지도·위치",
+      "description": "카카오내비 앱 연동 길 안내, 다중 경유지·다중 목적지 경로 탐색.",
+      "docs_url": "https://developers.kakao.com/docs/latest/ko/kakaonavi/common",
+      "auth": "API Key(REST/SDK)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "쿼터 있음",
+      "source": "GitHub: dl0312/open-apis-korea (교차검증)",
+      "note": "공식 문서로 현행 제공 확인(2026-05). 카카오모빌리티 길찾기와는 별개 제품."
+    },
+    {
+      "name": "카카오톡 채널 API",
+      "provider": "카카오",
+      "category": "검색·생활",
+      "description": "카카오톡 채널 추가/친구 관계 조회, 채널 기반 메시지·소셜 연동.",
+      "docs_url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common",
+      "auth": "OAuth/API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "쿼터 있음",
+      "source": "GitHub: dl0312/open-apis-korea (교차검증)",
+      "note": "현행 제품으로 확인(2026-05). 카카오톡 메시지/소셜 API와 인접하나 채널 기능은 별도."
+    },
+    {
+      "name": "네이버 캡차(CAPTCHA) API",
+      "provider": "네이버",
+      "category": "기타",
+      "description": "자동입력 방지용 이미지/음성 보안문자 생성 및 입력값 검증.",
+      "docs_url": "https://developers.naver.com/docs/utils/captcha/",
+      "auth": "API Key(Client ID/Secret)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "일일 호출 한도",
+      "source": "GitHub: dl0312/open-apis-korea (교차검증)",
+      "note": "developers.naver.com 현행 제공 확인(2026-05). 단축URL(me2.do)은 2024-10 종료라 제외."
     }
   ]
 }
