@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-229-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-231-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.11.0**
-- 큐레이션 API: **229** · 분야: **37** · 요금: free **201** / free-tier **28** · 회원가입·승인 필요: **225**
+- 최종 갱신: **2026-05-29** · 버전: **0.12.0**
+- 큐레이션 API: **231** · 분야: **37** · 요금: free **203** / free-tier **28** · 회원가입·승인 필요: **227**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -30,19 +30,19 @@
   - [💳 결제·핀테크](#결제핀테크) (5)
   - [🏪 상권·창업](#상권창업) (5)
   - [⚡ 에너지](#에너지) (5)
+  - [🤖 인공지능](#인공지능) (5)
   - [💼 채용·고용](#채용고용) (5)
   - [📨 커뮤니케이션](#커뮤니케이션) (5)
   - [🔬 과학기술·특허](#과학기술특허) (4)
   - [📦 물류·배송](#물류배송) (4)
-  - [🤖 인공지능](#인공지능) (4)
   - [🔎 검색](#검색) (3)
   - [🔗 블록체인·암호화폐](#블록체인암호화폐) (3)
+  - [📖 언어·사전](#언어사전) (3)
   - [🏠 IoT·스마트홈](#iot스마트홈) (2)
   - [🎮 게임](#게임) (2)
   - [🚢 무역·통상](#무역통상) (2)
   - [• 미디어·콘텐츠](#미디어콘텐츠) (2)
   - [⚖️ 법령·사법](#법령사법) (2)
-  - [📖 언어·사전](#언어사전) (2)
   - [📡 통신·인터넷](#통신인터넷) (2)
   - [• 검색·생활](#검색생활) (1)
   - [📊 과학·통계](#과학통계) (1)
@@ -74,19 +74,19 @@
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
 | 🏪 [상권·창업](#상권창업) | 5 |
 | ⚡ [에너지](#에너지) | 5 |
+| 🤖 [인공지능](#인공지능) | 5 |
 | 💼 [채용·고용](#채용고용) | 5 |
 | 📨 [커뮤니케이션](#커뮤니케이션) | 5 |
 | 🔬 [과학기술·특허](#과학기술특허) | 4 |
 | 📦 [물류·배송](#물류배송) | 4 |
-| 🤖 [인공지능](#인공지능) | 4 |
 | 🔎 [검색](#검색) | 3 |
 | 🔗 [블록체인·암호화폐](#블록체인암호화폐) | 3 |
+| 📖 [언어·사전](#언어사전) | 3 |
 | 🏠 [IoT·스마트홈](#iot스마트홈) | 2 |
 | 🎮 [게임](#게임) | 2 |
 | 🚢 [무역·통상](#무역통상) | 2 |
 | • [미디어·콘텐츠](#미디어콘텐츠) | 2 |
 | ⚖️ [법령·사법](#법령사법) | 2 |
-| 📖 [언어·사전](#언어사전) | 2 |
 | 📡 [통신·인터넷](#통신인터넷) | 2 |
 | • [검색·생활](#검색생활) | 1 |
 | 📊 [과학·통계](#과학통계) | 1 |
@@ -95,7 +95,7 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **229** |
+| **합계** | **231** |
 
 ## 분야별 API 목록
 
@@ -391,6 +391,18 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 인공지능
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [ETRI 공공 인공지능 Open API](https://aiopen.etri.re.kr/) | 한국전자통신연구원(ETRI) | 한국어 형태소분석, 질의응답, 음성인식, OCR 등 AI 오픈 API. | API Key | free | ✅ |
+| [네이버 CLOVA AI API](https://www.ncloud.com/product/aiService) | 네이버클라우드플랫폼(NCP) | CLOVA OCR, Speech(STT/TTS), Face, CLOVA Studio(생성형) 등. | API Key | free-tier | ✅ |
+| [네이버 Papago 번역 API](https://www.ncloud.com/product/aiService/papagoTranslation) | 네이버클라우드플랫폼(NCP) | 기계 번역(Papago) 및 언어감지 API. | API Key | free-tier | ✅ |
+| [업스테이지(Upstage) Document AI·OCR API](https://console.upstage.ai/docs) | 업스테이지(Upstage) | 한국어 특화 OCR, Document Parse(문서 구조화), Solar LLM 등 AI API. | API Key | free-tier | ✅ |
+| [AI허브(AI-Hub) 한국어 방언 발화 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=122) | 한국지능정보사회진흥원(NIA) / 과학기술정보통신부 | 경상·전라·충청·강원·제주 등 권역별 방언 음성+전사(표준어 대응) AI 학습용 데이터. | 회원가입 후 다운로드 승인(aihubshell) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 채용·고용
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -437,17 +449,6 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
-### 인공지능
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [ETRI 공공 인공지능 Open API](https://aiopen.etri.re.kr/) | 한국전자통신연구원(ETRI) | 한국어 형태소분석, 질의응답, 음성인식, OCR 등 AI 오픈 API. | API Key | free | ✅ |
-| [네이버 CLOVA AI API](https://www.ncloud.com/product/aiService) | 네이버클라우드플랫폼(NCP) | CLOVA OCR, Speech(STT/TTS), Face, CLOVA Studio(생성형) 등. | API Key | free-tier | ✅ |
-| [네이버 Papago 번역 API](https://www.ncloud.com/product/aiService/papagoTranslation) | 네이버클라우드플랫폼(NCP) | 기계 번역(Papago) 및 언어감지 API. | API Key | free-tier | ✅ |
-| [업스테이지(Upstage) Document AI·OCR API](https://console.upstage.ai/docs) | 업스테이지(Upstage) | 한국어 특화 OCR, Document Parse(문서 구조화), Solar LLM 등 AI API. | API Key | free-tier | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
 ### 검색
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -465,6 +466,16 @@
 | [두나무 노딧(Nodit)](https://docs.nodit.io/) | 두나무 | 블록체인 개발 플랫폼·인프라(Web3) | API Key | free-tier | ✅ |
 | [클레이튼 KAS](https://docs.klaytnapi.com/) | 그라운드X | 노드 운영 없는 블록체인 개발 API | API Key | free-tier | ✅ |
 | [카이아(KAIA) API](https://docs.kaia.io/) | 카이아 재단 | 클레이튼+핀시아 통합 블록체인 API | API Key | free-tier | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
+### 언어·사전
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [표준국어대사전 Open API](https://stdict.korean.go.kr/openapi/openApiInfo.do) | 국립국어원 | 표준국어대사전 표제어·뜻풀이 검색 오픈 API. | API Key | free | ✅ |
+| [우리말샘 개방형 사전 Open API](https://opendict.korean.go.kr/) | 국립국어원 | 신어·방언·북한어 등을 포함한 개방형 국어사전 검색 오픈 API. | API Key | free | ✅ |
+| [국립국어원 지역어(방언) 종합정보 Open API](https://dialect.korean.go.kr/dialect/openAPI/apiInfo) | 문화체육관광부 국립국어원 | 전국 지역어(사투리·방언) 어휘·뜻풀이·용례 등 지역어 사전 정보 조회. | API Key(인증키) | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -510,15 +521,6 @@
 |-----|----------|------|------|------|:----:|
 | [국가법령정보 공동활용 API](https://open.law.go.kr/LSO/openApi/guideList.do) | 법제처 | 법령·행정규칙·자치법규·판례·헌재결정례 등 법령정보 오픈 API. | API Key(이메일 ID 기반) | free | ✅ |
 | [열린국회정보 Open API](https://open.assembly.go.kr/portal/openapi/main.do) | 국회사무처 | 의안, 의원, 표결, 회의록 등 국회 정보 오픈 API. | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 언어·사전
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [표준국어대사전 Open API](https://stdict.korean.go.kr/openapi/openApiInfo.do) | 국립국어원 | 표준국어대사전 표제어·뜻풀이 검색 오픈 API. | API Key | free | ✅ |
-| [우리말샘 개방형 사전 Open API](https://opendict.korean.go.kr/) | 국립국어원 | 신어·방언·북한어 등을 포함한 개방형 국어사전 검색 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -630,3 +632,4 @@
 - 주제 점검(금융·엔터): 금융은 충실했으나 '금융상품 비교(예적금/대출/연금 금리)' 간판이 비어 금융감독원 금융상품한눈에 API 추가. 엔터는 공공(영화/공연/게임/등급위 등)은 충실하나 민간 음원·웹툰·OTT·티켓예매·프로스포츠는 공식 공개 API가 부재하여 미수록(카탈로그 공백이 아닌 실제 부재).
 - 특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시).
 - 특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.
+- 특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.
