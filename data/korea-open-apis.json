@@ -2182,6 +2182,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "특이 케이스 — 우주날씨. spaceweather.kasa.go.kr. 우주전파센터(rra.go.kr) Open API도 별도."
+    },
+    {
+      "name": "사람인(Saramin) 채용정보 API",
+      "provider": "사람인",
+      "category": "채용·고용",
+      "description": "채용공고 검색·조회 등 민간 채용정보 오픈 API.",
+      "docs_url": "https://oapi.saramin.co.kr/",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "일 최대 500건",
+      "source": "WebSearch",
+      "note": "이용신청·승인 필요. 잡코리아 API는 공공기관/학교 대상 위주."
+    },
+    {
+      "name": "국가보훈부 현충시설·독립유공자 Open API",
+      "provider": "국가보훈부",
+      "category": "공공·행정",
+      "description": "현충시설, 국외사적지, 독립유공자 공훈록 등 보훈 정보 오픈 API.",
+      "docs_url": "https://www.mpva.go.kr/mpva/contents.do?key=17",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "엔드포인트 mfis.mpva.go.kr/api/json/allSearch.do."
+    },
+    {
+      "name": "국가유산청 문화재 공간정보(GIS) API",
+      "provider": "국가유산청",
+      "category": "문화·관광·체육",
+      "description": "문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/3070426/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(XML, WMS/WFS)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "gis-heritage.go.kr. 구 문화재청."
+    },
+    {
+      "name": "금융결제원 어카운트인포 계좌통합관리 API",
+      "provider": "금융결제원(KFTC)",
+      "category": "금융",
+      "description": "전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API.",
+      "docs_url": "https://developers.kftc.or.kr/dev/openapi/account-info",
+      "auth": "OAuth 2.0",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "이용기관 등록 필요. 신한·국민 등 개별 은행 Open API도 별도 존재."
+    },
+    {
+      "name": "업스테이지(Upstage) Document AI·OCR API",
+      "provider": "업스테이지(Upstage)",
+      "category": "인공지능",
+      "description": "한국어 특화 OCR, Document Parse(문서 구조화), Solar LLM 등 AI API.",
+      "docs_url": "https://console.upstage.ai/docs",
+      "auth": "API Key",
+      "pricing": "free-tier",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "무료 크레딧 후 과금",
+      "source": "WebSearch",
+      "note": "가입 시 무료 크레딧 제공."
     }
   ]
 }
