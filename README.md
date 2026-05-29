@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-236-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-239-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.13.0**
-- 큐레이션 API: **236** · 분야: **37** · 요금: free **208** / free-tier **28** · 회원가입·승인 필요: **231**
+- 최종 갱신: **2026-05-29** · 버전: **0.14.0**
+- 큐레이션 API: **239** · 분야: **37** · 요금: free **211** / free-tier **28** · 회원가입·승인 필요: **234**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -23,9 +23,9 @@
   - [💬 생활·소셜](#생활소셜) (13)
   - [🌾 농축수산](#농축수산) (10)
   - [🏥 보건·식품](#보건식품) (10)
+  - [📺 콘텐츠·미디어](#콘텐츠미디어) (10)
   - [🚨 재난·안전](#재난안전) (9)
   - [🗺 지도·위치](#지도위치) (8)
-  - [📺 콘텐츠·미디어](#콘텐츠미디어) (8)
   - [🏘 부동산](#부동산) (6)
   - [💳 결제·핀테크](#결제핀테크) (5)
   - [🏪 상권·창업](#상권창업) (5)
@@ -36,10 +36,10 @@
   - [🔬 과학기술·특허](#과학기술특허) (4)
   - [📦 물류·배송](#물류배송) (4)
   - [🔎 검색](#검색) (3)
+  - [🎮 게임](#게임) (3)
   - [🔗 블록체인·암호화폐](#블록체인암호화폐) (3)
   - [📖 언어·사전](#언어사전) (3)
   - [🏠 IoT·스마트홈](#iot스마트홈) (2)
-  - [🎮 게임](#게임) (2)
   - [🚢 무역·통상](#무역통상) (2)
   - [• 미디어·콘텐츠](#미디어콘텐츠) (2)
   - [⚖️ 법령·사법](#법령사법) (2)
@@ -67,9 +67,9 @@
 | 💬 [생활·소셜](#생활소셜) | 13 |
 | 🌾 [농축수산](#농축수산) | 10 |
 | 🏥 [보건·식품](#보건식품) | 10 |
+| 📺 [콘텐츠·미디어](#콘텐츠미디어) | 10 |
 | 🚨 [재난·안전](#재난안전) | 9 |
 | 🗺 [지도·위치](#지도위치) | 8 |
-| 📺 [콘텐츠·미디어](#콘텐츠미디어) | 8 |
 | 🏘 [부동산](#부동산) | 6 |
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
 | 🏪 [상권·창업](#상권창업) | 5 |
@@ -80,10 +80,10 @@
 | 🔬 [과학기술·특허](#과학기술특허) | 4 |
 | 📦 [물류·배송](#물류배송) | 4 |
 | 🔎 [검색](#검색) | 3 |
+| 🎮 [게임](#게임) | 3 |
 | 🔗 [블록체인·암호화폐](#블록체인암호화폐) | 3 |
 | 📖 [언어·사전](#언어사전) | 3 |
 | 🏠 [IoT·스마트홈](#iot스마트홈) | 2 |
-| 🎮 [게임](#게임) | 2 |
 | 🚢 [무역·통상](#무역통상) | 2 |
 | • [미디어·콘텐츠](#미디어콘텐츠) | 2 |
 | ⚖️ [법령·사법](#법령사법) | 2 |
@@ -95,7 +95,7 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **236** |
+| **합계** | **239** |
 
 ## 분야별 API 목록
 
@@ -301,6 +301,23 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 콘텐츠·미디어
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [KOBIS 영화관입장권통합전산망 Open API](https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do) | 영화진흥위원회(KOFIC) | 일별/주간 박스오피스, 영화/영화인/영화사 정보 오픈 API. | API Key | free | ✅ |
+| [KMDb 한국영화데이터베이스 Open API](https://www.kmdb.or.kr/info/api/apiList) | 한국영상자료원 | 영화 상세정보(스태프/줄거리/스틸 등) 검색 오픈 API. | API Key | free | ✅ |
+| [알라딘 상품 검색 Open API](https://www.aladin.co.kr/ttb/apiguide.aspx) | 알라딘(Aladin) | 도서 상품 검색/조회/베스트셀러 등 도서 정보 오픈 API. | API Key(TTBKey) | free | ✅ |
+| [빅카인즈(BIGKINDS) 뉴스 빅데이터 API](https://www.bigkinds.or.kr/) | 한국언론진흥재단 | 뉴스 기사 검색, 메타데이터, 개체명·토픽 분석 등 뉴스 빅데이터 오픈 API. | API Key | free | ✅ |
+| [한국콘텐츠진흥원(KOCCA) Open API](https://www.kocca.kr/kocca/subPage.do?menuNo=204795) | 한국콘텐츠진흥원 | 방송·게임·만화·음악 등 콘텐츠 산업 통계·정보 오픈 API. | API Key | free | ✅ |
+| [영상물등급위원회 등급분류정보 API](https://www.data.go.kr/data/15127675/openapi.do) | 영상물등급위원회 | 비디오물 등급분류 정보(제명·감독·관람등급·내용정보) 오픈 API. | API Key | free | ✅ |
+| [한국저작권위원회 공유마당 API](https://gongu.copyright.or.kr/gongu/useReqst/apiKey/info.do?menuNo=200245) | 한국저작권위원회 | CCL/만료저작물 등 자유이용 저작물(사진·음악·미술·어문 등) 검색 오픈 API. | API Key | free | ✅ |
+| [국립국악원 국악 디지털음원 API](https://www.data.go.kr/data/15097515/openapi.do) | 문화체육관광부 국립국악원 | 국악 디지털 음원·아카이브(음향·영상·이미지) 정보 오픈 API. | API Key | free | ✅ |
+| [한국국제교류재단 한류현황 API](https://www.data.go.kr/data/15076252/openapi.do) | 한국국제교류재단(KF) | 전 세계 한류 동호회·팬 규모 등 분야별 한류 현황 통계. | API Key(serviceKey) | free | ✅ |
+| [영화진흥위원회 영화인 정보 API](https://www.data.go.kr/data/3058452/openapi.do) | 영화진흥위원회(KOFIC) | 영화 감독·배우 등 영화인 인물 DB 및 필모그래피 상세정보. | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 재난·안전
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -329,21 +346,6 @@
 | [국토교통부 연속지적도·토지특성 정보 API](https://www.data.go.kr/data/15057558/openapi.do) | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | ✅ |
 | [한국국토정보공사(LX) LX맵 서비스 API](https://www.data.go.kr/data/15020966/openapi.do) | 한국국토정보공사(LX) | 국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API. | API Key | free | ✅ |
 | [카카오내비 API](https://developers.kakao.com/docs/latest/ko/kakaonavi/common) | 카카오 | 카카오내비 앱 연동 길 안내, 다중 경유지·다중 목적지 경로 탐색. | API Key(REST/SDK) | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 콘텐츠·미디어
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [KOBIS 영화관입장권통합전산망 Open API](https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do) | 영화진흥위원회(KOFIC) | 일별/주간 박스오피스, 영화/영화인/영화사 정보 오픈 API. | API Key | free | ✅ |
-| [KMDb 한국영화데이터베이스 Open API](https://www.kmdb.or.kr/info/api/apiList) | 한국영상자료원 | 영화 상세정보(스태프/줄거리/스틸 등) 검색 오픈 API. | API Key | free | ✅ |
-| [알라딘 상품 검색 Open API](https://www.aladin.co.kr/ttb/apiguide.aspx) | 알라딘(Aladin) | 도서 상품 검색/조회/베스트셀러 등 도서 정보 오픈 API. | API Key(TTBKey) | free | ✅ |
-| [빅카인즈(BIGKINDS) 뉴스 빅데이터 API](https://www.bigkinds.or.kr/) | 한국언론진흥재단 | 뉴스 기사 검색, 메타데이터, 개체명·토픽 분석 등 뉴스 빅데이터 오픈 API. | API Key | free | ✅ |
-| [한국콘텐츠진흥원(KOCCA) Open API](https://www.kocca.kr/kocca/subPage.do?menuNo=204795) | 한국콘텐츠진흥원 | 방송·게임·만화·음악 등 콘텐츠 산업 통계·정보 오픈 API. | API Key | free | ✅ |
-| [영상물등급위원회 등급분류정보 API](https://www.data.go.kr/data/15127675/openapi.do) | 영상물등급위원회 | 비디오물 등급분류 정보(제명·감독·관람등급·내용정보) 오픈 API. | API Key | free | ✅ |
-| [한국저작권위원회 공유마당 API](https://gongu.copyright.or.kr/gongu/useReqst/apiKey/info.do?menuNo=200245) | 한국저작권위원회 | CCL/만료저작물 등 자유이용 저작물(사진·음악·미술·어문 등) 검색 오픈 API. | API Key | free | ✅ |
-| [국립국악원 국악 디지털음원 API](https://www.data.go.kr/data/15097515/openapi.do) | 문화체육관광부 국립국악원 | 국악 디지털 음원·아카이브(음향·영상·이미지) 정보 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -464,6 +466,16 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 게임
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [NEXON Open API](https://openapi.nexon.com/ko/) | 넥슨(NEXON) | 메이플스토리·던전앤파이터·FC온라인 등 13종 게임의 캐릭터·랭킹·전적 데이터 API. | API Key | free | ✅ |
+| [펄어비스 검은사막 API](https://documenter.getpostman.com/view/4028519/2s9Y5YRhp4) | 펄어비스 | 검은사막 게임·캐릭터 데이터 | API Key | free | ✅ |
+| [게임물관리위원회 게임물 등급분류 정보 API](https://www.data.go.kr/data/15120667/openapi.do) | 게임물관리위원회(GRAC) | 국내 유통 게임물의 등급분류 결정 정보(게임명·신청사·결정등급·결정일 등). | API Key(serviceKey) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 블록체인·암호화폐
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -490,15 +502,6 @@
 |-----|----------|------|------|------|:----:|
 | [삼성 SmartThings API](https://developer.smartthings.com/docs/api/public) | 삼성전자 | 스마트홈 기기 제어·자동화·장소 관리 | OAuth | free | ✅ |
 | [LG ThinQ API](https://smartsolution.developer.lge.com/) | LG전자 | AI 가전 제어·상업용 설비 관리 | OAuth | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 게임
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [NEXON Open API](https://openapi.nexon.com/ko/) | 넥슨(NEXON) | 메이플스토리·던전앤파이터·FC온라인 등 13종 게임의 캐릭터·랭킹·전적 데이터 API. | API Key | free | ✅ |
-| [펄어비스 검은사막 API](https://documenter.getpostman.com/view/4028519/2s9Y5YRhp4) | 펄어비스 | 검은사막 게임·캐릭터 데이터 | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -639,3 +642,4 @@
 - 특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.
 - 특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.
 - K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능).
+- K-콘텐츠 산업 공백 점검(게임산업·한류·영화인 등): 게임물 등급분류(GRAC)·한류현황(KF)·영화인 DB(KOFIC) 추가(URL은 datago 전수 확인). 전통주·애니메이션·웹소설·콘텐츠펀드·관광통역은 전국 단위 간판 API 부재(지자체/채용/면세유 오탐만)로 보류. K-푸드 수출은 기보유 관세청 UNIPASS로 커버.

@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-29",
-    "version": "0.13.0",
+    "version": "0.14.0",
     "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완. 추가로 dl0312/open-apis-korea 교차검증(폐기 항목 배제, 생존분만 반영).",
     "limitations": [
       "이 카탈로그는 두 층위: (1) 전 분야 대표 무료 API 큐레이션(README 본문), (2) data.go.kr 오픈 API 전수 12,073건(부록 A, data/datago_apis.json).",
@@ -18,7 +18,8 @@
       "특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시).",
       "특이 주제 '공백만' 집중 점검(큐레이션 0건이던 폭염쉼터·민방위대피소·기상특보·예방접종·유실물·무장애여행)에서 6종 추가. URL은 전수(datago)에서 실제 list_id 확인. 독도는 지명 오탐(전용 API 없음), 국립공원 탐방로 전용 API는 본 환경에서 list_id 미확정으로 보류, 반려동물동반은 지자체 단위만 존재해 간판 보류.",
       "특이 주제 점검(사투리/방언): data.go.kr 자동수집으로는 방언 전용 API가 잡히지 않았으나(키워드 오탐만), 국립국어원 '지역어 종합정보' 전용 오픈API와 AI허브 방언 발화 데이터(다운로드형)가 실재하여 추가. AI허브는 호출형 API가 아닌 데이터셋이므로 note에 명시.",
-      "K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능)."
+      "K-문화 주제 공백 점검(무형유산·전통문양·세시풍속·한옥/사찰·한지 등 큐레이션 0건이던 것): 국가유산청 국가유산포털을 분야 대표 간판으로, 국립무형유산원·국립민속박물관·국립문화유산연구원·한국문화정보원 전용 API를 추가(URL은 datago 전수에서 확인). 한복/족보/서예는 전국 단위 간판 API 부재로 보류(국가유산포털·우리말샘으로 일부 대체 가능).",
+      "K-콘텐츠 산업 공백 점검(게임산업·한류·영화인 등): 게임물 등급분류(GRAC)·한류현황(KF)·영화인 DB(KOFIC) 추가(URL은 datago 전수 확인). 전통주·애니메이션·웹소설·콘텐츠펀드·관광통역은 전국 단위 간판 API 부재(지자체/채용/면세유 오탐만)로 보류. K-푸드 수출은 기보유 관세청 UNIPASS로 커버."
     ],
     "source": "GitHub 교차검증(yybmion/public-apis-4Kr)"
   },
@@ -3326,6 +3327,48 @@
       "rate_limit": "포털 기본 한도",
       "source": "K-문화 주제 공백 점검(한옥/사찰/한지)",
       "note": "전수에서 URL 확인(향교건축 15015627 / 전통재료 15028223 / 석탑3D 15015634)."
+    },
+    {
+      "name": "게임물관리위원회 게임물 등급분류 정보 API",
+      "provider": "게임물관리위원회(GRAC)",
+      "category": "게임",
+      "description": "국내 유통 게임물의 등급분류 결정 정보(게임명·신청사·결정등급·결정일 등).",
+      "docs_url": "https://www.data.go.kr/data/15120667/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-콘텐츠 산업 공백 점검(게임산업) — 큐레이션 0건이던 게임물 등급 간판",
+      "note": "전수에서 URL 확인(15120667). 넥슨/펄어비스 등 게임 '서비스' API와 달리 등급분류 '행정/메타' 정보."
+    },
+    {
+      "name": "한국국제교류재단 한류현황 API",
+      "provider": "한국국제교류재단(KF)",
+      "category": "콘텐츠·미디어",
+      "description": "전 세계 한류 동호회·팬 규모 등 분야별 한류 현황 통계.",
+      "docs_url": "https://www.data.go.kr/data/15076252/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-콘텐츠 산업 공백 점검(한류/콘텐츠수출)",
+      "note": "전수에서 URL 확인(15076252). 국가별·분야별(K-pop/드라마 등) 한류 확산 통계."
+    },
+    {
+      "name": "영화진흥위원회 영화인 정보 API",
+      "provider": "영화진흥위원회(KOFIC)",
+      "category": "콘텐츠·미디어",
+      "description": "영화 감독·배우 등 영화인 인물 DB 및 필모그래피 상세정보.",
+      "docs_url": "https://www.data.go.kr/data/3058452/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "포털 기본 한도",
+      "source": "K-콘텐츠 산업 공백 점검(영화인)",
+      "note": "전수에서 URL 확인(영화인DB 3058452 / 상세 15095136). 기존 KOBIS(박스오피스)·KMDb와 보완 관계."
     }
   ]
 }
