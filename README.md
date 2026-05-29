@@ -4,18 +4,18 @@
 
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
-- 생성일: **2026-05-28** · 버전: **0.5.0**
-- 총 API 수: **178** · 분야 수: **26**
-- 요금: free **168** / free-tier **10** · 회원가입·승인 필요: **176**
+- 생성일: **2026-05-29** · 버전: **0.5.0**
+- 총 API 수: **216** · 분야 수: **35**
+- 요금: free **187** / free-tier **29** · 회원가입·승인 필요: **212**
 
 ## 분야별 분포
 
 | 분야 | 개수 |
 |------|------|
-| 공공·행정 | 17 |
-| 교통 | 15 |
-| 금융 | 15 |
-| 교육·학술 | 14 |
+| 금융 | 20 |
+| 교통 | 19 |
+| 공공·행정 | 18 |
+| 교육·학술 | 15 |
 | 문화·관광·체육 | 13 |
 | 생활·소셜 | 13 |
 | 날씨·환경 | 12 |
@@ -23,23 +23,81 @@
 | 콘텐츠·미디어 | 8 |
 | 보건·식품 | 7 |
 | 지도·위치 | 7 |
+| 결제·핀테크 | 6 |
 | 부동산 | 6 |
 | 에너지 | 5 |
 | 재난·안전 | 5 |
 | 채용·고용 | 5 |
+| 커뮤니케이션 | 5 |
 | 과학기술·특허 | 4 |
+| 물류·배송 | 4 |
 | 상권·창업 | 4 |
 | 인공지능 | 4 |
 | 검색 | 3 |
+| 블록체인·암호화폐 | 3 |
+| IoT·스마트홈 | 2 |
+| 게임 | 2 |
 | 무역·통상 | 2 |
+| 미디어·콘텐츠 | 2 |
 | 법령·사법 | 2 |
 | 언어·사전 | 2 |
+| 통신 | 2 |
 | 통신·인터넷 | 2 |
-| 게임 | 1 |
 | 과학·통계 | 1 |
+| 산업·고용 | 1 |
 | 쇼핑 | 1 |
+| 클라우드 | 1 |
 
 ## 분야별 API 목록
+
+### 금융
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 한국은행 경제통계시스템(ECOS) Open API | 한국은행 | 금리·환율·국민계정 등 경제통계 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://ecos.bok.or.kr/api/) |
+| 오픈뱅킹 공동업무 API | 금융결제원(KFTC) | 계좌조회·이체 등 은행 공동 오픈뱅킹 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://openapi.kftc.or.kr/) |
+| OpenDART 전자공시 API | 금융감독원 | 상장·외부감사 기업의 전자공시(사업보고서, 재무제표 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendart.fss.or.kr/) |
+| 한국수출입은행 환율 Open API | 한국수출입은행 | 현재/대출 환율 등 환율정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.koreaexim.go.kr) |
+| KRX OPEN API | 한국거래소(KRX) | 주식·채권·파생·지수 등 거래소 시장정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.krx.co.kr/) |
+| 한국예탁결제원(SEIBro) Open API | 한국예탁결제원 | 주식·기업·증권 발행정보 등 예탁결제 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.seibro.or.kr/pubc/pubr/cmm/CMPubrHome/viewCMPubrHome.do) |
+| 금융위원회 주식시세정보 API | 금융위원회 | 상장 주식의 시가·종가·거래량 등 시세 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15094808/openapi.do) |
+| 한국투자증권 KIS Developers Open API | 한국투자증권 | 주식/선물 시세 조회 및 주문·자동매매 REST/WebSocket 트레이딩 API. | API Key(App Key/Secret) + OAuth | free | 필요 | REST/WebSocket(JSON) | [link](https://apiportal.koreainvestment.com/intro) |
+| 키움증권 Open API+ | 키움증권 | 주식 시세·주문 등 트레이딩 API. | 계정 인증 | free | 필요 | OCX/COM(Windows), REST(신규) | [link](https://www.kiwoom.com/h/customer/download/VOpenApiInfoView) |
+| 업비트(Upbit) Open API | 업비트(두나무) | 가상자산 시세(캔들·현재가·호가·체결), 잔고·주문·출금 등 거래소 API. | 없음(시세) / API Key(거래) | free | 불필요 | REST/WebSocket(JSON) | [link](https://docs.upbit.com/kr/docs/developer-center-overview) |
+| 토스페이먼츠 결제 API | 토스페이먼츠 | 카드·간편결제(네이버페이/카카오페이 등) 통합 결제 연동 API. | API Key(시크릿/클라이언트 키) | free-tier | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/) |
+| 포트원(PortOne, 구 아임포트) 결제연동 API | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.portone.io/) |
+| 우체국금융(예금·보험) Open API | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.epostlife.go.kr/IPUIOP0000.do) |
+| 금융결제원 어카운트인포 계좌통합관리 API | 금융결제원(KFTC) | 전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://developers.kftc.or.kr/dev/openapi/account-info) |
+| 한국주택금융공사(HF) 주택금융 통계 API | 한국주택금융공사(HF) | 보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do) |
+| 신한은행 Open API | 신한은행 | 신한금융그룹 통합 금융 API | OAuth | free | 필요 | REST(JSON) | [link](https://openapi.shinhan.com/) |
+| 우리은행 Open API | 우리은행 | 핀테크 개발자 원스톱 금융 API | OAuth | free | 필요 | REST(JSON) | [link](https://developer.wooribank.com/apiservice) |
+| 하나금융그룹 Open API | 하나금융그룹 | 하나금융 API 마켓플레이스 | OAuth | free | 필요 | REST(JSON) | [link](https://www.hanafnapimarket.com/) |
+| KB금융 API 포탈 | KB금융그룹 | KB금융 종합 금융 API(800+) | OAuth | free | 필요 | REST(JSON) | [link](https://apiportal.kbfg.com/) |
+| NH농협은행 Open API | NH농협은행 | 농협 금융 개발자센터 API | OAuth | free | 필요 | REST(JSON) | [link](https://developers.nonghyup.com/center/CE_1020) |
+
+### 교통
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| TMAP API | SK텔레콤 | 경로안내, 대중교통, 보행자 길찾기, POI 검색 등. | API Key(App Key) | free-tier | 필요 | REST(JSON) | [link](https://tmapapi.sktelecom.com/) |
+| 국가대중교통정보(TAGO) | 국토교통부 | 전국 버스 도착정보, 노선, 정류소, 지하철 등 대중교통 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
+| 서울 버스정보 Open API | 서울특별시 / 서울교통정보과(TOPIS) | 서울 버스 도착정보, 노선/정류소 정보. | API Key | free | 필요 | REST(XML/JSON) | [link](http://api.bus.go.kr/) |
+| ITS 국가교통정보센터 오픈데이터 | 국토교통부 ITS | 실시간 소통정보, 돌발정보, CCTV 등 도로교통 오픈 API. | API Key | free | 필요 | REST(XML/JSON) | [link](https://www.its.go.kr/opendata/) |
+| 한국교통안전공단 자동차종합정보 API | 한국교통안전공단(TS) | 자동차 신규등록·검사 등 자동차 통계/정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15059401/openapi.do) |
+| 고속도로 공공데이터 포털 Open API | 한국도로공사 | 실시간 고속도로 교통량·소통·휴게소·통행료 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.ex.co.kr/openapi/intro/introduce01) |
+| 레일포털(철도산업정보센터) Open API | 국토교통부 / 한국철도기술연구원(KRIC) | 철도 노선·역사·운행 등 철도산업 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.kric.go.kr/rips/serviceInfo/openapi/introduce.do) |
+| 한국공항공사 항공기 운항정보 API | 한국공항공사(KAC) | 국내/국제선 운항 스케줄, 실시간 운항정보, 공항코드 등 항공 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000126/openapi.do) |
+| 인천국제공항 Open API | 인천국제공항공사 | 인천공항 출도착 운항현황, 주차장, 혼잡도 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](http://openapi.airport.kr/) |
+| 해양수산부 선박운항정보(PORT-MIS) API | 해양수산부 | 선박 입출항 시간, 선박 제원, 항만 관제 등 해운항만 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15006353/openapi.do) |
+| 서울 따릉이 공공자전거 실시간 대여정보 API | 서울특별시 | 대여소별 실시간 거치 자전거 수, 거치율, 대여소 위치 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr/dataList/OA-15493/A/1/datasetView.do) |
+| 도로교통공단 TAAS 교통사고분석 Open API | 한국도로교통공단(KOROAD) | 교통사고 다발지(13종), 교통안전정보(3종) 등 교통사고 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.koroad.or.kr/) |
+| 서울 지하철 실시간 도착정보 API | 서울특별시(TOPIS) | 서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058052/openapi.do) |
+| 한국철도공사(코레일) 열차운행정보 API | 한국철도공사 | 여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15125762/openapi.do) |
+| 부산교통공사 부산도시철도 운행정보 API | 부산교통공사 | 부산 도시철도 운행정보·시각표 등 지방 도시철도 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15001019/openapi.do) |
+| ODsay 대중교통 API | ODsay | 전국 대중교통·고속버스·항공 통합 길찾기 | API Key | free-tier | 필요 | REST(JSON) | [link](https://lab.odsay.com/guide/guide) |
+| 카카오모빌리티 API | 카카오모빌리티 | 길찾기 등 모빌리티 개발 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.kakaomobility.com/product/api) |
+| 현대자동차 Developers | 현대자동차 | 차량 제원·운행·주행거리·운전습관 | OAuth | free | 필요 | REST(JSON) | [link](https://developers.hyundai.com/) |
+| 기아 Developers | 기아 | KIA Connect 차량 데이터 | OAuth | free | 필요 | REST(JSON) | [link](https://developers.kia.com/) |
 
 ### 공공·행정
 
@@ -62,46 +120,7 @@
 | 국민연금공단 가입 사업장 내역 API | 국민연금공단 | 국민연금 가입 사업장 정보·기간별 현황 등 연금 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/3046071/openapi.do) |
 | ALIO 공공기관 경영정보 Open API | 기획재정부(공공기관 경영정보 공개시스템) | 공공기관 임직원·재무·복리후생 등 경영정보(알리오) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.alio.go.kr/public_inst/list) |
 | 제주데이터허브 Open API | 제주특별자치도 | 제주 지역 관광·교통·환경·생활 등 데이터를 제공하는 지자체 데이터 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.jejudatahub.net/) |
-
-### 교통
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| TMAP API | SK텔레콤 | 경로안내, 대중교통, 보행자 길찾기, POI 검색 등. | API Key(App Key) | free-tier | 필요 | REST(JSON) | [link](https://tmapapi.sktelecom.com/) |
-| 국가대중교통정보(TAGO) | 국토교통부 | 전국 버스 도착정보, 노선, 정류소, 지하철 등 대중교통 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
-| 서울 버스정보 Open API | 서울특별시 / 서울교통정보과(TOPIS) | 서울 버스 도착정보, 노선/정류소 정보. | API Key | free | 필요 | REST(XML/JSON) | [link](http://api.bus.go.kr/) |
-| ITS 국가교통정보센터 오픈데이터 | 국토교통부 ITS | 실시간 소통정보, 돌발정보, CCTV 등 도로교통 오픈 API. | API Key | free | 필요 | REST(XML/JSON) | [link](https://www.its.go.kr/opendata/) |
-| 한국교통안전공단 자동차종합정보 API | 한국교통안전공단(TS) | 자동차 신규등록·검사 등 자동차 통계/정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15059401/openapi.do) |
-| 고속도로 공공데이터 포털 Open API | 한국도로공사 | 실시간 고속도로 교통량·소통·휴게소·통행료 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.ex.co.kr/openapi/intro/introduce01) |
-| 레일포털(철도산업정보센터) Open API | 국토교통부 / 한국철도기술연구원(KRIC) | 철도 노선·역사·운행 등 철도산업 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.kric.go.kr/rips/serviceInfo/openapi/introduce.do) |
-| 한국공항공사 항공기 운항정보 API | 한국공항공사(KAC) | 국내/국제선 운항 스케줄, 실시간 운항정보, 공항코드 등 항공 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000126/openapi.do) |
-| 인천국제공항 Open API | 인천국제공항공사 | 인천공항 출도착 운항현황, 주차장, 혼잡도 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](http://openapi.airport.kr/) |
-| 해양수산부 선박운항정보(PORT-MIS) API | 해양수산부 | 선박 입출항 시간, 선박 제원, 항만 관제 등 해운항만 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15006353/openapi.do) |
-| 서울 따릉이 공공자전거 실시간 대여정보 API | 서울특별시 | 대여소별 실시간 거치 자전거 수, 거치율, 대여소 위치 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr/dataList/OA-15493/A/1/datasetView.do) |
-| 도로교통공단 TAAS 교통사고분석 Open API | 한국도로교통공단(KOROAD) | 교통사고 다발지(13종), 교통안전정보(3종) 등 교통사고 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.koroad.or.kr/) |
-| 서울 지하철 실시간 도착정보 API | 서울특별시(TOPIS) | 서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058052/openapi.do) |
-| 한국철도공사(코레일) 열차운행정보 API | 한국철도공사 | 여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15125762/openapi.do) |
-| 부산교통공사 부산도시철도 운행정보 API | 부산교통공사 | 부산 도시철도 운행정보·시각표 등 지방 도시철도 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15001019/openapi.do) |
-
-### 금융
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 한국은행 경제통계시스템(ECOS) Open API | 한국은행 | 금리·환율·국민계정 등 경제통계 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://ecos.bok.or.kr/api/) |
-| 오픈뱅킹 공동업무 API | 금융결제원(KFTC) | 계좌조회·이체 등 은행 공동 오픈뱅킹 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://openapi.kftc.or.kr/) |
-| OpenDART 전자공시 API | 금융감독원 | 상장·외부감사 기업의 전자공시(사업보고서, 재무제표 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendart.fss.or.kr/) |
-| 한국수출입은행 환율 Open API | 한국수출입은행 | 현재/대출 환율 등 환율정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.koreaexim.go.kr) |
-| KRX OPEN API | 한국거래소(KRX) | 주식·채권·파생·지수 등 거래소 시장정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.krx.co.kr/) |
-| 한국예탁결제원(SEIBro) Open API | 한국예탁결제원 | 주식·기업·증권 발행정보 등 예탁결제 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.seibro.or.kr/pubc/pubr/cmm/CMPubrHome/viewCMPubrHome.do) |
-| 금융위원회 주식시세정보 API | 금융위원회 | 상장 주식의 시가·종가·거래량 등 시세 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15094808/openapi.do) |
-| 한국투자증권 KIS Developers Open API | 한국투자증권 | 주식/선물 시세 조회 및 주문·자동매매 REST/WebSocket 트레이딩 API. | API Key(App Key/Secret) + OAuth | free | 필요 | REST/WebSocket(JSON) | [link](https://apiportal.koreainvestment.com/intro) |
-| 키움증권 Open API+ | 키움증권 | 주식 시세·주문 등 트레이딩 API. | 계정 인증 | free | 필요 | OCX/COM(Windows), REST(신규) | [link](https://www.kiwoom.com/h/customer/download/VOpenApiInfoView) |
-| 업비트(Upbit) Open API | 업비트(두나무) | 가상자산 시세(캔들·현재가·호가·체결), 잔고·주문·출금 등 거래소 API. | 없음(시세) / API Key(거래) | free | 불필요 | REST/WebSocket(JSON) | [link](https://docs.upbit.com/kr/docs/developer-center-overview) |
-| 토스페이먼츠 결제 API | 토스페이먼츠 | 카드·간편결제(네이버페이/카카오페이 등) 통합 결제 연동 API. | API Key(시크릿/클라이언트 키) | free-tier | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/) |
-| 포트원(PortOne, 구 아임포트) 결제연동 API | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.portone.io/) |
-| 우체국금융(예금·보험) Open API | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.epostlife.go.kr/IPUIOP0000.do) |
-| 금융결제원 어카운트인포 계좌통합관리 API | 금융결제원(KFTC) | 전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://developers.kftc.or.kr/dev/openapi/account-info) |
-| 한국주택금융공사(HF) 주택금융 통계 API | 한국주택금융공사(HF) | 보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do) |
+| 비즈노 API | 비즈노 | 사업자등록번호·상호로 사업자정보 조회 | API Key | free-tier | 필요 | REST(JSON) | [link](https://bizno.net/openapi) |
 
 ### 교육·학술
 
@@ -121,6 +140,7 @@
 | RISS 학술연구정보 Open API | 한국교육학술정보원(KERIS) | 학위논문·학술논문·단행본·연구보고서 등 학술정보 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.riss.kr/apicenter/apiMain.do) |
 | 국회도서관 Open API | 국회도서관 | 국회전자도서관 소장자료·국가학술정보 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nanet.go.kr/usermadang/etc/openApiView.do) |
 | 국가정책연구포털(NKIS) Open API | 경제·인문사회연구회 | 국책연구기관 정책연구보고서 등 정책연구 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nkis.re.kr/openSvcList.do) |
+| 클래스101 Business API | 클래스101 | 클래스 관리·수강신청·진도율·SSO | Bearer Token | free-tier | 필요 | REST(JSON) | [link](https://docs.class101.net/) |
 
 ### 문화·관광·체육
 
@@ -227,6 +247,17 @@
 | 국토교통부 연속지적도·토지특성 정보 API | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15057558/openapi.do) |
 | 한국국토정보공사(LX) LX맵 서비스 API | 한국국토정보공사(LX) | 국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15020966/openapi.do) |
 
+### 결제·핀테크
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 토스페이먼츠 | 토스페이먼츠 | 카드·가상계좌·간편결제 통합 결제 API | API Key | free | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/reference) |
+| 토스페이 | 비바리퍼블리카(토스) | 토스 간편결제·정기결제 API | API Key | free | 필요 | REST(JSON) | [link](https://docs-pay.toss.im/reference) |
+| 부트페이 | 부트페이 | 다중 PG(이니시스·KCP·다날 등) 통합 결제 연동 | API Key | free | 필요 | REST(JSON) | [link](https://docs.bootpay.co.kr/) |
+| 페이플 | 페이플 | 간편·정기·링크결제 서비스 | API Key | free | 필요 | REST(JSON) | [link](https://developer.payple.kr/) |
+| 페이코(PAYCO) | NHN페이코 | NHN 통합 ID·결제·멤버십 연동 | OAuth | free | 필요 | REST(JSON) | [link](https://developers.payco.com/guide) |
+| 하이픈 API 마켓플레이스 | 케이에스넷 | 금융·공공 데이터 스크래핑 API 마켓(500+) | API Key | free-tier | 필요 | REST(JSON) | [link](https://hyphen.im/) |
+
 ### 부동산
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -268,6 +299,16 @@
 | 근로복지공단 고용·산재보험 현황정보 API | 근로복지공단 | 사업장 고용·산재보험 가입 현황(사업장명·주소·근로자수 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15059256/openapi.do) |
 | 사람인(Saramin) 채용정보 API | 사람인 | 채용공고 검색·조회 등 민간 채용정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://oapi.saramin.co.kr/) |
 
+### 커뮤니케이션
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 가비아 문자/알림톡 API | 가비아 | SMS/LMS/MMS·카카오 알림톡 통합 발송 | OAuth | free-tier | 필요 | REST(JSON) | [link](https://message.gabia.com/api/documentation/) |
+| 센드버드 API | 센드버드 | 실시간 채팅·음성/영상·AI 챗봇 | API Key | free-tier | 필요 | REST(JSON) | [link](https://sendbird.com/docs) |
+| 잔디(JANDI) 웹훅 | 토스랩 | 외부 서비스 인커밍 웹훅 연동 | Webhook | free | 불필요 | Webhook(JSON) | [link](https://support.jandi.com/) |
+| 네이버웍스 API | 네이버웍스 | Bot·조직/그룹 관리·파일 등 협업 API | OAuth | free-tier | 필요 | REST(JSON) | [link](https://developers.worksmobile.com/kr) |
+| 하이웍스 API | 하이웍스 | 전자결재·푸시 등 기업 협업 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.hiworks.com/) |
+
 ### 과학기술·특허
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -276,6 +317,15 @@
 | e나라표준인증 국가표준(KS) Open API | 산업통상자원부 국가기술표준원 | 한국산업표준(KS), 인증, 기술기준 등 표준·인증 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://standard.go.kr/KSCI/onlineSvc/openApiIntro.do) |
 | KIGAM 지오빅데이터 오픈플랫폼 API | 한국지질자원연구원(KIGAM) | 지질주제도, 지진·지진해일 정보 등 지질자원 데이터 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://data.kigam.re.kr/guide/openapi) |
 | 우주항공청 우주환경(우주날씨) API | 우주항공청(KASA) 우주환경센터 | 태양흑점폭발(R)·태양입자유입(S)·지자기교란(G) 등 우주환경 예보확률 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.data.go.kr/data/15128884/openapi.do) |
+
+### 물류·배송
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 스위트트래커 스마트택배 | 스위트트래커 | 24개 택배사 통합 배송조회 | API Key | free-tier | 필요 | REST(JSON) | [link](https://tracking.sweettracker.co.kr/) |
+| 한진택배 배송조회 | 한진택배 | 한진택배 배송추적 서비스 | 없음 | free | 불필요 | REST(JSON) | [link](https://developers.hanjin.com/guides) |
+| 로지스팟 물류 Open API | 로지스팟 | 통합 물류관리(운송배차·차량·정산) | API Key | free-tier | 필요 | REST(JSON) | [link](https://logi-spot.com/) |
+| KOMSA MTIS Open API | 한국해양교통안전공단 | 연안여객선 운항·통계·제원·안전 정보 | API Key | free | 필요 | REST(JSON) | [link](https://mtisopenapi.komsa.or.kr/) |
 
 ### 상권·창업
 
@@ -303,12 +353,41 @@
 | 네이버 데이터랩(DataLab) API | 네이버 | 검색어 트렌드, 쇼핑인사이트 등 트렌드 데이터 오픈 API. | API Key(Client ID/Secret) | free | 필요 | REST(JSON) | [link](https://developers.naver.com/docs/serviceapi/datalab/search/search.md) |
 | 카카오 검색(다음) API | 카카오 | 웹/동영상/이미지/블로그/책/카페 등 다음 검색 오픈 API. | API Key(REST) | free | 필요 | REST(JSON) | [link](https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide) |
 
+### 블록체인·암호화폐
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 두나무 노딧(Nodit) | 두나무 | 블록체인 개발 플랫폼·인프라(Web3) | API Key | free-tier | 필요 | REST(JSON) | [link](https://docs.nodit.io/) |
+| 클레이튼 KAS | 그라운드X | 노드 운영 없는 블록체인 개발 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://docs.klaytnapi.com/) |
+| 카이아(KAIA) API | 카이아 재단 | 클레이튼+핀시아 통합 블록체인 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://docs.kaia.io/) |
+
+### IoT·스마트홈
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 삼성 SmartThings API | 삼성전자 | 스마트홈 기기 제어·자동화·장소 관리 | OAuth | free | 필요 | REST(JSON) | [link](https://developer.smartthings.com/docs/api/public) |
+| LG ThinQ API | LG전자 | AI 가전 제어·상업용 설비 관리 | OAuth | free | 필요 | REST(JSON) | [link](https://smartsolution.developer.lge.com/) |
+
+### 게임
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| NEXON Open API | 넥슨(NEXON) | 메이플스토리·던전앤파이터·FC온라인 등 13종 게임의 캐릭터·랭킹·전적 데이터 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.nexon.com/ko/) |
+| 펄어비스 검은사막 API | 펄어비스 | 검은사막 게임·캐릭터 데이터 | API Key | free | 필요 | REST(JSON) | [link](https://documenter.getpostman.com/view/4028519/2s9Y5YRhp4) |
+
 ### 무역·통상
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
 |-----|----------|------|------|------|------|------|------|
 | 관세청 수출입무역통계(UNIPASS) Open API | 관세청 | 수출입 무역통계, 수출이행내역, 환율 등 관세·무역 오픈 API. | API Key | free | 필요 | REST(XML/JSON) | [link](https://unipass.customs.go.kr/ets/index.do?menuId=ETS_MNU_00000107) |
 | KOTRA 해외시장뉴스 API | 대한무역투자진흥공사(KOTRA) | 국가별 해외시장 뉴스, 단신속보, 국가정보(GDP·인구·규제 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15034831/openapi.do) |
+
+### 미디어·콘텐츠
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 딥서치 뉴스 API | 딥서치 | 국내외 200개 언론사 뉴스 수집 | API Key | free-tier | 필요 | REST(JSON) | [link](https://news.deepsearch.com) |
+| 만화규장각 Open API | 한국만화영상진흥원 | 만화·웹툰·작가 정보 제공 | API Key | free | 필요 | REST(JSON) | [link](https://www.kmas.or.kr/guide/openapi) |
 
 ### 법령·사법
 
@@ -324,6 +403,13 @@
 | 표준국어대사전 Open API | 국립국어원 | 표준국어대사전 표제어·뜻풀이 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://stdict.korean.go.kr/openapi/openApiInfo.do) |
 | 우리말샘 개방형 사전 Open API | 국립국어원 | 신어·방언·북한어 등을 포함한 개방형 국어사전 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendict.korean.go.kr/) |
 
+### 통신
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| KT API Link | KT | Geo Master·Cloud·GiGA Genie AI 등 KT API | API Key | free-tier | 필요 | REST(JSON) | [link](https://apilink.kt.co.kr/) |
+| SK텔레콤 Open API | SK텔레콤 | T맵·NUGU 등 AI/IoT 플랫폼 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://openapi.sk.com/) |
+
 ### 통신·인터넷
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -331,23 +417,29 @@
 | KISA WHOIS 인터넷주소 정보검색 API | 한국인터넷진흥원(KISA) | 도메인·IP·AS번호 등록/할당 정보 조회(WHOIS) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15094277/openapi.do) |
 | 네이버 클라우드 SENS(문자·알림톡) API | 네이버클라우드플랫폼(NCP) | SMS/LMS/MMS 문자 및 카카오 알림톡·친구톡 발송 메시징 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://www.ncloud.com/product/applicationService/sens) |
 
-### 게임
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| NEXON Open API | 넥슨(NEXON) | 메이플스토리·던전앤파이터·FC온라인 등 13종 게임의 캐릭터·랭킹·전적 데이터 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.nexon.com/ko/) |
-
 ### 과학·통계
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
 |-----|----------|------|------|------|------|------|------|
 | KOSIS 국가통계포털 공유서비스 | 통계청 | 국가통계 자료를 조회하는 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://kosis.kr/openapi/) |
 
+### 산업·고용
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 에어브릿지 API | 에어브릿지 | 모바일 앱 마케팅 어트리뷰션 | API Key | free-tier | 필요 | REST(JSON) | [link](https://help.airbridge.io/ko/references/introduction) |
+
 ### 쇼핑
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
 |-----|----------|------|------|------|------|------|------|
 | 네이버 쇼핑 검색 API | 네이버 | 쇼핑 상품 검색(네이버 검색 API의 쇼핑 분야). | API Key(Client ID/Secret) | free | 필요 | REST(JSON/XML) | [link](https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md) |
+
+### 클라우드
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| KT Cloud API | KT클라우드 | 공공·금융·제조 특화 클라우드 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://cloud.kt.com/) |
 
 ## 부록 A — data.go.kr 오픈 API 전수
 
