@@ -5,16 +5,16 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-29** · 버전: **0.5.0**
-- 총 API 수: **216** · 분야 수: **35**
-- 요금: free **187** / free-tier **29** · 회원가입·승인 필요: **212**
+- 총 API 수: **213** · 분야 수: **35**
+- 요금: free **184** / free-tier **29** · 회원가입·승인 필요: **209**
 
 ## 분야별 분포
 
 | 분야 | 개수 |
 |------|------|
-| 금융 | 20 |
 | 교통 | 19 |
 | 공공·행정 | 18 |
+| 금융 | 17 |
 | 교육·학술 | 15 |
 | 문화·관광·체육 | 13 |
 | 생활·소셜 | 13 |
@@ -49,31 +49,6 @@
 | 클라우드 | 1 |
 
 ## 분야별 API 목록
-
-### 금융
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 한국은행 경제통계시스템(ECOS) Open API | 한국은행 | 금리·환율·국민계정 등 경제통계 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://ecos.bok.or.kr/api/) |
-| 오픈뱅킹 공동업무 API | 금융결제원(KFTC) | 계좌조회·이체 등 은행 공동 오픈뱅킹 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://openapi.kftc.or.kr/) |
-| OpenDART 전자공시 API | 금융감독원 | 상장·외부감사 기업의 전자공시(사업보고서, 재무제표 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendart.fss.or.kr/) |
-| 한국수출입은행 환율 Open API | 한국수출입은행 | 현재/대출 환율 등 환율정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.koreaexim.go.kr) |
-| KRX OPEN API | 한국거래소(KRX) | 주식·채권·파생·지수 등 거래소 시장정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.krx.co.kr/) |
-| 한국예탁결제원(SEIBro) Open API | 한국예탁결제원 | 주식·기업·증권 발행정보 등 예탁결제 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.seibro.or.kr/pubc/pubr/cmm/CMPubrHome/viewCMPubrHome.do) |
-| 금융위원회 주식시세정보 API | 금융위원회 | 상장 주식의 시가·종가·거래량 등 시세 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15094808/openapi.do) |
-| 한국투자증권 KIS Developers Open API | 한국투자증권 | 주식/선물 시세 조회 및 주문·자동매매 REST/WebSocket 트레이딩 API. | API Key(App Key/Secret) + OAuth | free | 필요 | REST/WebSocket(JSON) | [link](https://apiportal.koreainvestment.com/intro) |
-| 키움증권 Open API+ | 키움증권 | 주식 시세·주문 등 트레이딩 API. | 계정 인증 | free | 필요 | OCX/COM(Windows), REST(신규) | [link](https://www.kiwoom.com/h/customer/download/VOpenApiInfoView) |
-| 업비트(Upbit) Open API | 업비트(두나무) | 가상자산 시세(캔들·현재가·호가·체결), 잔고·주문·출금 등 거래소 API. | 없음(시세) / API Key(거래) | free | 불필요 | REST/WebSocket(JSON) | [link](https://docs.upbit.com/kr/docs/developer-center-overview) |
-| 토스페이먼츠 결제 API | 토스페이먼츠 | 카드·간편결제(네이버페이/카카오페이 등) 통합 결제 연동 API. | API Key(시크릿/클라이언트 키) | free-tier | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/) |
-| 포트원(PortOne, 구 아임포트) 결제연동 API | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.portone.io/) |
-| 우체국금융(예금·보험) Open API | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.epostlife.go.kr/IPUIOP0000.do) |
-| 금융결제원 어카운트인포 계좌통합관리 API | 금융결제원(KFTC) | 전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://developers.kftc.or.kr/dev/openapi/account-info) |
-| 한국주택금융공사(HF) 주택금융 통계 API | 한국주택금융공사(HF) | 보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do) |
-| 신한은행 Open API | 신한은행 | 신한금융그룹 통합 금융 API | OAuth | free | 필요 | REST(JSON) | [link](https://openapi.shinhan.com/) |
-| 우리은행 Open API | 우리은행 | 핀테크 개발자 원스톱 금융 API | OAuth | free | 필요 | REST(JSON) | [link](https://developer.wooribank.com/apiservice) |
-| 하나금융그룹 Open API | 하나금융그룹 | 하나금융 API 마켓플레이스 | OAuth | free | 필요 | REST(JSON) | [link](https://www.hanafnapimarket.com/) |
-| KB금융 API 포탈 | KB금융그룹 | KB금융 종합 금융 API(800+) | OAuth | free | 필요 | REST(JSON) | [link](https://apiportal.kbfg.com/) |
-| NH농협은행 Open API | NH농협은행 | 농협 금융 개발자센터 API | OAuth | free | 필요 | REST(JSON) | [link](https://developers.nonghyup.com/center/CE_1020) |
 
 ### 교통
 
@@ -121,6 +96,28 @@
 | ALIO 공공기관 경영정보 Open API | 기획재정부(공공기관 경영정보 공개시스템) | 공공기관 임직원·재무·복리후생 등 경영정보(알리오) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.alio.go.kr/public_inst/list) |
 | 제주데이터허브 Open API | 제주특별자치도 | 제주 지역 관광·교통·환경·생활 등 데이터를 제공하는 지자체 데이터 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.jejudatahub.net/) |
 | 비즈노 API | 비즈노 | 사업자등록번호·상호로 사업자정보 조회 | API Key | free-tier | 필요 | REST(JSON) | [link](https://bizno.net/openapi) |
+
+### 금융
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 한국은행 경제통계시스템(ECOS) Open API | 한국은행 | 금리·환율·국민계정 등 경제통계 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://ecos.bok.or.kr/api/) |
+| 오픈뱅킹 공동업무 API | 금융결제원(KFTC) | 계좌조회·이체 등 은행 공동 오픈뱅킹 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://openapi.kftc.or.kr/) |
+| OpenDART 전자공시 API | 금융감독원 | 상장·외부감사 기업의 전자공시(사업보고서, 재무제표 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendart.fss.or.kr/) |
+| 한국수출입은행 환율 Open API | 한국수출입은행 | 현재/대출 환율 등 환율정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.koreaexim.go.kr) |
+| KRX OPEN API | 한국거래소(KRX) | 주식·채권·파생·지수 등 거래소 시장정보 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://openapi.krx.co.kr/) |
+| 한국예탁결제원(SEIBro) Open API | 한국예탁결제원 | 주식·기업·증권 발행정보 등 예탁결제 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.seibro.or.kr/pubc/pubr/cmm/CMPubrHome/viewCMPubrHome.do) |
+| 금융위원회 주식시세정보 API | 금융위원회 | 상장 주식의 시가·종가·거래량 등 시세 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15094808/openapi.do) |
+| 한국투자증권 KIS Developers Open API | 한국투자증권 | 주식/선물 시세 조회 및 주문·자동매매 REST/WebSocket 트레이딩 API. | API Key(App Key/Secret) + OAuth | free | 필요 | REST/WebSocket(JSON) | [link](https://apiportal.koreainvestment.com/intro) |
+| 키움증권 Open API+ | 키움증권 | 주식 시세·주문 등 트레이딩 API. | 계정 인증 | free | 필요 | OCX/COM(Windows), REST(신규) | [link](https://www.kiwoom.com/h/customer/download/VOpenApiInfoView) |
+| 업비트(Upbit) Open API | 업비트(두나무) | 가상자산 시세(캔들·현재가·호가·체결), 잔고·주문·출금 등 거래소 API. | 없음(시세) / API Key(거래) | free | 불필요 | REST/WebSocket(JSON) | [link](https://docs.upbit.com/kr/docs/developer-center-overview) |
+| 토스페이먼츠 결제 API | 토스페이먼츠 | 카드·간편결제(네이버페이/카카오페이 등) 통합 결제 연동 API. | API Key(시크릿/클라이언트 키) | free-tier | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/) |
+| 포트원(PortOne, 구 아임포트) 결제연동 API | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.portone.io/) |
+| 우체국금융(예금·보험) Open API | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.epostlife.go.kr/IPUIOP0000.do) |
+| 금융결제원 어카운트인포 계좌통합관리 API | 금융결제원(KFTC) | 전 금융기관 계좌·카드·보험 통합조회 및 휴면계좌 정리 등 어카운트인포 API. | OAuth 2.0 | free | 필요 | REST(JSON) | [link](https://developers.kftc.or.kr/dev/openapi/account-info) |
+| 한국주택금융공사(HF) 주택금융 통계 API | 한국주택금융공사(HF) | 보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do) |
+| 하나금융그룹 Open API | 하나금융그룹 | 하나금융 API 마켓플레이스 | OAuth | free | 필요 | REST(JSON) | [link](https://www.hanafnapimarket.com/) |
+| KB금융 API 포탈 | KB금융그룹 | KB금융 종합 금융 API(800+) | OAuth | free | 필요 | REST(JSON) | [link](https://apiportal.kbfg.com/) |
 
 ### 교육·학술
 
