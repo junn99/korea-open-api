@@ -3,12 +3,14 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-28",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "method": "WebSearch + 신뢰 가능한 집계 출처(github.com/yybmion/public-apis-4Kr) + 공식 문서 확인. data.go.kr 직접 크롤링은 해외/클라우드 IP 차단(503/403)으로 불가하여, 알려진 공식 API 위주로 큐레이션.",
     "limitations": [
-      "data.go.kr 전체(수만 건) 자동 전수 수집은 IP 차단으로 미수행 — 대표 API 위주 큐레이션.",
+      "data.go.kr 전체(수만 건) 자동 전수 수집은 IP 차단으로 미수행 — 기관/서비스 단위의 대표 API를 폭넓게 큐레이션.",
+      "약 18라운드(70+회) 교차 검색 결과 기관/서비스 단위에서는 포화에 근접(신규 발견 급감). 다만 data.go.kr는 동일 기관의 하위 데이터셋이 수만 건이라 '데이터셋 단위 전수'는 본질적으로 무한.",
+      "진정한 '전수'로 가는 유일한 길은 data.go.kr 공식 목록조회 API(15077093, apis.data.go.kr — 차단 아님)를 서비스키로 enumerate 하는 것. 키가 없어 미수행(docs/ENUMERATION.md 참고).",
       "민간 무료 API는 '전수'가 아니라 '대표 큐레이션'.",
-      "시점 스냅샷(2026-05) — 신규 추가/폐기로 시간이 지나면 낡음.",
+      "시점 스냅샷(2026-05) — 신규 추가/폐기로 시간이 지나면 낡음. 일부 항목은 폐기·대체 안내가 있어 note에 표기.",
       "일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'."
     ]
   },
@@ -2308,6 +2310,62 @@
       "rate_limit": "개발계정 약 10,000건/일",
       "source": "WebSearch",
       "note": "nps.or.kr."
+    },
+    {
+      "name": "ALIO 공공기관 경영정보 Open API",
+      "provider": "기획재정부(공공기관 경영정보 공개시스템)",
+      "category": "공공·행정",
+      "description": "공공기관 임직원·재무·복리후생 등 경영정보(알리오) 오픈 API.",
+      "docs_url": "https://opendata.alio.go.kr/public_inst/list",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "alio.go.kr."
+    },
+    {
+      "name": "공정거래위원회 가맹사업(프랜차이즈) 정보 API",
+      "provider": "공정거래위원회",
+      "category": "상권·창업",
+      "description": "브랜드별 가맹점·직영점 수, 매출액, 계약현황 등 프랜차이즈 정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=API&keyword=가맹사업",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "공정위 가맹사업거래(franchise.ftc.go.kr). data.go.kr 제공."
+    },
+    {
+      "name": "국가정책연구포털(NKIS) Open API",
+      "provider": "경제·인문사회연구회",
+      "category": "교육·학술",
+      "description": "국책연구기관 정책연구보고서 등 정책연구 정보 오픈 API.",
+      "docs_url": "https://www.nkis.re.kr/openSvcList.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "제주데이터허브 Open API",
+      "provider": "제주특별자치도",
+      "category": "공공·행정",
+      "description": "제주 지역 관광·교통·환경·생활 등 데이터를 제공하는 지자체 데이터 포털.",
+      "docs_url": "https://www.jejudatahub.net/",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "지자체 데이터 포털의 예. 인천·대전·울산·세종 등도 별도 포털 운영."
     }
   ]
 }
