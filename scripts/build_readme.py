@@ -40,6 +40,9 @@ def slug(text: str) -> str:
     return s
 
 
+APPENDIX_TITLE = "부록 A: data.go.kr 오픈 API 전수"
+
+
 def main() -> None:
     doc = json.loads(DATA.read_text(encoding="utf-8"))
     meta = doc["meta"]
@@ -70,7 +73,7 @@ def main() -> None:
       f"· 요금: free **{pricing.get('free', 0)}** / free-tier **{pricing.get('free-tier', 0)}** "
       f"· 회원가입·승인 필요: **{auth_signup}**")
     a("- 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 "
-      "[`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a--datagokr-오픈-api-전수)).")
+      f"[`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#{slug(APPENDIX_TITLE)})).")
     a("")
 
     # ── 목차 ──
@@ -81,7 +84,7 @@ def main() -> None:
     for c in ordered_cats:
         icon = CAT_ICON.get(c, "•")
         a(f"  - [{icon} {c}](#{slug(c)}) ({cats[c]})")
-    a("- [부록 A — data.go.kr 오픈 API 전수](#부록-a--datagokr-오픈-api-전수)")
+    a(f"- [{APPENDIX_TITLE}](#{slug(APPENDIX_TITLE)})")
     a("- [한계 및 주의](#한계-및-주의)")
     a("")
 
@@ -100,8 +103,9 @@ def main() -> None:
     a("## 분야별 API 목록")
     a("")
     for c in ordered_cats:
-        icon = CAT_ICON.get(c, "•")
-        a(f"### {icon} {c}")
+        # 헤더에는 이모지를 넣지 않는다: GitHub 앵커가 깔끔하게 #분야명 으로 생성되어
+        # 목차/분포표의 링크(#slug)와 정확히 일치한다. (이모지는 목차·분포표에만 표시)
+        a(f"### {c}")
         a("")
         a("| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |")
         a("|-----|----------|------|------|------|:----:|")
@@ -120,7 +124,7 @@ def main() -> None:
     if DATAGO.exists():
         dg = json.loads(DATAGO.read_text(encoding="utf-8"))
         dm = dg["meta"]
-        a("## 부록 A — data.go.kr 오픈 API 전수")
+        a(f"## {APPENDIX_TITLE}")
         a("")
         a("위 큐레이션과 별개로, 공공데이터포털 **목록조회 API(15077093)** 로 오픈 API 목록을 "
           "**전수 수집**했습니다. 기계 판독용 전체 목록은 "
