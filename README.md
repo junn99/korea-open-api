@@ -5,31 +5,31 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-28** · 버전: **0.4.0**
-- 총 API 수: **145** · 분야 수: **26**
-- 요금: free **137** / free-tier **8** · 회원가입·승인 필요: **143**
+- 총 API 수: **151** · 분야 수: **26**
+- 요금: free **142** / free-tier **9** · 회원가입·승인 필요: **149**
 
 ## 분야별 분포
 
 | 분야 | 개수 |
 |------|------|
-| 교통 | 14 |
+| 교통 | 15 |
 | 교육·학술 | 13 |
 | 금융 | 13 |
 | 생활·소셜 | 13 |
 | 공공·행정 | 12 |
+| 날씨·환경 | 10 |
 | 문화·관광·체육 | 10 |
-| 날씨·환경 | 9 |
 | 콘텐츠·미디어 | 8 |
+| 농축수산 | 7 |
 | 보건·식품 | 7 |
 | 지도·위치 | 6 |
-| 농축수산 | 5 |
-| 에너지 | 4 |
+| 에너지 | 5 |
+| 채용·고용 | 4 |
 | 검색 | 3 |
 | 과학기술·특허 | 3 |
 | 부동산 | 3 |
 | 인공지능 | 3 |
 | 재난·안전 | 3 |
-| 채용·고용 | 3 |
 | 무역·통상 | 2 |
 | 법령·사법 | 2 |
 | 상권·창업 | 2 |
@@ -59,6 +59,7 @@
 | 도로교통공단 TAAS 교통사고분석 Open API | 한국도로교통공단(KOROAD) | 교통사고 다발지(13종), 교통안전정보(3종) 등 교통사고 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.koroad.or.kr/) |
 | 서울 지하철 실시간 도착정보 API | 서울특별시(TOPIS) | 서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058052/openapi.do) |
 | 한국철도공사(코레일) 열차운행정보 API | 한국철도공사 | 여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15125762/openapi.do) |
+| 부산교통공사 부산도시철도 운행정보 API | 부산교통공사 | 부산 도시철도 운행정보·시각표 등 지방 도시철도 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15001019/openapi.do) |
 
 ### 교육·학술
 
@@ -131,6 +132,21 @@
 | 행정표준코드 법정동코드 API | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077871/openapi.do) |
 | 지방재정365 재정정보 API | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058102/openapi.do) |
 
+### 날씨·환경
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 기상청 API 허브 | 기상청 | 단기/중기예보, 실황, 지상/해양 관측 등 기상 데이터 오픈 API 통합 허브. | API Key | free | 필요 | REST(JSON/XML/텍스트) | [link](https://apihub.kma.go.kr) |
+| 에어코리아 대기오염정보 API | 한국환경공단 | 미세먼지·대기질 실시간 측정정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15073861/openapi.do) |
+| 한국환경공단 전기차 충전소 정보 API | 한국환경공단 | 전국 전기차 충전소 위치·상태 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15076352/openapi.do) |
+| 바다누리 해양정보 서비스 Open API | 국립해양조사원 | 조위·조류·수온 등 해양 관측/예측 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](http://www.khoa.go.kr/oceangrid/khoa/takepart/openapi/openApiDeveloperGuide.do) |
+| K-water 공공데이터 개방포털 Open API | 한국수자원공사(K-water) | 댐·보 수문정보(수위·강우·방류량 등), 수자원 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.kwater.or.kr/) |
+| 환경부 화학물질정보 API | 환경부 화학물질안전원 | 화학물질 명칭·CAS번호·분자식·분류 등 화학물질 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15029194/openapi.do) |
+| 국립생물자원관 한반도 생물다양성 API | 환경부 국립생물자원관 | 국가생물종목록, 생물다양성, 종별 멀티미디어 등 생태 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://species.nibr.go.kr/) |
+| 한강홍수통제소 수문·홍수 Open API | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.hrfco.go.kr/web/openapiPage/openApi.do) |
+| 국가지하수정보센터(GIMS) Open API | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML, WMS/WFS) | [link](https://www.gims.go.kr/apiIntro.do) |
+| 한국환경공단 올바로(Allbaro) 폐기물·자원순환 API | 한국환경공단 | 폐기물 배출·운반·처리 관리(올바로) 코드 및 자원순환 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.recycling-info.or.kr/sds/apiKeyControl.do) |
+
 ### 문화·관광·체육
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -146,20 +162,6 @@
 | 한국관광공사 두루누비(코리아둘레길) 정보 API | 한국관광공사 | 코리아둘레길 284개 코스 GPX·걷기여행길·자전거길 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15101974/openapi.do) |
 | 한국마사회 경마경주정보 API | 한국마사회 | 경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15063951/openapi.do) |
 
-### 날씨·환경
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 기상청 API 허브 | 기상청 | 단기/중기예보, 실황, 지상/해양 관측 등 기상 데이터 오픈 API 통합 허브. | API Key | free | 필요 | REST(JSON/XML/텍스트) | [link](https://apihub.kma.go.kr) |
-| 에어코리아 대기오염정보 API | 한국환경공단 | 미세먼지·대기질 실시간 측정정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15073861/openapi.do) |
-| 한국환경공단 전기차 충전소 정보 API | 한국환경공단 | 전국 전기차 충전소 위치·상태 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15076352/openapi.do) |
-| 바다누리 해양정보 서비스 Open API | 국립해양조사원 | 조위·조류·수온 등 해양 관측/예측 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](http://www.khoa.go.kr/oceangrid/khoa/takepart/openapi/openApiDeveloperGuide.do) |
-| K-water 공공데이터 개방포털 Open API | 한국수자원공사(K-water) | 댐·보 수문정보(수위·강우·방류량 등), 수자원 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendata.kwater.or.kr/) |
-| 환경부 화학물질정보 API | 환경부 화학물질안전원 | 화학물질 명칭·CAS번호·분자식·분류 등 화학물질 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15029194/openapi.do) |
-| 국립생물자원관 한반도 생물다양성 API | 환경부 국립생물자원관 | 국가생물종목록, 생물다양성, 종별 멀티미디어 등 생태 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://species.nibr.go.kr/) |
-| 한강홍수통제소 수문·홍수 Open API | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.hrfco.go.kr/web/openapiPage/openApi.do) |
-| 국가지하수정보센터(GIMS) Open API | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML, WMS/WFS) | [link](https://www.gims.go.kr/apiIntro.do) |
-
 ### 콘텐츠·미디어
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -172,6 +174,18 @@
 | 영상물등급위원회 등급분류정보 API | 영상물등급위원회 | 비디오물 등급분류 정보(제명·감독·관람등급·내용정보) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15127675/openapi.do) |
 | 한국저작권위원회 공유마당 API | 한국저작권위원회 | CCL/만료저작물 등 자유이용 저작물(사진·음악·미술·어문 등) 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://gongu.copyright.or.kr/gongu/useReqst/apiKey/info.do?menuNo=200245) |
 | 국립국악원 국악 디지털음원 API | 문화체육관광부 국립국악원 | 국악 디지털 음원·아카이브(음향·영상·이미지) 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15097515/openapi.do) |
+
+### 농축수산
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| KAMIS 농수산물유통정보 Open API | 한국농수산식품유통공사(aT) | 농수산물 도·소매 가격, 거래동향 등 17종 유통정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.kamis.or.kr/customer/reference/openapi_list.do) |
+| 농사로 Open API | 농촌진흥청 | 농업기술·작물·병해충 등 농업정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00191) |
+| 농림축산식품 공공데이터 포털 | 농림축산식품부 | 농림축산식품 분야 데이터·오픈API를 제공하는 부처 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.mafra.go.kr/) |
+| 축산물이력제 Open API | 농림축산식품부 / 축산물품질평가원 | 소·돼지 등 축산물 이력정보(개체식별번호) 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://mtrace.go.kr/openService.jsp) |
+| 스마트팜코리아 Open API | 농림수산식품교육문화정보원(EPIS) | 스마트팜 시설원예·노지 빅데이터(환경·생육·제어) 등 농업 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.smartfarmkorea.net/openApi/openApiUseInfo.do) |
+| 한국농어촌공사 농촌용수 저수지 수위정보 API | 한국농어촌공사 | 농업용 저수지 수위·저수율·수질 등 농촌용수 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15099919/openapi.do) |
+| 국립농업과학원 농업기상 관측데이터 API | 농촌진흥청 국립농업과학원 | 농업기상 기본·상세 관측(기온·강수·일사·토양수분 등), 주산지 분석 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15078057/openapi.do) |
 
 ### 보건·식품
 
@@ -196,16 +210,6 @@
 | 도로명주소 API | 행정안전부 | 도로명주소 검색, 영문주소, 좌표제공 등 주소 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://business.juso.go.kr/addrlink/openApi/apiExprn.do) |
 | 국토교통부 연속지적도·토지특성 정보 API | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15057558/openapi.do) |
 
-### 농축수산
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| KAMIS 농수산물유통정보 Open API | 한국농수산식품유통공사(aT) | 농수산물 도·소매 가격, 거래동향 등 17종 유통정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.kamis.or.kr/customer/reference/openapi_list.do) |
-| 농사로 Open API | 농촌진흥청 | 농업기술·작물·병해충 등 농업정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00191) |
-| 농림축산식품 공공데이터 포털 | 농림축산식품부 | 농림축산식품 분야 데이터·오픈API를 제공하는 부처 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.mafra.go.kr/) |
-| 축산물이력제 Open API | 농림축산식품부 / 축산물품질평가원 | 소·돼지 등 축산물 이력정보(개체식별번호) 조회 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://mtrace.go.kr/openService.jsp) |
-| 스마트팜코리아 Open API | 농림수산식품교육문화정보원(EPIS) | 스마트팜 시설원예·노지 빅데이터(환경·생육·제어) 등 농업 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.smartfarmkorea.net/openApi/openApiUseInfo.do) |
-
 ### 에너지
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -214,6 +218,16 @@
 | 전력거래소(KPX) 공공데이터 API | 한국전력거래소(KPX) | 전력 수급, SMP, 발전량 등 전력시장 데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.kpx.or.kr/menu.es?mid=a10107020000) |
 | 한국에너지공단 신재생에너지 Open API | 한국에너지공단 | 신재생에너지 보급·설비 등 에너지 통계/정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.energy.or.kr/web/kem_home_new/data_offer/OPEN_API_3.asp) |
 | 한국가스공사 도시가스 공급열량 API | 한국가스공사 | 도시가스 공급예상열량·공급열량실적 등 가스 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15138871/openapi.do) |
+| 오피넷(Opinet) 유가정보 Open API | 한국석유공사 | 전국/시도/시군구 평균 유가, 최저가 주유소, 주유소 위치·상세 등 유가 API. | API Key | free-tier | 필요 | REST(XML/JSON) | [link](https://www.opinet.co.kr/user/custapi/custApiInfo.do) |
+
+### 채용·고용
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 고용24 / 고용노동부 일자리 API | 고용노동부 / 한국고용정보원 | 채용공고, 직업정보, 고용통계 등 일자리 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
+| 워크넷 Open API | 한국고용정보원 | 채용정보, 직업정보, 학과정보 등 고용 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://openapi.work.go.kr/opiMain.do) |
+| 한국산업인력공단(큐넷) 국가자격 정보 API | 한국산업인력공단 | 국가기술자격 종목·시험일정·교부수수료 등 자격정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://openapi.hrdkorea.or.kr/main) |
+| 근로복지공단 고용·산재보험 현황정보 API | 근로복지공단 | 사업장 고용·산재보험 가입 현황(사업장명·주소·근로자수 등) 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15059256/openapi.do) |
 
 ### 검색
 
@@ -254,14 +268,6 @@
 | 재난안전데이터 공유플랫폼 Open API | 행정안전부 | 재난·안전 분야 데이터를 통합 제공하는 플랫폼 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safetydata.go.kr/) |
 | 생활안전지도(SafeMap) Open API | 행정안전부 | 치안·교통·재난 등 생활안전 공간정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safemap.go.kr/dvct/openAPI.do) |
 | 소방청 구급정보 서비스 API | 소방청 | 구급·구급통계, 출동 등 119 구급 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15099423/openapi.do) |
-
-### 채용·고용
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 고용24 / 고용노동부 일자리 API | 고용노동부 / 한국고용정보원 | 채용공고, 직업정보, 고용통계 등 일자리 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
-| 워크넷 Open API | 한국고용정보원 | 채용정보, 직업정보, 학과정보 등 고용 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://openapi.work.go.kr/opiMain.do) |
-| 한국산업인력공단(큐넷) 국가자격 정보 API | 한국산업인력공단 | 국가기술자격 종목·시험일정·교부수수료 등 자격정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://openapi.hrdkorea.or.kr/main) |
 
 ### 무역·통상
 
