@@ -2126,6 +2126,62 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "allbaro.or.kr. data.go.kr로도 코드 등 제공."
+    },
+    {
+      "name": "경찰청 치안·교통 Open API",
+      "provider": "경찰청",
+      "category": "재난·안전",
+      "description": "교통 CCTV 영상, 안전Dream 실종자 정보, 범죄 통계 등 치안 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15148511/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "스마트치안 빅데이터 플랫폼(bigdata-policing.kr) Open API도 별도. CCTV는 UTIC."
+    },
+    {
+      "name": "행정안전부 주민등록 인구·세대현황 API",
+      "provider": "행정안전부",
+      "category": "공공·행정",
+      "description": "행정동/법정동/도로명별 주민등록 인구·세대수·연령·남녀 통계 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15108065/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "jumin.mois.go.kr. 인구통계의 기본 데이터로 널리 사용."
+    },
+    {
+      "name": "국립수산과학원 어장·해양관측 Open API",
+      "provider": "국립수산과학원(NIFS)",
+      "category": "농축수산",
+      "description": "실시간 어장정보, 수온·염분 등 해양관측, 수산 정보 오픈 API.",
+      "docs_url": "https://www.nifs.go.kr/openApi/actionOpenapiInfoList.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "우주항공청 우주환경(우주날씨) API",
+      "provider": "우주항공청(KASA) 우주환경센터",
+      "category": "과학기술·특허",
+      "description": "태양흑점폭발(R)·태양입자유입(S)·지자기교란(G) 등 우주환경 예보확률 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15128884/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "특이 케이스 — 우주날씨. spaceweather.kasa.go.kr. 우주전파센터(rra.go.kr) Open API도 별도."
     }
   ]
 }
