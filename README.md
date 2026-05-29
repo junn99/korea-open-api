@@ -2,12 +2,12 @@
 
 한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.
 
-![APIs](https://img.shields.io/badge/큐레이션_API-217-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
+![APIs](https://img.shields.io/badge/큐레이션_API-218-blue) ![Categories](https://img.shields.io/badge/분야-37-green) ![data.go.kr](https://img.shields.io/badge/data.go.kr_전수-12%2C073-orange)
 
 > 이 파일은 자동 생성됩니다. 원본 데이터는 [`data/korea-open-apis.json`](data/korea-open-apis.json) 이며 `python3 scripts/build_readme.py` 로 재생성합니다. **README를 직접 수정하지 마세요.**
 
-- 최종 갱신: **2026-05-29** · 버전: **0.8.0**
-- 큐레이션 API: **217** · 분야: **37** · 요금: free **189** / free-tier **28** · 회원가입·승인 필요: **213**
+- 최종 갱신: **2026-05-29** · 버전: **0.9.0**
+- 큐레이션 API: **218** · 분야: **37** · 요금: free **190** / free-tier **28** · 회원가입·승인 필요: **214**
 - 이와 별개로 공공데이터포털(data.go.kr) 오픈 API **전수 12,073건**을 [`data/datago_apis.json`](data/datago_apis.json) 으로 제공합니다 ([부록 A](#부록-a-datagokr-오픈-api-전수)).
 
 ## 목차
@@ -22,9 +22,9 @@
   - [💬 생활·소셜](#생활소셜) (13)
   - [☀️ 날씨·환경](#날씨환경) (12)
   - [🌾 농축수산](#농축수산) (10)
+  - [🏥 보건·식품](#보건식품) (8)
   - [🗺 지도·위치](#지도위치) (8)
   - [📺 콘텐츠·미디어](#콘텐츠미디어) (8)
-  - [🏥 보건·식품](#보건식품) (7)
   - [🏘 부동산](#부동산) (6)
   - [💳 결제·핀테크](#결제핀테크) (5)
   - [🏪 상권·창업](#상권창업) (5)
@@ -66,9 +66,9 @@
 | 💬 [생활·소셜](#생활소셜) | 13 |
 | ☀️ [날씨·환경](#날씨환경) | 12 |
 | 🌾 [농축수산](#농축수산) | 10 |
+| 🏥 [보건·식품](#보건식품) | 8 |
 | 🗺 [지도·위치](#지도위치) | 8 |
 | 📺 [콘텐츠·미디어](#콘텐츠미디어) | 8 |
-| 🏥 [보건·식품](#보건식품) | 7 |
 | 🏘 [부동산](#부동산) | 6 |
 | 💳 [결제·핀테크](#결제핀테크) | 5 |
 | 🏪 [상권·창업](#상권창업) | 5 |
@@ -95,7 +95,7 @@
 | 🛍 [쇼핑](#쇼핑) | 1 |
 | ☁️ [클라우드](#클라우드) | 1 |
 | • [통신](#통신) | 1 |
-| **합계** | **217** |
+| **합계** | **218** |
 
 ## 분야별 API 목록
 
@@ -274,6 +274,21 @@
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
+### 보건·식품
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
+|-----|----------|------|------|------|:----:|
+| [식품안전나라 Open API](https://www.foodsafetykorea.go.kr/api/) | 식품의약품안전처 | 식품·의약품·건강기능식품 정보, 회수/판매중지 등 식의약 오픈 API. | API Key | free | ✅ |
+| [건강보험심사평가원(HIRA) 공공 API](https://opendata.hira.or.kr) | 건강보험심사평가원 | 병원·약국 정보, 의약품, 비급여 진료비 등 보건의료 오픈 API. | API Key | free | ✅ |
+| [E-Gen 중앙응급의료센터 Open API](https://www.e-gen.or.kr/nemc/open_api.do) | 국립중앙의료원 중앙응급의료센터 | 실시간 응급실 가용병상, 응급의료기관, 외상센터 등 응급의료 오픈 API. | API Key | free | ✅ |
+| [국가건강정보포털 Open API](https://health.kdca.go.kr/healthinfo/biz/health/portalUseGuidance/openApiReqst/openApiReqstRegist.do) | 질병관리청 | 질병·건강정보 콘텐츠 오픈 API. | API Key | free | ✅ |
+| [국민건강보험공단 검진기관 정보 API](https://www.data.go.kr/data/15001672/openapi.do) | 국민건강보험공단 | 건강검진기관 위치·검진종류 등 정보 오픈 API. | API Key | free | ✅ |
+| [식약처 의약품개요정보(e약은요) API](https://www.data.go.kr/data/15075057/openapi.do) | 식품의약품안전처 | 일반·전문 의약품의 효능·용법·주의사항·상호작용 등 개요 정보 오픈 API. | API Key | free | ✅ |
+| [식약처 의약품안전사용서비스(DUR) API](https://www.data.go.kr/data/15059486/openapi.do) | 식품의약품안전처 | 병용금기, 연령·임부 금기, 중복효능 등 의약품 안전사용(DUR) 오픈 API. | API Key | free | ✅ |
+| [초록누리(생활환경안전정보) Open API](https://ecolife.me.go.kr/ecolife/infoCenter/openApi?pMENU_NO=588) | 기후에너지환경부(환경부) / 국립환경과학원 | 생활화학제품 전성분(함유 화학물질·유해성) 및 안전기준 위반 회수대상 제품 정보. | API Key(인증키) | free | ✅ |
+
+<sub>[⬆ 맨 위로](#목차)</sub>
+
 ### 지도·위치
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
@@ -301,20 +316,6 @@
 | [영상물등급위원회 등급분류정보 API](https://www.data.go.kr/data/15127675/openapi.do) | 영상물등급위원회 | 비디오물 등급분류 정보(제명·감독·관람등급·내용정보) 오픈 API. | API Key | free | ✅ |
 | [한국저작권위원회 공유마당 API](https://gongu.copyright.or.kr/gongu/useReqst/apiKey/info.do?menuNo=200245) | 한국저작권위원회 | CCL/만료저작물 등 자유이용 저작물(사진·음악·미술·어문 등) 검색 오픈 API. | API Key | free | ✅ |
 | [국립국악원 국악 디지털음원 API](https://www.data.go.kr/data/15097515/openapi.do) | 문화체육관광부 국립국악원 | 국악 디지털 음원·아카이브(음향·영상·이미지) 정보 오픈 API. | API Key | free | ✅ |
-
-<sub>[⬆ 맨 위로](#목차)</sub>
-
-### 보건·식품
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 |
-|-----|----------|------|------|------|:----:|
-| [식품안전나라 Open API](https://www.foodsafetykorea.go.kr/api/) | 식품의약품안전처 | 식품·의약품·건강기능식품 정보, 회수/판매중지 등 식의약 오픈 API. | API Key | free | ✅ |
-| [건강보험심사평가원(HIRA) 공공 API](https://opendata.hira.or.kr) | 건강보험심사평가원 | 병원·약국 정보, 의약품, 비급여 진료비 등 보건의료 오픈 API. | API Key | free | ✅ |
-| [E-Gen 중앙응급의료센터 Open API](https://www.e-gen.or.kr/nemc/open_api.do) | 국립중앙의료원 중앙응급의료센터 | 실시간 응급실 가용병상, 응급의료기관, 외상센터 등 응급의료 오픈 API. | API Key | free | ✅ |
-| [국가건강정보포털 Open API](https://health.kdca.go.kr/healthinfo/biz/health/portalUseGuidance/openApiReqst/openApiReqstRegist.do) | 질병관리청 | 질병·건강정보 콘텐츠 오픈 API. | API Key | free | ✅ |
-| [국민건강보험공단 검진기관 정보 API](https://www.data.go.kr/data/15001672/openapi.do) | 국민건강보험공단 | 건강검진기관 위치·검진종류 등 정보 오픈 API. | API Key | free | ✅ |
-| [식약처 의약품개요정보(e약은요) API](https://www.data.go.kr/data/15075057/openapi.do) | 식품의약품안전처 | 일반·전문 의약품의 효능·용법·주의사항·상호작용 등 개요 정보 오픈 API. | API Key | free | ✅ |
-| [식약처 의약품안전사용서비스(DUR) API](https://www.data.go.kr/data/15059486/openapi.do) | 식품의약품안전처 | 병용금기, 연령·임부 금기, 중복효능 등 의약품 안전사용(DUR) 오픈 API. | API Key | free | ✅ |
 
 <sub>[⬆ 맨 위로](#목차)</sub>
 
@@ -614,3 +615,4 @@
 - 일부 docs_url은 포털 루트만 확보 — 정확한 딥링크는 note에 표기하거나 '(미확인)'.
 - GitHub 모음 2차 교차검증(dl0312/open-apis-korea, 711행): 신규+생존+무료+한국제공은 3건(카카오내비·카카오톡채널·네이버캡차)뿐. 나머지는 해외 API(범위 밖)·기보유·폐기(카카오 비전/번역/음성 2022종료, 카카오스토리 2023종료, 네이버 me2.do 2024종료). 즉 공개 모음들은 상당수 폐기 항목을 포함하므로 그대로 신뢰 불가.
 - 주제별 커버리지 점검(노래/화장실/공공장소/식당) 중 큐레이션 본문에 화장실·식당 '간판'이 비어 있던 공백을 보완: 전국공중화장실 표준데이터, LOCALDATA(음식점 인허가), 전국공공시설개방정보 표준데이터 추가. data.go.kr 전수(부록 A)에는 이미 다수 존재했으나 대표 API를 본문으로 끌어올림.
+- 주제 점검(의약품·위생/유해성분)에서 의약품(e약은요·DUR)·식품안전은 충분했으나 '생활화학제품 유해성분/회수' 간판이 비어 초록누리 OpenAPI 추가. 식품·의약품 회수·판매중단은 기존 식품안전나라 API에 포함.
