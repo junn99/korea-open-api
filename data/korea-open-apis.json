@@ -2366,6 +2366,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "지자체 데이터 포털의 예. 인천·대전·울산·세종 등도 별도 포털 운영."
+    },
+    {
+      "name": "한국국토정보공사(LX) LX맵 서비스 API",
+      "provider": "한국국토정보공사(LX)",
+      "category": "지도·위치",
+      "description": "국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15020966/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "vworld.kr 연계."
+    },
+    {
+      "name": "주택도시보증공사(HUG) Open API",
+      "provider": "주택도시보증공사(HUG)",
+      "category": "부동산",
+      "description": "분양보증, 주택사업, 주택도시 관련 통계·정보 오픈 API.",
+      "docs_url": "https://www.khug.or.kr/openapi/web/se/ap/seap000002.jsp",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "한국주택금융공사(HF) 주택금융 통계 API",
+      "provider": "한국주택금융공사(HF)",
+      "category": "금융",
+      "description": "보금자리론, 주택연금, 전세자금보증 등 주택금융 통계 오픈 API.",
+      "docs_url": "https://houstat.hf.go.kr/research/portal/openapi/openApiIntroPage.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "hf.go.kr."
+    },
+    {
+      "name": "기업마당(Bizinfo) 정부지원사업 API",
+      "provider": "중소벤처기업부",
+      "category": "상권·창업",
+      "description": "중앙부처·지자체·유관기관 중소기업 지원사업 공고·정책정보 오픈 API.",
+      "docs_url": "https://www.bizinfo.go.kr/web/lay1/program/S1T175C174/apiList.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "중소벤처24(smes.go.kr)도 별도."
+    },
+    {
+      "name": "국립농산물품질관리원 친환경인증정보 API",
+      "provider": "국립농산물품질관리원(NAQS)",
+      "category": "농축수산",
+      "description": "친환경(유기·무농약)·전통식품 등 농식품 인증정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15000935/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "enviagro.go.kr / naqs.go.kr. 유기농업자재 공시 등 관련 API 다수."
     }
   ]
 }
