@@ -5,8 +5,8 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-29** · 버전: **0.5.0**
-- 총 API 수: **213** · 분야 수: **35**
-- 요금: free **184** / free-tier **29** · 회원가입·승인 필요: **209**
+- 총 API 수: **211** · 분야 수: **35**
+- 요금: free **183** / free-tier **28** · 회원가입·승인 필요: **207**
 
 ## 분야별 분포
 
@@ -23,8 +23,8 @@
 | 콘텐츠·미디어 | 8 |
 | 보건·식품 | 7 |
 | 지도·위치 | 7 |
-| 결제·핀테크 | 6 |
 | 부동산 | 6 |
+| 결제·핀테크 | 5 |
 | 에너지 | 5 |
 | 재난·안전 | 5 |
 | 채용·고용 | 5 |
@@ -41,12 +41,12 @@
 | 미디어·콘텐츠 | 2 |
 | 법령·사법 | 2 |
 | 언어·사전 | 2 |
-| 통신 | 2 |
 | 통신·인터넷 | 2 |
 | 과학·통계 | 1 |
 | 산업·고용 | 1 |
 | 쇼핑 | 1 |
 | 클라우드 | 1 |
+| 통신 | 1 |
 
 ## 분야별 API 목록
 
@@ -244,17 +244,6 @@
 | 국토교통부 연속지적도·토지특성 정보 API | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15057558/openapi.do) |
 | 한국국토정보공사(LX) LX맵 서비스 API | 한국국토정보공사(LX) | 국토정보 기본도·정사영상 기반 지도 및 국토변화 정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15020966/openapi.do) |
 
-### 결제·핀테크
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 토스페이먼츠 | 토스페이먼츠 | 카드·가상계좌·간편결제 통합 결제 API | API Key | free | 필요 | REST(JSON) | [link](https://docs.tosspayments.com/reference) |
-| 토스페이 | 비바리퍼블리카(토스) | 토스 간편결제·정기결제 API | API Key | free | 필요 | REST(JSON) | [link](https://docs-pay.toss.im/reference) |
-| 부트페이 | 부트페이 | 다중 PG(이니시스·KCP·다날 등) 통합 결제 연동 | API Key | free | 필요 | REST(JSON) | [link](https://docs.bootpay.co.kr/) |
-| 페이플 | 페이플 | 간편·정기·링크결제 서비스 | API Key | free | 필요 | REST(JSON) | [link](https://developer.payple.kr/) |
-| 페이코(PAYCO) | NHN페이코 | NHN 통합 ID·결제·멤버십 연동 | OAuth | free | 필요 | REST(JSON) | [link](https://developers.payco.com/guide) |
-| 하이픈 API 마켓플레이스 | 케이에스넷 | 금융·공공 데이터 스크래핑 API 마켓(500+) | API Key | free-tier | 필요 | REST(JSON) | [link](https://hyphen.im/) |
-
 ### 부동산
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -265,6 +254,16 @@
 | 국토교통부 건축HUB 건축물대장·인허가 API | 국토교통부 | 건축물대장(표제부·전유부·층별 등), 건축인허가 등 건축데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15134735/openapi.do) |
 | 한국토지주택공사(LH) 임대·분양 주택정보 API | 한국토지주택공사(LH) | 공공임대주택 단지정보, 분양·임대 공고별 공급정보 등 주택 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058476/openapi.do) |
 | 주택도시보증공사(HUG) Open API | 주택도시보증공사(HUG) | 분양보증, 주택사업, 주택도시 관련 통계·정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.khug.or.kr/openapi/web/se/ap/seap000002.jsp) |
+
+### 결제·핀테크
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 토스페이 | 비바리퍼블리카(토스) | 토스 간편결제·정기결제 API | API Key | free | 필요 | REST(JSON) | [link](https://docs-pay.toss.im/reference) |
+| 부트페이 | 부트페이 | 다중 PG(이니시스·KCP·다날 등) 통합 결제 연동 | API Key | free | 필요 | REST(JSON) | [link](https://docs.bootpay.co.kr/) |
+| 페이플 | 페이플 | 간편·정기·링크결제 서비스 | API Key | free | 필요 | REST(JSON) | [link](https://developer.payple.kr/) |
+| 페이코(PAYCO) | NHN페이코 | NHN 통합 ID·결제·멤버십 연동 | OAuth | free | 필요 | REST(JSON) | [link](https://developers.payco.com/guide) |
+| 하이픈 API 마켓플레이스 | 케이에스넷 | 금융·공공 데이터 스크래핑 API 마켓(500+) | API Key | free-tier | 필요 | REST(JSON) | [link](https://hyphen.im/) |
 
 ### 에너지
 
@@ -400,13 +399,6 @@
 | 표준국어대사전 Open API | 국립국어원 | 표준국어대사전 표제어·뜻풀이 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://stdict.korean.go.kr/openapi/openApiInfo.do) |
 | 우리말샘 개방형 사전 Open API | 국립국어원 | 신어·방언·북한어 등을 포함한 개방형 국어사전 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://opendict.korean.go.kr/) |
 
-### 통신
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| KT API Link | KT | Geo Master·Cloud·GiGA Genie AI 등 KT API | API Key | free-tier | 필요 | REST(JSON) | [link](https://apilink.kt.co.kr/) |
-| SK텔레콤 Open API | SK텔레콤 | T맵·NUGU 등 AI/IoT 플랫폼 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://openapi.sk.com/) |
-
 ### 통신·인터넷
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -437,6 +429,12 @@
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
 |-----|----------|------|------|------|------|------|------|
 | KT Cloud API | KT클라우드 | 공공·금융·제조 특화 클라우드 API | API Key | free-tier | 필요 | REST(JSON) | [link](https://cloud.kt.com/) |
+
+### 통신
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| KT API Link | KT | Geo Master·Cloud·GiGA Genie AI 등 KT API | API Key | free-tier | 필요 | REST(JSON) | [link](https://apilink.kt.co.kr/) |
 
 ## 부록 A — data.go.kr 오픈 API 전수
 

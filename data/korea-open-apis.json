@@ -2509,20 +2509,6 @@
       "note": "nature.go.kr(국가표준식물목록)."
     },
     {
-      "name": "토스페이먼츠",
-      "provider": "토스페이먼츠",
-      "category": "결제·핀테크",
-      "description": "카드·가상계좌·간편결제 통합 결제 API",
-      "docs_url": "https://docs.tosspayments.com/reference",
-      "auth": "API Key",
-      "pricing": "free",
-      "signup_required": true,
-      "format": "REST(JSON)",
-      "rate_limit": "(미확인)",
-      "source": "GitHub: yybmion/public-apis-4Kr",
-      "note": ""
-    },
-    {
       "name": "토스페이",
       "provider": "비바리퍼블리카(토스)",
       "category": "결제·핀테크",
@@ -2640,20 +2626,6 @@
       "category": "통신",
       "description": "Geo Master·Cloud·GiGA Genie AI 등 KT API",
       "docs_url": "https://apilink.kt.co.kr/",
-      "auth": "API Key",
-      "pricing": "free-tier",
-      "signup_required": true,
-      "format": "REST(JSON)",
-      "rate_limit": "(미확인)",
-      "source": "GitHub: yybmion/public-apis-4Kr",
-      "note": ""
-    },
-    {
-      "name": "SK텔레콤 Open API",
-      "provider": "SK텔레콤",
-      "category": "통신",
-      "description": "T맵·NUGU 등 AI/IoT 플랫폼 API",
-      "docs_url": "https://openapi.sk.com/",
       "auth": "API Key",
       "pricing": "free-tier",
       "signup_required": true,
