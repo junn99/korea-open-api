@@ -5,31 +5,31 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-28** · 버전: **0.4.0**
-- 총 API 수: **140** · 분야 수: **26**
-- 요금: free **132** / free-tier **8** · 회원가입·승인 필요: **138**
+- 총 API 수: **145** · 분야 수: **26**
+- 요금: free **137** / free-tier **8** · 회원가입·승인 필요: **143**
 
 ## 분야별 분포
 
 | 분야 | 개수 |
 |------|------|
 | 교통 | 14 |
+| 교육·학술 | 13 |
 | 금융 | 13 |
+| 생활·소셜 | 13 |
 | 공공·행정 | 12 |
-| 생활·소셜 | 12 |
-| 교육·학술 | 11 |
 | 문화·관광·체육 | 10 |
-| 날씨·환경 | 8 |
+| 날씨·환경 | 9 |
 | 콘텐츠·미디어 | 8 |
 | 보건·식품 | 7 |
 | 지도·위치 | 6 |
 | 농축수산 | 5 |
 | 에너지 | 4 |
 | 검색 | 3 |
+| 과학기술·특허 | 3 |
 | 부동산 | 3 |
 | 인공지능 | 3 |
 | 재난·안전 | 3 |
 | 채용·고용 | 3 |
-| 과학기술·특허 | 2 |
 | 무역·통상 | 2 |
 | 법령·사법 | 2 |
 | 상권·창업 | 2 |
@@ -60,6 +60,24 @@
 | 서울 지하철 실시간 도착정보 API | 서울특별시(TOPIS) | 서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058052/openapi.do) |
 | 한국철도공사(코레일) 열차운행정보 API | 한국철도공사 | 여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15125762/openapi.do) |
 
+### 교육·학술
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 도서관 정보나루 Open API | 문화체육관광부 / 국립중앙도서관 | 전국 도서관 대출·소장·인기도서 등 도서관 빅데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data4library.kr/apiUtilization) |
+| NEIS 교육정보 개방 포털 Open API | 한국교육학술정보원(KERIS) | 전국 학교 기본정보, 급식, 시간표, 학사일정 등 교육 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.neis.go.kr/) |
+| 국립중앙도서관 Open API | 국립중앙도서관 | 서지정보 검색, LOD, 전거데이터 등 도서/서지 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nl.go.kr) |
+| 커리어넷 진로·직업정보 Open API | 교육부 / 한국직업능력연구원 | 직업정보, 학과정보, 진로심리검사, 진로상담 등 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.career.go.kr/cnet/front/openapi/jobCenter.do) |
+| KCI 한국학술지인용색인 논문정보 API | 한국연구재단 | 국내 학술지·논문 서지정보, 인용/피인용 등 학술 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15085348/openapi.do) |
+| ScienceON Open API | 한국과학기술정보연구원(KISTI) | 논문·특허·보고서·연구자 등 과학기술 지식 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://scienceon.kisti.re.kr/por/oapi/openApi.do) |
+| 학교알리미 Open API | 교육부 / 한국교육학술정보원 | 전국 초·중·고 학교 기본정보 및 공시정보 오픈 API. | API Key(네이버/카카오 로그인) | free | 필요 | REST(JSON/XML) | [link](https://www.schoolinfo.go.kr/ng/go/pnnggo_a01_l0.do) |
+| 유치원알리미 공시정보 API | 교육부 / 한국교육학술정보원 | 전국 유치원 기본정보, 급식, 예산, 교육과정 등 공시 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15020786/openapi.do) |
+| 어린이집정보공개포털 보육정보 API | 보건복지부 / 한국사회보장정보원 | 전국 어린이집 위치·정원·평가 등 보육시설 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://info.childcare.go.kr/info_html5/oais/openapi/OpenApiSlL.jsp) |
+| 국가기록원 나라기록물정보 서비스 API | 행정안전부 국가기록원 | 국가 기록물 메타데이터(제목·생산기관·관리번호 등) 검색 오픈 API. | API Key | free | 필요 | REST(RSS/XML) | [link](https://www.data.go.kr/data/15000153/openapi.do) |
+| 대학알리미 대학정보공시 API | 한국대학교육협의회 | 전국 대학 기본정보, 학과, 등록금, 장학금 등 대학 공시정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15037507/openapi.do) |
+| RISS 학술연구정보 Open API | 한국교육학술정보원(KERIS) | 학위논문·학술논문·단행본·연구보고서 등 학술정보 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.riss.kr/apicenter/apiMain.do) |
+| 국회도서관 Open API | 국회도서관 | 국회전자도서관 소장자료·국가학술정보 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nanet.go.kr/usermadang/etc/openApiView.do) |
+
 ### 금융
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -78,23 +96,6 @@
 | 포트원(PortOne, 구 아임포트) 결제연동 API | 포트원(코리아포트원) | 여러 PG·간편결제를 단일 연동으로 통합 처리하는 결제 연동 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://developers.portone.io/) |
 | 우체국금융(예금·보험) Open API | 우정사업본부 | 우체국 예금상품, 보험상품, 공시이율, 보험료 조회 등 우체국금융 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.epostlife.go.kr/IPUIOP0000.do) |
 
-### 공공·행정
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 공공데이터포털 (Public Data Portal) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
-| 공공데이터포털 목록조회서비스 | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077093/openapi.do) |
-| 정부24 OpenAPI | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.gov.kr/openapi) |
-| 서울 열린데이터광장 | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr) |
-| 국세청 사업자등록정보 진위확인·상태조회 API | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.data.go.kr/data/15081808/openapi.do) |
-| 경기데이터드림 Open API | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) |
-| 조달청 나라장터 입찰공고·낙찰 정보 API | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15129394/openapi.do) |
-| 중앙선거관리위원회 선거정보 API | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000900/openapi.do) |
-| 병무청 오픈 API | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) |
-| 통일부 북한정보포털 통합검색 API | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15079225/openapi.do) |
-| 행정표준코드 법정동코드 API | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077871/openapi.do) |
-| 지방재정365 재정정보 API | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058102/openapi.do) |
-
 ### 생활·소셜
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -111,22 +112,24 @@
 | 국방부 군 부대 식단 정보 API | 국방부 | 부대별 일자별 조·중·석식 메뉴 및 칼로리 등 군 급식 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15056563/openapi.do) |
 | 외교부 해외안전여행 여행경보 API | 외교부 | 국가·지역별 여행경보, 특별여행경보, 여행금지 등 해외안전여행 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15076237/openapi.do) |
 | 온통청년 청년정책 API | 한국고용정보원 | 중앙·지자체 청년정책, 청년센터 등 청년 지원정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.data.go.kr/data/15143273/openapi.do) |
+| 소비자24 제품안전·리콜 Open API | 공정거래위원회 / 한국소비자원 | 제품 리콜정보, 인증정보, 피해주의보 등 소비자 안전 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.consumer.go.kr/user/ftc/consumer/openApiSvcUser/120/selectOpenApiSvcList.do) |
 
-### 교육·학술
+### 공공·행정
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
 |-----|----------|------|------|------|------|------|------|
-| 도서관 정보나루 Open API | 문화체육관광부 / 국립중앙도서관 | 전국 도서관 대출·소장·인기도서 등 도서관 빅데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data4library.kr/apiUtilization) |
-| NEIS 교육정보 개방 포털 Open API | 한국교육학술정보원(KERIS) | 전국 학교 기본정보, 급식, 시간표, 학사일정 등 교육 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.neis.go.kr/) |
-| 국립중앙도서관 Open API | 국립중앙도서관 | 서지정보 검색, LOD, 전거데이터 등 도서/서지 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nl.go.kr) |
-| 커리어넷 진로·직업정보 Open API | 교육부 / 한국직업능력연구원 | 직업정보, 학과정보, 진로심리검사, 진로상담 등 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.career.go.kr/cnet/front/openapi/jobCenter.do) |
-| KCI 한국학술지인용색인 논문정보 API | 한국연구재단 | 국내 학술지·논문 서지정보, 인용/피인용 등 학술 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15085348/openapi.do) |
-| ScienceON Open API | 한국과학기술정보연구원(KISTI) | 논문·특허·보고서·연구자 등 과학기술 지식 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://scienceon.kisti.re.kr/por/oapi/openApi.do) |
-| 학교알리미 Open API | 교육부 / 한국교육학술정보원 | 전국 초·중·고 학교 기본정보 및 공시정보 오픈 API. | API Key(네이버/카카오 로그인) | free | 필요 | REST(JSON/XML) | [link](https://www.schoolinfo.go.kr/ng/go/pnnggo_a01_l0.do) |
-| 유치원알리미 공시정보 API | 교육부 / 한국교육학술정보원 | 전국 유치원 기본정보, 급식, 예산, 교육과정 등 공시 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15020786/openapi.do) |
-| 어린이집정보공개포털 보육정보 API | 보건복지부 / 한국사회보장정보원 | 전국 어린이집 위치·정원·평가 등 보육시설 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://info.childcare.go.kr/info_html5/oais/openapi/OpenApiSlL.jsp) |
-| 국가기록원 나라기록물정보 서비스 API | 행정안전부 국가기록원 | 국가 기록물 메타데이터(제목·생산기관·관리번호 등) 검색 오픈 API. | API Key | free | 필요 | REST(RSS/XML) | [link](https://www.data.go.kr/data/15000153/openapi.do) |
-| 대학알리미 대학정보공시 API | 한국대학교육협의회 | 전국 대학 기본정보, 학과, 등록금, 장학금 등 대학 공시정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15037507/openapi.do) |
+| 공공데이터포털 (Public Data Portal) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
+| 공공데이터포털 목록조회서비스 | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077093/openapi.do) |
+| 정부24 OpenAPI | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.gov.kr/openapi) |
+| 서울 열린데이터광장 | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr) |
+| 국세청 사업자등록정보 진위확인·상태조회 API | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.data.go.kr/data/15081808/openapi.do) |
+| 경기데이터드림 Open API | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) |
+| 조달청 나라장터 입찰공고·낙찰 정보 API | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15129394/openapi.do) |
+| 중앙선거관리위원회 선거정보 API | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000900/openapi.do) |
+| 병무청 오픈 API | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) |
+| 통일부 북한정보포털 통합검색 API | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15079225/openapi.do) |
+| 행정표준코드 법정동코드 API | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077871/openapi.do) |
+| 지방재정365 재정정보 API | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058102/openapi.do) |
 
 ### 문화·관광·체육
 
@@ -155,6 +158,7 @@
 | 환경부 화학물질정보 API | 환경부 화학물질안전원 | 화학물질 명칭·CAS번호·분자식·분류 등 화학물질 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15029194/openapi.do) |
 | 국립생물자원관 한반도 생물다양성 API | 환경부 국립생물자원관 | 국가생물종목록, 생물다양성, 종별 멀티미디어 등 생태 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://species.nibr.go.kr/) |
 | 한강홍수통제소 수문·홍수 Open API | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.hrfco.go.kr/web/openapiPage/openApi.do) |
+| 국가지하수정보센터(GIMS) Open API | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML, WMS/WFS) | [link](https://www.gims.go.kr/apiIntro.do) |
 
 ### 콘텐츠·미디어
 
@@ -219,6 +223,14 @@
 | 네이버 데이터랩(DataLab) API | 네이버 | 검색어 트렌드, 쇼핑인사이트 등 트렌드 데이터 오픈 API. | API Key(Client ID/Secret) | free | 필요 | REST(JSON) | [link](https://developers.naver.com/docs/serviceapi/datalab/search/search.md) |
 | 카카오 검색(다음) API | 카카오 | 웹/동영상/이미지/블로그/책/카페 등 다음 검색 오픈 API. | API Key(REST) | free | 필요 | REST(JSON) | [link](https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide) |
 
+### 과학기술·특허
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| KIPRIS PLUS 특허정보 Open API | 한국특허정보원 / 특허청 | 특허·실용신안·디자인·상표 등 지식재산권 정보 오픈 API. | API Key | free-tier | 필요 | REST(XML) | [link](https://plus.kipris.or.kr/) |
+| e나라표준인증 국가표준(KS) Open API | 산업통상자원부 국가기술표준원 | 한국산업표준(KS), 인증, 기술기준 등 표준·인증 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://standard.go.kr/KSCI/onlineSvc/openApiIntro.do) |
+| KIGAM 지오빅데이터 오픈플랫폼 API | 한국지질자원연구원(KIGAM) | 지질주제도, 지진·지진해일 정보 등 지질자원 데이터 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://data.kigam.re.kr/guide/openapi) |
+
 ### 부동산
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -250,13 +262,6 @@
 | 고용24 / 고용노동부 일자리 API | 고용노동부 / 한국고용정보원 | 채용공고, 직업정보, 고용통계 등 일자리 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
 | 워크넷 Open API | 한국고용정보원 | 채용정보, 직업정보, 학과정보 등 고용 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://openapi.work.go.kr/opiMain.do) |
 | 한국산업인력공단(큐넷) 국가자격 정보 API | 한국산업인력공단 | 국가기술자격 종목·시험일정·교부수수료 등 자격정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://openapi.hrdkorea.or.kr/main) |
-
-### 과학기술·특허
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| KIPRIS PLUS 특허정보 Open API | 한국특허정보원 / 특허청 | 특허·실용신안·디자인·상표 등 지식재산권 정보 오픈 API. | API Key | free-tier | 필요 | REST(XML) | [link](https://plus.kipris.or.kr/) |
-| e나라표준인증 국가표준(KS) Open API | 산업통상자원부 국가기술표준원 | 한국산업표준(KS), 인증, 기술기준 등 표준·인증 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://standard.go.kr/KSCI/onlineSvc/openApiIntro.do) |
 
 ### 무역·통상
 

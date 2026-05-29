@@ -1972,6 +1972,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "특이 케이스 — 경마. kra.co.kr. 일부 구 OPEN API는 폐기·대체됨."
+    },
+    {
+      "name": "국가지하수정보센터(GIMS) Open API",
+      "provider": "환경부 / 한국수자원공사",
+      "category": "날씨·환경",
+      "description": "지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API.",
+      "docs_url": "https://www.gims.go.kr/apiIntro.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(JSON/XML, WMS/WFS)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "국가지하수측정자료 등 data.go.kr로도 제공."
+    },
+    {
+      "name": "KIGAM 지오빅데이터 오픈플랫폼 API",
+      "provider": "한국지질자원연구원(KIGAM)",
+      "category": "과학기술·특허",
+      "description": "지질주제도, 지진·지진해일 정보 등 지질자원 데이터 오픈 API.",
+      "docs_url": "https://data.kigam.re.kr/guide/openapi",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "RISS 학술연구정보 Open API",
+      "provider": "한국교육학술정보원(KERIS)",
+      "category": "교육·학술",
+      "description": "학위논문·학술논문·단행본·연구보고서 등 학술정보 검색 오픈 API.",
+      "docs_url": "https://www.riss.kr/apicenter/apiMain.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "국회도서관 Open API",
+      "provider": "국회도서관",
+      "category": "교육·학술",
+      "description": "국회전자도서관 소장자료·국가학술정보 검색 오픈 API.",
+      "docs_url": "https://www.nanet.go.kr/usermadang/etc/openApiView.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "data.go.kr로도 제공."
+    },
+    {
+      "name": "소비자24 제품안전·리콜 Open API",
+      "provider": "공정거래위원회 / 한국소비자원",
+      "category": "생활·소셜",
+      "description": "제품 리콜정보, 인증정보, 피해주의보 등 소비자 안전 오픈 API.",
+      "docs_url": "https://www.consumer.go.kr/user/ftc/consumer/openApiSvcUser/120/selectOpenApiSvcList.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "제품안전정보센터(safetykorea.kr) Open API도 별도."
     }
   ]
 }
