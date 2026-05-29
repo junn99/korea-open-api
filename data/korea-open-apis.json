@@ -578,14 +578,14 @@
       "provider": "한국환경공단",
       "category": "날씨·환경",
       "description": "전국 전기차 충전소 위치·상태 정보 오픈 API.",
-      "docs_url": "https://www.data.go.kr",
+      "docs_url": "https://www.data.go.kr/data/15076352/openapi.do",
       "auth": "API Key",
       "pricing": "free",
       "signup_required": true,
       "format": "REST(JSON/XML)",
       "rate_limit": "(미확인)",
-      "source": "집계 출처",
-      "note": "data.go.kr 제공. 딥링크 (미확인)."
+      "source": "WebSearch",
+      "note": "data.go.kr 제공. 무공해차 통합누리집(ev.or.kr), 전국전기차충전소표준데이터도 존재."
     },
     {
       "name": "국토교통부 실거래가 공개시스템 API",
@@ -1440,6 +1440,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "forest.go.kr / 국립수목원(kna.forest.go.kr). 관련 API 다수."
+    },
+    {
+      "name": "소상공인시장진흥공단 상가(상권)정보 API",
+      "provider": "소상공인시장진흥공단",
+      "category": "상권·창업",
+      "description": "전국 상가업소 상호·업종·좌표 등 상권정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15012005/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "data.sbiz.or.kr. 창업/상권분석에 널리 사용."
+    },
+    {
+      "name": "K-Startup 창업지원 정보 API",
+      "provider": "창업진흥원 / 중소벤처기업부",
+      "category": "상권·창업",
+      "description": "창업지원 사업공고, 사업소개, 콘텐츠 등 창업 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15125364/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "k-startup.go.kr."
+    },
+    {
+      "name": "도로교통공단 TAAS 교통사고분석 Open API",
+      "provider": "한국도로교통공단(KOROAD)",
+      "category": "교통",
+      "description": "교통사고 다발지(13종), 교통안전정보(3종) 등 교통사고 오픈 API.",
+      "docs_url": "https://opendata.koroad.or.kr/",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "출처 명시 조건. taas.koroad.or.kr."
+    },
+    {
+      "name": "한국에너지공단 신재생에너지 Open API",
+      "provider": "한국에너지공단",
+      "category": "에너지",
+      "description": "신재생에너지 보급·설비 등 에너지 통계/정보 오픈 API.",
+      "docs_url": "https://www.energy.or.kr/web/kem_home_new/data_offer/OPEN_API_3.asp",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": ""
+    },
+    {
+      "name": "국립중앙박물관 e뮤지엄 유물정보 API",
+      "provider": "문화체육관광부 / 국립중앙박물관",
+      "category": "문화·관광·체육",
+      "description": "전국 박물관 소장품(유물) 명칭·시대·재질·이미지 등 통합검색 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15104964/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "emuseum.go.kr."
     }
   ]
 }
