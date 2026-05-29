@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-29",
-    "version": "0.9.1",
+    "version": "0.10.0",
     "method": "민간/분야별 핵심 API는 WebSearch 교차검증 + 공식 포털/문서 확인 후 큐레이션. data.go.kr 공공 API는 공식 목록조회 API(15077093)로 전수 수집(부록 A). GitHub 모음(github.com/yybmion/public-apis-4Kr) 교차검증으로 누락 보완. 추가로 dl0312/open-apis-korea 교차검증(폐기 항목 배제, 생존분만 반영).",
     "limitations": [
       "이 카탈로그는 두 층위: (1) 전 분야 대표 무료 API 큐레이션(README 본문), (2) data.go.kr 오픈 API 전수 12,073건(부록 A, data/datago_apis.json).",
@@ -14,7 +14,8 @@
       "GitHub 모음 2차 교차검증(dl0312/open-apis-korea, 711행): 신규+생존+무료+한국제공은 3건(카카오내비·카카오톡채널·네이버캡차)뿐. 나머지는 해외 API(범위 밖)·기보유·폐기(카카오 비전/번역/음성 2022종료, 카카오스토리 2023종료, 네이버 me2.do 2024종료). 즉 공개 모음들은 상당수 폐기 항목을 포함하므로 그대로 신뢰 불가.",
       "주제별 커버리지 점검(노래/화장실/공공장소/식당) 중 큐레이션 본문에 화장실·식당 '간판'이 비어 있던 공백을 보완: 전국공중화장실 표준데이터, LOCALDATA(음식점 인허가), 전국공공시설개방정보 표준데이터 추가. data.go.kr 전수(부록 A)에는 이미 다수 존재했으나 대표 API를 본문으로 끌어올림.",
       "주제 점검(의약품·위생/유해성분)에서 의약품(e약은요·DUR)·식품안전은 충분했으나 '생활화학제품 유해성분/회수' 간판이 비어 초록누리 OpenAPI 추가. 식품·의약품 회수·판매중단은 기존 식품안전나라 API에 포함.",
-      "주제 점검(금융·엔터): 금융은 충실했으나 '금융상품 비교(예적금/대출/연금 금리)' 간판이 비어 금융감독원 금융상품한눈에 API 추가. 엔터는 공공(영화/공연/게임/등급위 등)은 충실하나 민간 음원·웹툰·OTT·티켓예매·프로스포츠는 공식 공개 API가 부재하여 미수록(카탈로그 공백이 아닌 실제 부재)."
+      "주제 점검(금융·엔터): 금융은 충실했으나 '금융상품 비교(예적금/대출/연금 금리)' 간판이 비어 금융감독원 금융상품한눈에 API 추가. 엔터는 공공(영화/공연/게임/등급위 등)은 충실하나 민간 음원·웹툰·OTT·티켓예매·프로스포츠는 공식 공개 API가 부재하여 미수록(카탈로그 공백이 아닌 실제 부재).",
+      "특이 주제 점검(천문·헌혈·실종·지진·장례 등): 헌혈(적십자)·실종경보(경찰청)·지진(기상청)·장사시설(e하늘) 간판을 추가. 천문(KASI 음양력·특일)·북한(통일부 북한정보포털)·해양조석(바다누리)은 이미 존재. 일부 docs_url은 list_id 미확정으로 포털/운영 사이트 루트를 기재(note에 명시)."
     ],
     "source": "GitHub 교차검증(yybmion/public-apis-4Kr)"
   },
@@ -3084,6 +3085,62 @@
       "rate_limit": "포털 기본 한도",
       "source": "주제 점검(금융) 중 큐레이션 공백 보완",
       "note": "예적금/대출/연금 금리비교 분야 간판. finlife.fss.or.kr. 현행 확인(2026-05)."
+    },
+    {
+      "name": "대한적십자사 헌혈·혈액 정보 Open API",
+      "provider": "대한적십자사 혈액관리본부",
+      "category": "보건·식품",
+      "description": "전국 헌혈의 집 정보, 혈액 통계 등 헌혈·혈액 관련 공공데이터.",
+      "docs_url": "https://www.data.go.kr/data/15050729/fileData.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "포털 기본 한도",
+      "source": "특이 주제 점검(헌혈) 중 큐레이션 공백 보완",
+      "note": "헌혈의집 정보(15050729) 확인. 실시간 혈액보유량은 bloodinfo.net 별도 제공. 현행 확인(2026-05)."
+    },
+    {
+      "name": "경찰청 실종경보정보 서비스 API",
+      "provider": "경찰청",
+      "category": "재난·안전",
+      "description": "실종아동·치매환자 등 실종경보 발령 대상자 정보 조회.",
+      "docs_url": "https://www.data.go.kr/data/3051810/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "특이 주제 점검(실종) 중 큐레이션 공백 보완",
+      "note": "datago 전수에서 URL 확인(3051810). 경찰청 치안 API와 별개."
+    },
+    {
+      "name": "기상청 지진정보 조회서비스 API",
+      "provider": "기상청(KMA)",
+      "category": "재난·안전",
+      "description": "국내외 지진 발생 정보(규모·진앙·발생시각) 및 지진해일 정보 조회.",
+      "docs_url": "https://www.data.go.kr/data/15000420/openapi.do",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "특이 주제 점검(지진) 중 큐레이션 공백 보완",
+      "note": "datago 전수에서 URL 확인(15000420). 날씨 API와 별개 재난 분야 간판."
+    },
+    {
+      "name": "e하늘 장사정보(장사시설) 시스템",
+      "provider": "보건복지부 / 한국장례문화진흥원",
+      "category": "공공·행정",
+      "description": "전국 화장시설·봉안당·자연장지 등 장사시설 현황 및 화장로 예약 정보.",
+      "docs_url": "https://www.ehaneul.go.kr/",
+      "auth": "API Key(serviceKey)",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(XML/JSON)",
+      "rate_limit": "포털 기본 한도",
+      "source": "특이 주제 점검(장례/장사) 중 큐레이션 공백 보완",
+      "note": "e하늘 장사정보시스템 운영. data.go.kr에 장사시설 관련 다수 데이터셋 존재(정확한 list_id는 포털 검색 권장)."
     }
   ]
 }
