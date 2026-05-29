@@ -5,15 +5,15 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-28** · 버전: **0.4.0**
-- 총 API 수: **160** · 분야 수: **26**
-- 요금: free **150** / free-tier **10** · 회원가입·승인 필요: **158**
+- 총 API 수: **164** · 분야 수: **26**
+- 요금: free **154** / free-tier **10** · 회원가입·승인 필요: **162**
 
 ## 분야별 분포
 
 | 분야 | 개수 |
 |------|------|
+| 공공·행정 | 15 |
 | 교통 | 15 |
-| 공공·행정 | 14 |
 | 금융 | 14 |
 | 교육·학술 | 13 |
 | 생활·소셜 | 13 |
@@ -23,13 +23,13 @@
 | 콘텐츠·미디어 | 8 |
 | 보건·식품 | 7 |
 | 지도·위치 | 6 |
+| 부동산 | 5 |
 | 에너지 | 5 |
+| 재난·안전 | 5 |
 | 채용·고용 | 5 |
 | 과학기술·특허 | 4 |
 | 인공지능 | 4 |
-| 재난·안전 | 4 |
 | 검색 | 3 |
-| 부동산 | 3 |
 | 무역·통상 | 2 |
 | 법령·사법 | 2 |
 | 상권·창업 | 2 |
@@ -40,6 +40,26 @@
 | 쇼핑 | 1 |
 
 ## 분야별 API 목록
+
+### 공공·행정
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 공공데이터포털 (Public Data Portal) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
+| 공공데이터포털 목록조회서비스 | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077093/openapi.do) |
+| 정부24 OpenAPI | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.gov.kr/openapi) |
+| 서울 열린데이터광장 | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr) |
+| 국세청 사업자등록정보 진위확인·상태조회 API | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.data.go.kr/data/15081808/openapi.do) |
+| 경기데이터드림 Open API | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) |
+| 조달청 나라장터 입찰공고·낙찰 정보 API | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15129394/openapi.do) |
+| 중앙선거관리위원회 선거정보 API | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000900/openapi.do) |
+| 병무청 오픈 API | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) |
+| 통일부 북한정보포털 통합검색 API | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15079225/openapi.do) |
+| 행정표준코드 법정동코드 API | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077871/openapi.do) |
+| 지방재정365 재정정보 API | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058102/openapi.do) |
+| 행정안전부 주민등록 인구·세대현황 API | 행정안전부 | 행정동/법정동/도로명별 주민등록 인구·세대수·연령·남녀 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15108065/openapi.do) |
+| 국가보훈부 현충시설·독립유공자 Open API | 국가보훈부 | 현충시설, 국외사적지, 독립유공자 공훈록 등 보훈 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.mpva.go.kr/mpva/contents.do?key=17) |
+| 국민연금공단 가입 사업장 내역 API | 국민연금공단 | 국민연금 가입 사업장 정보·기간별 현황 등 연금 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/3046071/openapi.do) |
 
 ### 교통
 
@@ -60,25 +80,6 @@
 | 서울 지하철 실시간 도착정보 API | 서울특별시(TOPIS) | 서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058052/openapi.do) |
 | 한국철도공사(코레일) 열차운행정보 API | 한국철도공사 | 여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15125762/openapi.do) |
 | 부산교통공사 부산도시철도 운행정보 API | 부산교통공사 | 부산 도시철도 운행정보·시각표 등 지방 도시철도 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15001019/openapi.do) |
-
-### 공공·행정
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 공공데이터포털 (Public Data Portal) | 행정안전부 / 한국지능정보사회진흥원(NIA) | 국가 공공데이터를 데이터셋·오픈API로 개방하는 중앙 플랫폼. 수만 건의 오픈API 보유. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr) |
-| 공공데이터포털 목록조회서비스 | 공공데이터활용지원센터 | 공공데이터포털에 등록된 데이터/오픈API 목록을 조회하는 메타 API. 전수 수집의 진입점. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077093/openapi.do) |
-| 정부24 OpenAPI | 행정안전부 | 정부 민원·공공서비스 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.gov.kr/openapi) |
-| 서울 열린데이터광장 | 서울특별시 | 서울시 행정·교통·환경·생활 등 데이터를 오픈API로 제공하는 지자체 포털. | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.seoul.go.kr) |
-| 국세청 사업자등록정보 진위확인·상태조회 API | 국세청 | 사업자등록번호 진위확인 및 휴·폐업 상태조회 오픈 API. | API Key | free | 필요 | REST(JSON) | [link](https://www.data.go.kr/data/15081808/openapi.do) |
-| 경기데이터드림 Open API | 경기도 | 경기도 보유 공공데이터 오픈 API 포털(지자체). | API Key | free | 필요 | REST(JSON/XML) | [link](https://data.gg.go.kr/portal/intro/develop/searchBulletinPage.do) |
-| 조달청 나라장터 입찰공고·낙찰 정보 API | 조달청 | 입찰공고, 낙찰정보, 계약현황, 발주계획 등 공공조달 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15129394/openapi.do) |
-| 중앙선거관리위원회 선거정보 API | 중앙선거관리위원회 | 투·개표 결과, 당선인, 사전투표, 선거코드 등 선거 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000900/openapi.do) |
-| 병무청 오픈 API | 병무청 | 병무행정(병역판정, 사회복무, 입영 등) 관련 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://open.mma.go.kr/caisGGGS/ggda/openApiList.do?menu_id=mma0000037) |
-| 통일부 북한정보포털 통합검색 API | 통일부 | 북한 정치·경제·군사·사회·교육문화 등 북한정보 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15079225/openapi.do) |
-| 행정표준코드 법정동코드 API | 행정안전부 | 법정동코드·행정표준코드 조회 오픈 API. 주소/지역 기반 서비스의 기초 코드. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15077871/openapi.do) |
-| 지방재정365 재정정보 API | 행정안전부 | 지방자치단체 재정자립도·세입세출 등 지방재정 통합공개 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058102/openapi.do) |
-| 행정안전부 주민등록 인구·세대현황 API | 행정안전부 | 행정동/법정동/도로명별 주민등록 인구·세대수·연령·남녀 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15108065/openapi.do) |
-| 국가보훈부 현충시설·독립유공자 Open API | 국가보훈부 | 현충시설, 국외사적지, 독립유공자 공훈록 등 보훈 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.mpva.go.kr/mpva/contents.do?key=17) |
 
 ### 금융
 
@@ -215,6 +216,16 @@
 | 도로명주소 API | 행정안전부 | 도로명주소 검색, 영문주소, 좌표제공 등 주소 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://business.juso.go.kr/addrlink/openApi/apiExprn.do) |
 | 국토교통부 연속지적도·토지특성 정보 API | 국토교통부 / 국토지리정보원 | 연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15057558/openapi.do) |
 
+### 부동산
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 국토교통부 실거래가 공개시스템 API | 국토교통부 | 아파트/연립/단독 등 부동산 매매·전월세 실거래가 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.data.go.kr) |
+| 한국부동산원 R-ONE 부동산통계 Open API | 한국부동산원 | 지가·주택가격지수·거래량 등 부동산 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.reb.or.kr/r-one/portal/openapi/openApiIntroPage.do) |
+| 국토교통부 개별공시지가·공동주택가격 API | 국토교통부 | 개별공시지가, 공동주택가격(WMS/WFS/속성) 등 부동산 공시가격 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15124014/openapi.do) |
+| 국토교통부 건축HUB 건축물대장·인허가 API | 국토교통부 | 건축물대장(표제부·전유부·층별 등), 건축인허가 등 건축데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15134735/openapi.do) |
+| 한국토지주택공사(LH) 임대·분양 주택정보 API | 한국토지주택공사(LH) | 공공임대주택 단지정보, 분양·임대 공고별 공급정보 등 주택 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058476/openapi.do) |
+
 ### 에너지
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -224,6 +235,16 @@
 | 한국에너지공단 신재생에너지 Open API | 한국에너지공단 | 신재생에너지 보급·설비 등 에너지 통계/정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.energy.or.kr/web/kem_home_new/data_offer/OPEN_API_3.asp) |
 | 한국가스공사 도시가스 공급열량 API | 한국가스공사 | 도시가스 공급예상열량·공급열량실적 등 가스 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15138871/openapi.do) |
 | 오피넷(Opinet) 유가정보 Open API | 한국석유공사 | 전국/시도/시군구 평균 유가, 최저가 주유소, 주유소 위치·상세 등 유가 API. | API Key | free-tier | 필요 | REST(XML/JSON) | [link](https://www.opinet.co.kr/user/custapi/custApiInfo.do) |
+
+### 재난·안전
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 재난안전데이터 공유플랫폼 Open API | 행정안전부 | 재난·안전 분야 데이터를 통합 제공하는 플랫폼 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safetydata.go.kr/) |
+| 생활안전지도(SafeMap) Open API | 행정안전부 | 치안·교통·재난 등 생활안전 공간정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safemap.go.kr/dvct/openAPI.do) |
+| 소방청 구급정보 서비스 API | 소방청 | 구급·구급통계, 출동 등 119 구급 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15099423/openapi.do) |
+| 경찰청 치안·교통 Open API | 경찰청 | 교통 CCTV 영상, 안전Dream 실종자 정보, 범죄 통계 등 치안 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15148511/openapi.do) |
+| 한국승강기안전공단 승강기 정보 API | 한국승강기안전공단 | 건물별 승강기 목록·검사이력·사고/고장이력 등 승강기 안전 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000476/openapi.do) |
 
 ### 채용·고용
 
@@ -253,15 +274,6 @@
 | 네이버 Papago 번역 API | 네이버클라우드플랫폼(NCP) | 기계 번역(Papago) 및 언어감지 API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://www.ncloud.com/product/aiService/papagoTranslation) |
 | 업스테이지(Upstage) Document AI·OCR API | 업스테이지(Upstage) | 한국어 특화 OCR, Document Parse(문서 구조화), Solar LLM 등 AI API. | API Key | free-tier | 필요 | REST(JSON) | [link](https://console.upstage.ai/docs) |
 
-### 재난·안전
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 재난안전데이터 공유플랫폼 Open API | 행정안전부 | 재난·안전 분야 데이터를 통합 제공하는 플랫폼 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safetydata.go.kr/) |
-| 생활안전지도(SafeMap) Open API | 행정안전부 | 치안·교통·재난 등 생활안전 공간정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.safemap.go.kr/dvct/openAPI.do) |
-| 소방청 구급정보 서비스 API | 소방청 | 구급·구급통계, 출동 등 119 구급 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15099423/openapi.do) |
-| 경찰청 치안·교통 Open API | 경찰청 | 교통 CCTV 영상, 안전Dream 실종자 정보, 범죄 통계 등 치안 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15148511/openapi.do) |
-
 ### 검색
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -269,14 +281,6 @@
 | 네이버 검색 API | 네이버 | 뉴스·블로그·책·백과사전·이미지·웹·쇼핑·지역 등 통합검색 오픈 API. | API Key(Client ID/Secret) | free | 필요 | REST(JSON/XML) | [link](https://developers.naver.com/docs/serviceapi/search/news/news.md) |
 | 네이버 데이터랩(DataLab) API | 네이버 | 검색어 트렌드, 쇼핑인사이트 등 트렌드 데이터 오픈 API. | API Key(Client ID/Secret) | free | 필요 | REST(JSON) | [link](https://developers.naver.com/docs/serviceapi/datalab/search/search.md) |
 | 카카오 검색(다음) API | 카카오 | 웹/동영상/이미지/블로그/책/카페 등 다음 검색 오픈 API. | API Key(REST) | free | 필요 | REST(JSON) | [link](https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide) |
-
-### 부동산
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 국토교통부 실거래가 공개시스템 API | 국토교통부 | 아파트/연립/단독 등 부동산 매매·전월세 실거래가 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.data.go.kr) |
-| 한국부동산원 R-ONE 부동산통계 Open API | 한국부동산원 | 지가·주택가격지수·거래량 등 부동산 통계 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.reb.or.kr/r-one/portal/openapi/openApiIntroPage.do) |
-| 국토교통부 개별공시지가·공동주택가격 API | 국토교통부 | 개별공시지가, 공동주택가격(WMS/WFS/속성) 등 부동산 공시가격 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML) | [link](https://www.data.go.kr/data/15124014/openapi.do) |
 
 ### 무역·통상
 

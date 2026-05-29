@@ -2252,6 +2252,62 @@
       "rate_limit": "무료 크레딧 후 과금",
       "source": "WebSearch",
       "note": "가입 시 무료 크레딧 제공."
+    },
+    {
+      "name": "국토교통부 건축HUB 건축물대장·인허가 API",
+      "provider": "국토교통부",
+      "category": "부동산",
+      "description": "건축물대장(표제부·전유부·층별 등), 건축인허가 등 건축데이터 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15134735/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "세움터(open.eais.go.kr) / 건축HUB(hub.go.kr). 신청 즉시 활용."
+    },
+    {
+      "name": "한국토지주택공사(LH) 임대·분양 주택정보 API",
+      "provider": "한국토지주택공사(LH)",
+      "category": "부동산",
+      "description": "공공임대주택 단지정보, 분양·임대 공고별 공급정보 등 주택 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15058476/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "myhome.go.kr. lh.or.kr 개방목록. SH 등 별도."
+    },
+    {
+      "name": "한국승강기안전공단 승강기 정보 API",
+      "provider": "한국승강기안전공단",
+      "category": "재난·안전",
+      "description": "건물별 승강기 목록·검사이력·사고/고장이력 등 승강기 안전 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15000476/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "elevator.go.kr(국가승강기정보센터)."
+    },
+    {
+      "name": "국민연금공단 가입 사업장 내역 API",
+      "provider": "국민연금공단",
+      "category": "공공·행정",
+      "description": "국민연금 가입 사업장 정보·기간별 현황 등 연금 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/3046071/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "개발계정 약 10,000건/일",
+      "source": "WebSearch",
+      "note": "nps.or.kr."
     }
   ]
 }
