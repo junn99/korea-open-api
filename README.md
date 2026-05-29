@@ -5,8 +5,8 @@
 > 자동 생성 파일입니다. 원본은 `data/korea-open-apis.json` 이며 `python3 scripts/build_readme.py` 로 재생성합니다. 직접 수정하지 마세요.
 
 - 생성일: **2026-05-28** · 버전: **0.5.0**
-- 총 API 수: **173** · 분야 수: **26**
-- 요금: free **163** / free-tier **10** · 회원가입·승인 필요: **171**
+- 총 API 수: **178** · 분야 수: **26**
+- 요금: free **168** / free-tier **10** · 회원가입·승인 필요: **176**
 
 ## 분야별 분포
 
@@ -16,10 +16,10 @@
 | 교통 | 15 |
 | 금융 | 15 |
 | 교육·학술 | 14 |
+| 문화·관광·체육 | 13 |
 | 생활·소셜 | 13 |
-| 문화·관광·체육 | 11 |
-| 날씨·환경 | 10 |
-| 농축수산 | 9 |
+| 날씨·환경 | 12 |
+| 농축수산 | 10 |
 | 콘텐츠·미디어 | 8 |
 | 보건·식품 | 7 |
 | 지도·위치 | 7 |
@@ -122,6 +122,24 @@
 | 국회도서관 Open API | 국회도서관 | 국회전자도서관 소장자료·국가학술정보 검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nanet.go.kr/usermadang/etc/openApiView.do) |
 | 국가정책연구포털(NKIS) Open API | 경제·인문사회연구회 | 국책연구기관 정책연구보고서 등 정책연구 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nkis.re.kr/openSvcList.do) |
 
+### 문화·관광·체육
+
+| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
+|-----|----------|------|------|------|------|------|------|
+| 한국관광공사 TourAPI | 한국관광공사 | 관광지·숙박·축제·문화시설·여행코스·이미지 등 관광 콘텐츠 오픈 API(15종, 약 26만 건). | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.visitkorea.or.kr/) |
+| 공연예술통합전산망(KOPIS) Open API | 예술경영지원센터 | 공연 목록·상세·예매상황 등 공연예술 통계/정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.kopis.or.kr/por/cs/openapi/openApiList.do) |
+| 문화공공데이터광장(문화포털) Open API | 한국문화정보원 | 문화·예술·관광·도서 등 문화 분야 공공데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.culture.go.kr/data/) |
+| 고캠핑(GoCamping) 캠핑장 정보 API | 한국관광공사 | 전국 등록 야영장(캠핑장) 위치·시설·안전정보 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15101933/openapi.do) |
+| 해양수산부 해수욕장정보 서비스 API | 해양수산부 | 전국 해수욕장 위치·제원·비상연락처·이미지 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058519/openapi.do) |
+| 산림청 산·등산로·식물 정보 API | 산림청 | 전국 산 정보, 등산로, 숲에 사는 식물, 수목 이미지 등 산림 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058682/openapi.do) |
+| 국립중앙박물관 e뮤지엄 유물정보 API | 문화체육관광부 / 국립중앙박물관 | 전국 박물관 소장품(유물) 명칭·시대·재질·이미지 등 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15104964/openapi.do) |
+| 국민체육진흥공단 공공체육시설 정보 API | 서울올림픽기념국민체육진흥공단 | 전국 공공체육시설 위치·규모·운영상태 등 체육시설 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15107764/openapi.do) |
+| 한국관광공사 두루누비(코리아둘레길) 정보 API | 한국관광공사 | 코리아둘레길 284개 코스 GPX·걷기여행길·자전거길 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15101974/openapi.do) |
+| 한국마사회 경마경주정보 API | 한국마사회 | 경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15063951/openapi.do) |
+| 국가유산청 문화재 공간정보(GIS) API | 국가유산청 | 문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(XML, WMS/WFS) | [link](https://www.data.go.kr/data/3070426/openapi.do) |
+| 문화체육관광부 공연정보(통합) API | 문화체육관광부 | 예술의전당·국립극장 등 10개 기관 공연/전시 정보 통합 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15121487/openapi.do) |
+| 국립현대미술관 미술작품 정보 API | 국립현대미술관(MMCA) | 소장 미술작품 명칭·작가·재질·이미지 등 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/dataset/3059104/openapi.do) |
+
 ### 생활·소셜
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -140,22 +158,6 @@
 | 온통청년 청년정책 API | 한국고용정보원 | 중앙·지자체 청년정책, 청년센터 등 청년 지원정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.data.go.kr/data/15143273/openapi.do) |
 | 소비자24 제품안전·리콜 Open API | 공정거래위원회 / 한국소비자원 | 제품 리콜정보, 인증정보, 피해주의보 등 소비자 안전 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.consumer.go.kr/user/ftc/consumer/openApiSvcUser/120/selectOpenApiSvcList.do) |
 
-### 문화·관광·체육
-
-| API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
-|-----|----------|------|------|------|------|------|------|
-| 한국관광공사 TourAPI | 한국관광공사 | 관광지·숙박·축제·문화시설·여행코스·이미지 등 관광 콘텐츠 오픈 API(15종, 약 26만 건). | API Key | free | 필요 | REST(JSON/XML) | [link](https://api.visitkorea.or.kr/) |
-| 공연예술통합전산망(KOPIS) Open API | 예술경영지원센터 | 공연 목록·상세·예매상황 등 공연예술 통계/정보 오픈 API. | API Key | free | 필요 | REST(XML) | [link](https://www.kopis.or.kr/por/cs/openapi/openApiList.do) |
-| 문화공공데이터광장(문화포털) Open API | 한국문화정보원 | 문화·예술·관광·도서 등 문화 분야 공공데이터 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.culture.go.kr/data/) |
-| 고캠핑(GoCamping) 캠핑장 정보 API | 한국관광공사 | 전국 등록 야영장(캠핑장) 위치·시설·안전정보 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15101933/openapi.do) |
-| 해양수산부 해수욕장정보 서비스 API | 해양수산부 | 전국 해수욕장 위치·제원·비상연락처·이미지 등 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058519/openapi.do) |
-| 산림청 산·등산로·식물 정보 API | 산림청 | 전국 산 정보, 등산로, 숲에 사는 식물, 수목 이미지 등 산림 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15058682/openapi.do) |
-| 국립중앙박물관 e뮤지엄 유물정보 API | 문화체육관광부 / 국립중앙박물관 | 전국 박물관 소장품(유물) 명칭·시대·재질·이미지 등 통합검색 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15104964/openapi.do) |
-| 국민체육진흥공단 공공체육시설 정보 API | 서울올림픽기념국민체육진흥공단 | 전국 공공체육시설 위치·규모·운영상태 등 체육시설 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15107764/openapi.do) |
-| 한국관광공사 두루누비(코리아둘레길) 정보 API | 한국관광공사 | 코리아둘레길 284개 코스 GPX·걷기여행길·자전거길 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15101974/openapi.do) |
-| 한국마사회 경마경주정보 API | 한국마사회 | 경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15063951/openapi.do) |
-| 국가유산청 문화재 공간정보(GIS) API | 국가유산청 | 문화재 위치·속성·사진·도면 등 GIS 기반 국가유산 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(XML, WMS/WFS) | [link](https://www.data.go.kr/data/3070426/openapi.do) |
-
 ### 날씨·환경
 
 | API | 제공기관 | 설명 | 인증 | 요금 | 가입 | 포맷 | 문서 |
@@ -170,6 +172,8 @@
 | 한강홍수통제소 수문·홍수 Open API | 환경부 한강홍수통제소 | 하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.hrfco.go.kr/web/openapiPage/openApi.do) |
 | 국가지하수정보센터(GIMS) Open API | 환경부 / 한국수자원공사 | 지하수 관측(수위·수질), 관정·조사시설 등 지하수 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML, WMS/WFS) | [link](https://www.gims.go.kr/apiIntro.do) |
 | 한국환경공단 올바로(Allbaro) 폐기물·자원순환 API | 한국환경공단 | 폐기물 배출·운반·처리 관리(올바로) 코드 및 자원순환 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.recycling-info.or.kr/sds/apiKeyControl.do) |
+| 국립생태원 생태자연도 서비스 API | 국립생태원(NIE) | 전 국토 생태·자연도 등급, 지형평가 등 생태 공간정보 오픈 API. | API Key | free | 필요 | REST/OGC(JSON/XML/SHP) | [link](https://www.data.go.kr/data/15057288/openapi.do) |
+| 국립수목원 국가표준식물목록 서비스 API | 산림청 국립수목원 | 국가표준식물목록(학명·국명·문헌 등), 식물자원 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000236/openapi.do) |
 
 ### 농축수산
 
@@ -184,6 +188,7 @@
 | 국립농업과학원 농업기상 관측데이터 API | 농촌진흥청 국립농업과학원 | 농업기상 기본·상세 관측(기온·강수·일사·토양수분 등), 주산지 분석 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15078057/openapi.do) |
 | 국립수산과학원 어장·해양관측 Open API | 국립수산과학원(NIFS) | 실시간 어장정보, 수온·염분 등 해양관측, 수산 정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.nifs.go.kr/openApi/actionOpenapiInfoList.do) |
 | 국립농산물품질관리원 친환경인증정보 API | 국립농산물품질관리원(NAQS) | 친환경(유기·무농약)·전통식품 등 농식품 인증정보 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15000935/openapi.do) |
+| 한국임업진흥원 임산물정보 API | 한국임업진흥원(KOFPI) | 임산물 기초정보·유통 등 임업 오픈 API. | API Key | free | 필요 | REST(JSON/XML) | [link](https://www.data.go.kr/data/15022797/openapi.do) |
 
 ### 콘텐츠·미디어
 

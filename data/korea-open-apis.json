@@ -2436,6 +2436,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "enviagro.go.kr / naqs.go.kr. 유기농업자재 공시 등 관련 API 다수."
+    },
+    {
+      "name": "문화체육관광부 공연정보(통합) API",
+      "provider": "문화체육관광부",
+      "category": "문화·관광·체육",
+      "description": "예술의전당·국립극장 등 10개 기관 공연/전시 정보 통합 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15121487/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "공연예술통합전산망(KOPIS)과 별도. culture.go.kr."
+    },
+    {
+      "name": "국립현대미술관 미술작품 정보 API",
+      "provider": "국립현대미술관(MMCA)",
+      "category": "문화·관광·체육",
+      "description": "소장 미술작품 명칭·작가·재질·이미지 등 정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/dataset/3059104/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "mmca.go.kr."
+    },
+    {
+      "name": "한국임업진흥원 임산물정보 API",
+      "provider": "한국임업진흥원(KOFPI)",
+      "category": "농축수산",
+      "description": "임산물 기초정보·유통 등 임업 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15022797/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "목재정보서비스(winz.forest.go.kr)도 별도."
+    },
+    {
+      "name": "국립생태원 생태자연도 서비스 API",
+      "provider": "국립생태원(NIE)",
+      "category": "날씨·환경",
+      "description": "전 국토 생태·자연도 등급, 지형평가 등 생태 공간정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15057288/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(JSON/XML/SHP)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "에코뱅크(nie-ecobank.kr)."
+    },
+    {
+      "name": "국립수목원 국가표준식물목록 서비스 API",
+      "provider": "산림청 국립수목원",
+      "category": "날씨·환경",
+      "description": "국가표준식물목록(학명·국명·문헌 등), 식물자원 정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15000236/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "nature.go.kr(국가표준식물목록)."
     }
   ]
 }
