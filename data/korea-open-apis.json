@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-28",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "method": "WebSearch + 신뢰 가능한 집계 출처(github.com/yybmion/public-apis-4Kr) + 공식 문서 확인. data.go.kr 직접 크롤링은 해외/클라우드 IP 차단(503/403)으로 불가하여, 알려진 공식 API 위주로 큐레이션.",
     "limitations": [
       "data.go.kr 전체(수만 건) 자동 전수 수집은 IP 차단으로 미수행 — 대표 API 위주 큐레이션.",
@@ -1594,6 +1594,62 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "엔드포인트 apis.data.go.kr/1480000/ncismttr. 안전보건공단 MSDS도 별도."
+    },
+    {
+      "name": "KISA WHOIS 인터넷주소 정보검색 API",
+      "provider": "한국인터넷진흥원(KISA)",
+      "category": "통신·인터넷",
+      "description": "도메인·IP·AS번호 등록/할당 정보 조회(WHOIS) 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15094277/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "최대 100,000건/일",
+      "source": "WebSearch",
+      "note": "whois.kr / 후이즈검색.한국. data.go.kr 연계."
+    },
+    {
+      "name": "국가기록원 나라기록물정보 서비스 API",
+      "provider": "행정안전부 국가기록원",
+      "category": "교육·학술",
+      "description": "국가 기록물 메타데이터(제목·생산기관·관리번호 등) 검색 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15000153/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(RSS/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "archives.go.kr."
+    },
+    {
+      "name": "외교부 해외안전여행 여행경보 API",
+      "provider": "외교부",
+      "category": "생활·소셜",
+      "description": "국가·지역별 여행경보, 특별여행경보, 여행금지 등 해외안전여행 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15076237/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "0404.go.kr. 여행경보 히스토리 등 관련 API 다수."
+    },
+    {
+      "name": "국토교통부 개별공시지가·공동주택가격 API",
+      "provider": "국토교통부",
+      "category": "부동산",
+      "description": "개별공시지가, 공동주택가격(WMS/WFS/속성) 등 부동산 공시가격 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15124014/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "아파트 매매 실거래가(15126469) 등 관련 API 다수."
     }
   ]
 }
