@@ -3,7 +3,7 @@
     "title": "Korea Free Open API Catalog",
     "description": "한국에서 제공되는 무료 오픈 API 카탈로그. GOAL.md 기준(무료 한정, 회원가입/승인 허용, 전 분야 포괄)에 따라 수집.",
     "generated": "2026-05-28",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "method": "WebSearch + 신뢰 가능한 집계 출처(github.com/yybmion/public-apis-4Kr) + 공식 문서 확인. data.go.kr 직접 크롤링은 해외/클라우드 IP 차단(503/403)으로 불가하여, 알려진 공식 API 위주로 큐레이션.",
     "limitations": [
       "data.go.kr 전체(수만 건) 자동 전수 수집은 IP 차단으로 미수행 — 대표 API 위주 큐레이션.",
@@ -1902,6 +1902,76 @@
       "rate_limit": "(미확인)",
       "source": "WebSearch",
       "note": "standard.go.kr."
+    },
+    {
+      "name": "서울 지하철 실시간 도착정보 API",
+      "provider": "서울특별시(TOPIS)",
+      "category": "교통",
+      "description": "서울 전체 역의 실시간 지하철 도착·열차위치 정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15058052/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "서울 열린데이터광장으로도 제공."
+    },
+    {
+      "name": "한국철도공사(코레일) 열차운행정보 API",
+      "provider": "한국철도공사",
+      "category": "교통",
+      "description": "여객열차 운행계획·운행정보 등 KTX·일반열차 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15125762/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "openapis.korail.com. 레일포털(KRIC)과 별도."
+    },
+    {
+      "name": "한강홍수통제소 수문·홍수 Open API",
+      "provider": "환경부 한강홍수통제소",
+      "category": "날씨·환경",
+      "description": "하천 수위·강우·댐 방류, 홍수예보, 강우레이더 등 수문 오픈 API.",
+      "docs_url": "https://www.hrfco.go.kr/web/openapiPage/openApi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "WAMIS 국가수자원관리종합정보(wamis.go.kr)도 별도 Open API 제공."
+    },
+    {
+      "name": "국토교통부 연속지적도·토지특성 정보 API",
+      "provider": "국토교통부 / 국토지리정보원",
+      "category": "지도·위치",
+      "description": "연속지적도형정보, 토지특성, 토지이용 등 공간정보 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15057558/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST/OGC(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "구 국가공간정보포털(NSDI) 일부 서비스는 폐기·대체됨 — data.go.kr 최신 안내 확인."
+    },
+    {
+      "name": "한국마사회 경마경주정보 API",
+      "provider": "한국마사회",
+      "category": "문화·관광·체육",
+      "description": "경주계획, 경주결과, 경주마·기수 정보 등 경마 오픈 API.",
+      "docs_url": "https://www.data.go.kr/data/15063951/openapi.do",
+      "auth": "API Key",
+      "pricing": "free",
+      "signup_required": true,
+      "format": "REST(JSON/XML)",
+      "rate_limit": "(미확인)",
+      "source": "WebSearch",
+      "note": "특이 케이스 — 경마. kra.co.kr. 일부 구 OPEN API는 폐기·대체됨."
     }
   ]
 }
