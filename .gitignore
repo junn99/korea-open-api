@@ -1,3 +1,8 @@
 
 # 재현 가능한 대용량 원천 (scripts/fetch_datago.py 로 재생성)
 data/datago_raw.json
+
+# node 도구 임시 설치물 (프로토타입은 의존성 불필요)
+node_modules/
+package.json
+package-lock.json
