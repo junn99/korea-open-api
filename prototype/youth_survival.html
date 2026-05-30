@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청년자취생존 — 프로토타입</title>
+<style>
+  :root{
+    --bg:#0e1116; --card:#171c24; --card2:#1f2630; --line:#2a323d;
+    --txt:#e8edf3; --sub:#9aa7b5; --mut:#6b7886;
+    --brand:#4f8cff; --brand2:#6ea8ff;
+    --red:#ff5a5f; --amber:#ffb020; --green:#27c498;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+  html,body{margin:0; padding:0; background:#000; font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif; color:var(--txt)}
+  .phone{max-width:420px; margin:0 auto; min-height:100vh; background:var(--bg); position:relative; overflow:hidden}
+  .screen{display:none; animation:fade .25s ease}
+  .screen.active{display:block}
+  @keyframes fade{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+
+  /* top bar */
+  .top{position:sticky; top:0; z-index:10; background:rgba(14,17,22,.92); backdrop-filter:blur(8px); padding:16px 20px 12px; border-bottom:1px solid var(--line)}
+  .top h1{font-size:18px; margin:0; letter-spacing:-.3px}
+  .top .greet{font-size:13px; color:var(--sub); margin-top:3px}
+
+  .wrap{padding:20px 20px 110px}
+
+  /* onboarding */
+  .progress{height:4px; background:var(--card2); border-radius:99px; overflow:hidden; margin-bottom:24px}
+  .progress > i{display:block; height:100%; background:linear-gradient(90deg,var(--brand),var(--brand2)); width:20%; transition:width .3s}
+  .q-step{display:none}
+  .q-step.active{display:block; animation:fade .25s ease}
+  .q-num{font-size:13px; color:var(--brand2); font-weight:600; margin-bottom:8px}
+  .q-title{font-size:23px; font-weight:700; letter-spacing:-.5px; line-height:1.35; margin:0 0 6px}
+  .q-help{font-size:13px; color:var(--mut); margin-bottom:24px}
+  .opts{display:flex; flex-direction:column; gap:10px}
+  .opt{background:var(--card); border:1.5px solid var(--line); border-radius:14px; padding:16px 18px; font-size:16px; color:var(--txt); cursor:pointer; transition:.15s; text-align:left; display:flex; align-items:center; justify-content:space-between}
+  .opt:hover{border-color:#3a4654}
+  .opt.sel{border-color:var(--brand); background:rgba(79,140,255,.12)}
+  .opt .chk{opacity:0; color:var(--brand); font-weight:700}
+  .opt.sel .chk{opacity:1}
+  .chips{display:flex; flex-wrap:wrap; gap:10px}
+  .chip{background:var(--card); border:1.5px solid var(--line); border-radius:99px; padding:11px 16px; font-size:15px; cursor:pointer; transition:.15s}
+  .chip.sel{border-color:var(--brand); background:rgba(79,140,255,.15); color:var(--brand2)}
+  .agehint{margin-top:14px; font-size:13px; color:var(--mut)}
+  .age-row{display:flex; align-items:center; gap:14px; margin-top:8px}
+  .age-val{font-size:40px; font-weight:800; color:var(--brand2); min-width:64px; text-align:center; letter-spacing:-1px}
+  input[type=range]{flex:1; accent-color:var(--brand)}
+
+  /* nav buttons */
+  .navbtns{position:fixed; bottom:0; left:0; right:0; max-width:420px; margin:0 auto; padding:14px 20px calc(14px + env(safe-area-inset-bottom)); background:linear-gradient(180deg,transparent,var(--bg) 22%); display:flex; gap:10px}
+  .btn{flex:1; border:none; border-radius:14px; padding:16px; font-size:16px; font-weight:700; cursor:pointer; transition:.15s}
+  .btn-primary{background:var(--brand); color:#fff}
+  .btn-primary:disabled{background:#28323f; color:#5a6776; cursor:not-allowed}
+  .btn-ghost{flex:0 0 auto; background:var(--card2); color:var(--sub); padding:16px 20px}
+
+  /* result summary banner */
+  .radar{border:1px solid #243247; border-radius:18px; padding:18px 20px; margin-bottom:18px; background:linear-gradient(135deg,rgba(79,140,255,.16),rgba(39,196,152,.10))}
+  .radar .big{font-size:15px; color:var(--sub)}
+  .radar .big b{color:var(--txt); font-size:26px; font-weight:800; letter-spacing:-.5px}
+  .radar .sub{font-size:12.5px; color:var(--mut); margin-top:6px}
+
+  /* filter pills */
+  .seg{display:flex; gap:8px; margin-bottom:16px; overflow-x:auto; padding-bottom:2px}
+  .seg::-webkit-scrollbar{display:none}
+  .seg button{white-space:nowrap; background:var(--card); border:1px solid var(--line); color:var(--sub); border-radius:99px; padding:8px 14px; font-size:13px; cursor:pointer}
+  .seg button.on{background:#fff; color:#111; border-color:#fff; font-weight:700}
+
+  /* policy card */
+  .pcard{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 17px; margin-bottom:12px; cursor:pointer; transition:.15s; position:relative; overflow:hidden}
+  .pcard:active{transform:scale(.99)}
+  .pcard .dl{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; padding:4px 9px; border-radius:8px; margin-bottom:10px}
+  .dl.r{background:rgba(255,90,95,.16); color:#ff8589}
+  .dl.a{background:rgba(255,176,32,.15); color:var(--amber)}
+  .dl.g{background:rgba(39,196,152,.14); color:var(--green)}
+  .pcard h3{margin:0 0 6px; font-size:17px; letter-spacing:-.3px}
+  .pcard .amt{font-size:14px; color:var(--brand2); font-weight:600}
+  .pcard .meta{font-size:12.5px; color:var(--mut); margin-top:8px; display:flex; gap:8px; flex-wrap:wrap}
+  .pcard .meta span{background:var(--card2); padding:3px 9px; border-radius:6px}
+  .match{position:absolute; top:14px; right:14px; font-size:11px; color:var(--green); font-weight:700}
+
+  /* detail sheet */
+  .sheet-bg{position:fixed; inset:0; max-width:420px; margin:0 auto; background:rgba(0,0,0,.6); display:none; z-index:50}
+  .sheet-bg.show{display:block}
+  .sheet{position:absolute; bottom:0; left:0; right:0; background:var(--card); border-radius:22px 22px 0 0; padding:8px 22px calc(28px + env(safe-area-inset-bottom)); max-height:88%; overflow-y:auto; animation:up .28s cubic-bezier(.2,.8,.2,1)}
+  @keyframes up{from{transform:translateY(100%)} to{transform:none}}
+  .grab{width:40px; height:4px; background:#3a4451; border-radius:99px; margin:8px auto 18px}
+  .sheet h2{margin:0 0 4px; font-size:21px; letter-spacing:-.4px}
+  .sheet .prov{font-size:13px; color:var(--mut); margin-bottom:18px}
+  .sec{margin-bottom:18px}
+  .sec .lbl{font-size:12px; color:var(--brand2); font-weight:700; margin-bottom:6px; letter-spacing:.3px}
+  .sec .val{font-size:14.5px; color:var(--txt); line-height:1.55}
+  .docs li{font-size:14px; margin:5px 0; color:var(--sub)}
+  .poss{display:flex; align-items:center; gap:10px; background:rgba(39,196,152,.1); border:1px solid rgba(39,196,152,.25); border-radius:12px; padding:12px 14px; margin-bottom:18px}
+  .poss .dot{width:10px; height:10px; border-radius:99px; background:var(--green); box-shadow:0 0 0 4px rgba(39,196,152,.2)}
+  .poss .t{font-size:13.5px} .poss .t b{color:var(--green)}
+  .applybtn{display:block; width:100%; background:var(--brand); color:#fff; border:none; border-radius:14px; padding:17px; font-size:16px; font-weight:700; cursor:pointer; text-align:center; margin-top:4px}
+  .disc{font-size:11.5px; color:var(--mut); text-align:center; margin-top:12px; line-height:1.5}
+
+  /* push toast */
+  .toast{position:fixed; top:14px; left:50%; transform:translateX(-50%) translateY(-140%); max-width:380px; width:calc(100% - 28px); background:#fff; color:#111; border-radius:16px; padding:14px 16px; box-shadow:0 12px 40px rgba(0,0,0,.5); z-index:80; display:flex; gap:12px; align-items:flex-start; transition:transform .4s cubic-bezier(.2,.9,.2,1)}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  .toast .ic{width:34px; height:34px; border-radius:9px; background:#fee500; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0}
+  .toast .tt{font-size:13px; font-weight:800}
+  .toast .tb{font-size:12.5px; color:#444; margin-top:2px}
+
+  .footnote{text-align:center; color:var(--mut); font-size:11px; padding:24px 20px 0; line-height:1.6}
+  .badge-mock{display:inline-block; background:#2a1f00; color:#ffb020; font-size:10px; font-weight:700; padding:3px 8px; border-radius:6px; letter-spacing:.4px}
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <!-- ============ ONBOARDING ============ -->
+  <section class="screen active" id="sc-onboard">
+    <div class="top">
+      <h1>청년자취생존</h1>
+      <div class="greet">30초면 끝나요. 받을 수 있는 돈만 골라드릴게요.</div>
+    </div>
+    <div class="wrap">
+      <div class="progress"><i id="bar"></i></div>
+
+      <!-- Q1 age -->
+      <div class="q-step active" data-step="1">
+        <div class="q-num">Q1 / 5</div>
+        <p class="q-title">나이가 어떻게 되세요?</p>
+        <p class="q-help">청년정책은 보통 만 19~34세 대상이에요.</p>
+        <div class="age-row">
+          <div class="age-val"><span id="ageOut">24</span>세</div>
+          <input type="range" id="ageR" min="15" max="45" value="24">
+        </div>
+        <div class="agehint" id="ageHint">✅ 대부분의 청년정책 대상 연령이에요.</div>
+      </div>
+
+      <!-- Q2 region -->
+      <div class="q-step" data-step="2">
+        <div class="q-num">Q2 / 5</div>
+        <p class="q-title">어디 살고 계세요?</p>
+        <p class="q-help">지역마다 별도 청년사업이 있어요. 사는 시·군·구 기준.</p>
+        <div class="chips" id="regionChips">
+          <div class="chip" data-v="서울 관악구">서울 관악구</div>
+          <div class="chip" data-v="서울 마포구">서울 마포구</div>
+          <div class="chip" data-v="서울 광진구">서울 광진구</div>
+          <div class="chip" data-v="경기 수원시">경기 수원시</div>
+          <div class="chip" data-v="부산 부산진구">부산 부산진구</div>
+          <div class="chip" data-v="대전 유성구">대전 유성구</div>
+          <div class="chip" data-v="기타 지역">기타 지역</div>
+        </div>
+      </div>
+
+      <!-- Q3 status -->
+      <div class="q-step" data-step="3">
+        <div class="q-num">Q3 / 5</div>
+        <p class="q-title">지금 어떤 상황인가요?</p>
+        <p class="q-help">상태에 따라 받을 수 있는 게 크게 달라져요.</p>
+        <div class="opts" id="statusOpts">
+          <button class="opt" data-v="대학생/대학원생">대학생 · 대학원생 <span class="chk">✓</span></button>
+          <button class="opt" data-v="취업준비생">취업준비생 · 구직중 <span class="chk">✓</span></button>
+          <button class="opt" data-v="재직자">직장인 (재직중) <span class="chk">✓</span></button>
+          <button class="opt" data-v="프리랜서/자영업">프리랜서 · 자영업 <span class="chk">✓</span></button>
+        </div>
+      </div>
+
+      <!-- Q4 income -->
+      <div class="q-step" data-step="4">
+        <div class="q-num">Q4 / 5</div>
+        <p class="q-title">월 소득이 대략 어느 정도예요?</p>
+        <p class="q-help">정확하지 않아도 돼요. 대략의 구간만 알려주세요.</p>
+        <div class="opts" id="incomeOpts">
+          <button class="opt" data-v="소득 없음">아직 소득이 없어요 <span class="chk">✓</span></button>
+          <button class="opt" data-v="월 200만원 이하">월 200만원 이하 <span class="chk">✓</span></button>
+          <button class="opt" data-v="월 200~300만원">월 200~300만원 <span class="chk">✓</span></button>
+          <button class="opt" data-v="월 300만원 이상">월 300만원 이상 <span class="chk">✓</span></button>
+        </div>
+      </div>
+
+      <!-- Q5 interests -->
+      <div class="q-step" data-step="5">
+        <div class="q-num">Q5 / 5</div>
+        <p class="q-title">어떤 게 제일 급해요?</p>
+        <p class="q-help">여러 개 골라도 돼요.</p>
+        <div class="chips" id="interestChips">
+          <div class="chip" data-v="주거">🏠 주거 · 월세</div>
+          <div class="chip" data-v="금융">💰 목돈 · 적금</div>
+          <div class="chip" data-v="취업">💼 취업 · 일자리</div>
+          <div class="chip" data-v="생활">🍙 생활비</div>
+          <div class="chip" data-v="교육">📚 교육 · 자격증</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbtns">
+      <button class="btn btn-ghost" id="backBtn" style="display:none">이전</button>
+      <button class="btn btn-primary" id="nextBtn">다음</button>
+    </div>
+  </section>
+
+  <!-- ============ HOME / RADAR ============ -->
+  <section class="screen" id="sc-home">
+    <div class="top">
+      <h1>내 정책 레이더</h1>
+      <div class="greet" id="homeGreet">관악구 · 24세 · 취업준비생</div>
+    </div>
+    <div class="wrap">
+      <div class="radar">
+        <div class="big">너에게 해당 가능성 높은 <b id="cnt">6</b>건</div>
+        <div class="sub">온통청년 1,700여 건 중 자동 선별 · 마감 임박순 정렬</div>
+      </div>
+
+      <div class="seg" id="seg">
+        <button class="on" data-f="all">전체</button>
+        <button data-f="urgent">⏰ 마감임박</button>
+        <button data-f="주거">🏠 주거</button>
+        <button data-f="금융">💰 금융</button>
+        <button data-f="취업">💼 취업</button>
+        <button data-f="생활">🍙 생활</button>
+      </div>
+
+      <div id="list"></div>
+
+      <div class="footnote">
+        <span class="badge-mock">MOCK</span> 목업 데이터로 만든 프로토타입입니다.<br>
+        실제 서비스는 온통청년 OpenAPI(심사 승인 후) 연동 예정.<br>
+        자격은 "확정"이 아닌 "해당 <b>가능성</b>"이며, 최종 확인은 각 신청처에서.
+      </div>
+    </div>
+    <div class="navbtns">
+      <button class="btn btn-ghost" id="resetBtn">↺ 다시</button>
+      <button class="btn btn-primary" id="pushBtn">🔔 마감 알림 받기</button>
+    </div>
+  </section>
+
+  <!-- detail sheet -->
+  <div class="sheet-bg" id="sheetBg">
+    <div class="sheet" id="sheet"></div>
+  </div>
+
+  <!-- push toast -->
+  <div class="toast" id="toast">
+    <div class="ic">💬</div>
+    <div>
+      <div class="tt" id="toastT">카카오톡 알림 예약 완료</div>
+      <div class="tb" id="toastB">마감 3일 전에 콕 알려드릴게요.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ---------- mock policy data ----------
+const POLICIES = [
+  { id:'wolse', cat:'주거', name:'청년 월세 한시 특별지원', org:'국토교통부 · 관악구',
+    amt:'월 최대 20만원 × 12개월', dday:3,
+    intro:'부모와 따로 사는 청년의 월세 부담을 덜어주는 지원금. 보증금 5천만원·월세 70만원 이하 거주 청년 대상.',
+    age:'만 19~34세', income:'본인 중위소득 60% 이하 & 원가구 100% 이하', resi:'부모와 별거 + 무주택',
+    docs:['월세이체 증빙','임대차계약서','주민등록등본','가족관계증명서'],
+    how:'복지로 또는 주소지 행정복지센터', period:'~ 2026.06.02 마감' },
+  { id:'soodang', cat:'취업', name:'서울 청년수당', org:'서울특별시',
+    amt:'월 50만원 × 최대 6개월', dday:12,
+    intro:'미취업 청년의 구직활동을 돕는 활동지원금. 서울 거주 만 19~34세 미취업/단기근로 청년.',
+    age:'만 19~34세', income:'기준 중위소득 150% 이하', resi:'서울 거주',
+    docs:['졸업증명서','구직활동 계획서','주민등록초본'],
+    how:'서울청년포털 온라인 신청', period:'~ 2026.06.11 마감' },
+  { id:'doyak', cat:'금융', name:'청년도약계좌', org:'금융위원회 · 서민금융진흥원',
+    amt:'5년 만기 최대 약 5,000만원 (정부기여금+이자)', dday:9,
+    intro:'매달 납입하면 정부가 기여금을 얹어주는 청년 자산형성 계좌. 만기까지 유지 시 목돈 마련.',
+    age:'만 19~34세', income:'총급여 7,500만원 이하 & 가구 중위 250% 이하', resi:'제한 없음',
+    docs:['소득확인증명(앱 연동)','신분증'],
+    how:'협약은행 앱(국민·신한·하나 등)', period:'매월 초 신청 (상시)' },
+  { id:'bottomjeonse', cat:'주거', name:'청년 버팀목 전세자금대출', org:'주택도시기금',
+    amt:'최대 2억원 · 연 1.5~2.7% 저금리', dday:null, ddayTxt:'상시',
+    intro:'청년 전세보증금을 저금리로 빌려주는 정책 대출. 보증금 3억 이하 주택 대상.',
+    age:'만 19~34세', income:'부부합산 연 5,000만원 이하', resi:'무주택 세대주',
+    docs:['확정일자부 임대차계약서','계약금 영수증','주민등록등본','재직/소득 증빙'],
+    how:'기금e든든 또는 수탁은행 방문', period:'상시 (입주일·전입일 기준 3개월 내)' },
+  { id:'naeil', cat:'취업', name:'청년내일채움공제', org:'고용노동부',
+    amt:'2년 만기 1,200만원 (본인 400+정부·기업)', dday:21,
+    intro:'중소기업 정규직 청년이 2년간 적립하면 목돈으로 돌려받는 공제. 장기근속 유도.',
+    age:'만 15~34세', income:'제한 없음 (중소기업 재직)', resi:'제한 없음',
+    docs:['재직증명서','정규직 근로계약서'],
+    how:'내일채움공제 누리집 (입사 6개월 내)', period:'~ 2026.06.20 마감' },
+  { id:'gyotong', cat:'생활', name:'청년 기후동행카드 할인', org:'서울특별시',
+    amt:'월 대중교통 정액권 추가 할인 (월 약 5,800원↓)', dday:null, ddayTxt:'상시',
+    intro:'무제한 대중교통 정기권을 청년에게 추가 할인. 교통비 부담이 큰 자취 청년에 직접 도움.',
+    age:'만 19~39세', income:'제한 없음', resi:'서울 생활권',
+    docs:['청년 인증(앱)','교통카드 등록'],
+    how:'모바일 티머니/기후동행카드 앱', period:'상시' },
+];
+
+// ---------- onboarding state ----------
+const A = { age:24, region:null, status:null, income:null, interests:[] };
+let step = 1;
+const TOTAL = 5;
+
+const $ = s => document.querySelector(s);
+const bar = $('#bar'), nextBtn = $('#nextBtn'), backBtn = $('#backBtn');
+
+function showStep(n){
+  document.querySelectorAll('.q-step').forEach(e=>e.classList.toggle('active', +e.dataset.step===n));
+  bar.style.width = (n/TOTAL*100)+'%';
+  backBtn.style.display = n>1 ? 'block':'none';
+  nextBtn.textContent = n===TOTAL ? '내 정책 찾기 →' : '다음';
+  validate();
+}
+function validate(){
+  let ok=true;
+  if(step===2) ok = !!A.region;
+  if(step===3) ok = !!A.status;
+  if(step===4) ok = !!A.income;
+  if(step===5) ok = A.interests.length>0;
+  nextBtn.disabled = !ok;
+}
+
+// age slider
+const ageR=$('#ageR'), ageOut=$('#ageOut'), ageHint=$('#ageHint');
+ageR.oninput = ()=>{
+  A.age=+ageR.value; ageOut.textContent=A.age;
+  if(A.age>=19 && A.age<=34) ageHint.innerHTML='✅ 대부분의 청년정책 대상 연령이에요.';
+  else if(A.age>=35 && A.age<=39) ageHint.innerHTML='🟡 일부 정책(만 39세까지)은 가능해요.';
+  else ageHint.innerHTML='⚠️ 청년정책 대상이 아닌 경우가 많아요.';
+};
+
+// chips (region single, interests multi)
+$('#regionChips').onclick = e=>{ const c=e.target.closest('.chip'); if(!c)return;
+  $('#regionChips').querySelectorAll('.chip').forEach(x=>x.classList.remove('sel'));
+  c.classList.add('sel'); A.region=c.dataset.v; validate(); };
+$('#interestChips').onclick = e=>{ const c=e.target.closest('.chip'); if(!c)return;
+  c.classList.toggle('sel');
+  A.interests = [...$('#interestChips').querySelectorAll('.chip.sel')].map(x=>x.dataset.v); validate(); };
+
+// option buttons
+function optGroup(sel, key){ $(sel).onclick = e=>{ const b=e.target.closest('.opt'); if(!b)return;
+  $(sel).querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+  b.classList.add('sel'); A[key]=b.dataset.v; validate(); }; }
+optGroup('#statusOpts','status'); optGroup('#incomeOpts','income');
+
+backBtn.onclick = ()=>{ if(step>1){step--; showStep(step);} };
+nextBtn.onclick = ()=>{ if(step<TOTAL){step++; showStep(step);} else buildHome(); };
+
+// ---------- build home ----------
+function scorePolicy(p){
+  // very light mock of "2-stage match": region/interest filter + age text parse
+  let s=0;
+  if(A.interests.includes(p.cat)) s+=3;
+  const m=p.age.match(/(\d+)[~\-](\d+)/);
+  if(m){ const lo=+m[1], hi=+m[2]; if(A.age>=lo && A.age<=hi) s+=2; else s-=5; }
+  if(p.dday!==null) s+= (p.dday<=7?2:1); // 마감 임박 가산
+  return s;
+}
+let CUR_FILTER='all';
+function buildHome(){
+  $('#sc-onboard').classList.remove('active');
+  $('#sc-home').classList.add('active');
+  const reg = (A.region||'').replace('서울 ','').replace('경기 ','').replace('부산 ','').replace('대전 ','');
+  $('#homeGreet').textContent = `${reg} · ${A.age}세 · ${A.status}`;
+  renderList();
+}
+function renderList(){
+  const matched = POLICIES
+    .map(p=>({p, s:scorePolicy(p)}))
+    .filter(o=>o.s>0)
+    .sort((a,b)=> (a.p.dday??999)-(b.p.dday??999));
+  $('#cnt').textContent = matched.length;
+
+  let arr = matched;
+  if(CUR_FILTER==='urgent') arr = matched.filter(o=>o.p.dday!==null && o.p.dday<=14);
+  else if(CUR_FILTER!=='all') arr = matched.filter(o=>o.p.cat===CUR_FILTER);
+
+  const list=$('#list'); list.innerHTML='';
+  if(arr.length===0){ list.innerHTML='<div style="color:#6b7886;text-align:center;padding:40px 0;font-size:14px">이 조건에 맞는 정책이 없어요.</div>'; return; }
+  arr.forEach(({p})=>{
+    const cls = p.dday===null?'g':(p.dday<=7?'r':(p.dday<=14?'a':'g'));
+    const ddTxt = p.dday===null? p.ddayTxt : `마감 D-${p.dday}`;
+    const el=document.createElement('div'); el.className='pcard'; el.onclick=()=>openSheet(p);
+    el.innerHTML = `
+      <span class="match">● 가능성 높음</span>
+      <span class="dl ${cls}">${ddTxt}</span>
+      <h3>${p.name}</h3>
+      <div class="amt">${p.amt}</div>
+      <div class="meta"><span>${p.org}</span><span>${p.age}</span></div>`;
+    list.appendChild(el);
+  });
+}
+$('#seg').onclick = e=>{ const b=e.target.closest('button'); if(!b)return;
+  $('#seg').querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); CUR_FILTER=b.dataset.f; renderList(); };
+
+// ---------- detail sheet ----------
+function openSheet(p){
+  const ddTxt = p.dday===null? p.ddayTxt : `마감 D-${p.dday}`;
+  $('#sheet').innerHTML = `
+    <div class="grab"></div>
+    <h2>${p.name}</h2>
+    <div class="prov">${p.org} · ${ddTxt}</div>
+    <div class="poss"><div class="dot"></div><div class="t">내 조건 기준 <b>해당 가능성 높음</b> · 최종 자격은 신청처에서 확인</div></div>
+    <div class="sec"><div class="lbl">얼마나</div><div class="val">${p.amt}</div></div>
+    <div class="sec"><div class="lbl">어떤 지원</div><div class="val">${p.intro}</div></div>
+    <div class="sec"><div class="lbl">신청 자격</div><div class="val">· 연령: ${p.age}<br>· 소득: ${p.income}<br>· 거주: ${p.resi}</div></div>
+    <div class="sec"><div class="lbl">제출 서류</div><ul class="docs">${p.docs.map(d=>`<li>· ${d}</li>`).join('')}</ul></div>
+    <div class="sec"><div class="lbl">신청 방법 · 기간</div><div class="val">${p.how}<br>${p.period}</div></div>
+    <button class="applybtn" onclick="alert('실제 서비스에서는 온통청년이 제공하는 신청 사이트 URL로 이동합니다.\\n\\n('+'${p.name}'+')')">지금 신청하러 가기 →</button>
+    <div class="disc">우리는 매칭·알림·링크까지만 도와요. 신청·심사는 정부 채널에서 진행돼요.</div>`;
+  $('#sheetBg').classList.add('show');
+}
+$('#sheetBg').onclick = e=>{ if(e.target.id==='sheetBg') $('#sheetBg').classList.remove('show'); };
+
+// ---------- push toast ----------
+$('#pushBtn').onclick = ()=>{
+  const urgent = POLICIES.filter(p=>p.dday!==null && p.dday<=7).sort((a,b)=>a.dday-b.dday)[0];
+  if(urgent){ $('#toastT').textContent=`⏰ ${urgent.name} 마감 D-${urgent.dday}`;
+    $('#toastB').textContent='마감 3일 전에 카톡으로 콕 알려드릴게요. 알림 예약 완료!'; }
+  const t=$('#toast'); t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3800);
+};
+$('#resetBtn').onclick = ()=>{ location.reload(); };
+
+// init
+showStep(1);
+</script>
+</body>
+</html>
